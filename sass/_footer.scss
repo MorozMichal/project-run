@@ -1,5 +1,5 @@
 footer {
-    background-color: silver;
+    background-color: rgba(black, 0.8);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -7,25 +7,65 @@ footer {
     color: white;
 
     .footer-logo {
-        background-color: blue;
+        // background-color: blue;
         flex-basis: 100%;
         font-size: $font-size-xxl;
         line-height: calc(#{$font-size-xxl} + 2rem); //jak jest zmienna w calc trzeba wstawiać #{}
+        animation: footer-logo linear 1.5s;
+
+        @media screen and (min-width: 739px) {
+            flex-basis: 60%;
+            font-size: 4rem;
+            line-height: calc(#{$font-size-xxl} + 4rem);
+        }
+    }
+
+    @keyframes footer-logo {
+        0% {
+            color: rgba(black, 0.2);
+            transform: rotateY(0deg);
+        }
+
+        90% {
+            color: rgba(black, 0.2s);
+
+        }
+
+        100% {
+            color: white;
+            transform: rotateY(360deg);
+        }
     }
 
     .footer-social-media {
 
         flex-basis: 100%;
         font-size: $font-size-md;
-        background-color: yellow;
+        // background-color: yellow;
         display: flex;
         flex-direction: row;
         align-items: center;
 
+        @media screen and (min-width: 739px) {
+            flex-basis: 40%;
+
+        }
+
         div {
-            background-color: red;
+            // background-color: red;
             flex-basis: 34%;
             font-size: 4rem;
+            cursor: pointer;
+
+            :hover {
+                color: brown;
+                transition: 0.5s;
+
+            }
+
+            @media screen and (min-width: 739px) {
+                font-size: 5rem;
+            }
 
         }
 
@@ -33,17 +73,49 @@ footer {
 
     .footer-contact {
         padding-top: 1rem;
-        background-color: brown;
+        // background-color: brown;
         flex-basis: 100%;
         font-size: $font-size-md;
         display: flex;
         flex-direction: column;
 
         .footer-contact-form {
-            padding: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
             width: 100%;
+
+            .footer-contact-form-name {
+                height: 2rem;
+                flex-basis: 100%;
+
+                @media screen and (min-width: 739px) {
+                    flex-basis: 50%;
+                }
+            }
+
+            .footer-contact-form-mail {
+                height: 2rem;
+                flex-basis: 100%;
+
+                @media screen and (min-width: 739px) {
+                    flex-basis: 50%;
+                }
+            }
+
+            .footer-contact-form-text {
+                height: 5rem;
+                flex-basis: 100%;
+            }
+
+            .footer-contact-form-send {
+                flex-basis: 4rem;
+                margin: 0 auto;
+                height: 2rem;
+                cursor: pointer;
+            }
 
         }
     }
