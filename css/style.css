@@ -7,21 +7,90 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  width: 400;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 10px;
 }
 
+/* footer */
 footer {
   background-color: silver;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  color: white;
 }
 
 footer .footer-logo {
-  text-align: center;
+  background-color: blue;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 2rem;
+  line-height: calc(2rem + 2rem);
+}
+
+footer .footer-social-media {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 1rem;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-social-media div {
+  background-color: red;
+  -ms-flex-preferred-size: 34%;
+      flex-basis: 34%;
+  font-size: 4rem;
+}
+
+footer .footer-contact {
+  padding-top: 1rem;
+  background-color: brown;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-contact .footer-contact-form {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
 
 footer .footer-copy {
-  text-align: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 0.625rem;
+  line-height: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

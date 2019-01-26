@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>nabieganie.pl</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -23,12 +25,23 @@
     <div class="footer-logo">
       <p>nabieganie.pl</p>
     </div>
-    <div class="footer-social">
-      <div class="footer-social-media"></div>
-      <div class="footer-social-contact"></div>
-      <div class="footer-copy">
-        <p>&copy; wszelkie prawa zastrzeżone</p>
+    <div class="footer-social-media">
+      <div><i class="fab fa-facebook-square"></i></div>
+      <div><i class="fab fa-twitter-square"></i></div>
+      <div><i class="fab fa-instagram"></i></div>
+    </div>
+    <div class="footer-contact">
+      <h2>kontakt</h2>
+      <div class="footer-contact-form">
+        <input type="text" name="contact_name" placeholder="Imię i nazwisko" required="required" tabindex="1">
+        <input type="email" name="contact_email" placeholder="Adres e-mail" required="required" tabindex="2">
+        <textarea rows="5" name="contact_body" placeholder="Treść wiadomości" required="required" tabindex="3"></textarea>
+        <input type="submit" value="Wyślij" tabindex="5">
       </div>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; wszelkie prawa zastrzeżone</p>
+    </div>
 
   </footer>
 

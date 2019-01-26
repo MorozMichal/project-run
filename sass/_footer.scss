@@ -1,19 +1,56 @@
 footer {
     background-color: silver;
     display: flex;
-
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
 
     .footer-logo {
-        text-align: center;
+        background-color: blue;
+        flex-basis: 100%;
+        font-size: $font-size-xxl;
+        line-height: calc(#{$font-size-xxl} + 2rem); //jak jest zmienna w calc trzeba wstawiać #{}
     }
 
-    .footer-social {
-        .footer-social-media {}
+    .footer-social-media {
 
-        .footer-social-contact {}
+        flex-basis: 100%;
+        font-size: $font-size-md;
+        background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        div {
+            background-color: red;
+            flex-basis: 34%;
+            font-size: 4rem;
+
+        }
+
+    }
+
+    .footer-contact {
+        padding-top: 1rem;
+        background-color: brown;
+        flex-basis: 100%;
+        font-size: $font-size-md;
+        display: flex;
+        flex-direction: column;
+
+        .footer-contact-form {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
     }
 
     .footer-copy {
-        text-align: center;
+        flex-basis: 100%;
+        font-size: $font-size-xxs;
+        line-height: 1.5rem;
     }
 }
