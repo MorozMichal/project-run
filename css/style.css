@@ -134,6 +134,13 @@ footer .footer-contact {
           flex-direction: column;
 }
 
+footer .footer-contact h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
 footer .footer-contact .footer-contact-form {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -147,6 +154,14 @@ footer .footer-contact .footer-contact-form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+}
+
+footer .footer-contact .footer-contact-form div {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  background-color: rgba(31, 31, 36, 0.9);
+  color: white;
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-name {
@@ -179,13 +194,19 @@ footer .footer-contact .footer-contact-form .footer-contact-form-text {
   height: 5rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  font-family: roboto;
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-send {
-  -ms-flex-preferred-size: 4rem;
-      flex-basis: 4rem;
-  margin: 0 auto;
-  height: 2rem;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  border-radius: 4%;
+  background-color: rgba(31, 31, 36, 0.9);
+  -ms-flex-preferred-size: 5rem;
+      flex-basis: 5rem;
+  margin: 1rem auto;
+  height: 2.5rem;
   cursor: pointer;
 }
 

@@ -7,7 +7,6 @@ footer {
     color: white;
 
     .footer-logo {
-        // background-color: blue;
         flex-basis: 100%;
         font-size: $font-size-xxl;
         line-height: calc(#{$font-size-xxl} + 2rem); //jak jest zmienna w calc trzeba wstawiać #{}
@@ -41,7 +40,6 @@ footer {
 
         flex-basis: 100%;
         font-size: $font-size-md;
-        // background-color: yellow;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -52,7 +50,6 @@ footer {
         }
 
         div {
-            // background-color: red;
             flex-basis: 34%;
             font-size: 4rem;
             cursor: pointer;
@@ -73,13 +70,20 @@ footer {
 
     .footer-contact {
         padding-top: 1rem;
-        // background-color: brown;
         flex-basis: 100%;
         font-size: $font-size-md;
         display: flex;
         flex-direction: column;
 
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            font-size: 1rem;
+            color: white;
+        }
+
         .footer-contact-form {
+
             padding-left: 1rem;
             padding-right: 1rem;
             display: flex;
@@ -87,9 +91,19 @@ footer {
             flex-wrap: wrap;
             width: 100%;
 
+            div {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                width: 100%;
+                background-color: rgba(rgb(31, 31, 36), 0.9);
+                color: white;
+            }
+
+
             .footer-contact-form-name {
                 height: 2rem;
                 flex-basis: 100%;
+
 
                 @media screen and (min-width: 739px) {
                     flex-basis: 50%;
@@ -100,6 +114,7 @@ footer {
                 height: 2rem;
                 flex-basis: 100%;
 
+
                 @media screen and (min-width: 739px) {
                     flex-basis: 50%;
                 }
@@ -108,12 +123,19 @@ footer {
             .footer-contact-form-text {
                 height: 5rem;
                 flex-basis: 100%;
+                font-family: roboto;
+
             }
 
             .footer-contact-form-send {
-                flex-basis: 4rem;
-                margin: 0 auto;
-                height: 2rem;
+                border: none;
+                font-size: 1rem;
+                color: white;
+                border-radius: 4%;
+                background-color: rgba(rgb(31, 31, 36), 0.9);
+                flex-basis: 5rem;
+                margin: 1rem auto;
+                height: 2.5rem;
                 cursor: pointer;
             }
 
