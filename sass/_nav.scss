@@ -1,0 +1,50 @@
+nav {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            list-style-type: none;
+            flex-basis: 100%;
+
+            @media screen and (min-width: 640px) {
+                flex-basis: calc(100% / 2);
+
+            }
+
+            @media screen and (min-width: 900px) {
+                flex-basis: calc(100% / 3);
+
+            }
+
+            @media screen and (min-width: 1199px) {
+                flex-basis: calc(100% / 6);
+                font-size: 1rem;
+
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                line-height: 3rem;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: 0.4s;
+                font-weight: bold;
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+                text-align: center;
+                text-transform: uppercase;
+
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.7);
+
+                }
+            }
+        }
+    }
+
+}
