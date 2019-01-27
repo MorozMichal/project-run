@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -68,6 +69,422 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* contest*/
+/* sekcja polecane zawody */
+.section-contest {
+  /* height: 100vh; */
+  /* overflow: hidden; */
+  /* background-color: rgb(212, 201, 173); */
+}
+
+.section-contest h1 {
+  border-top: 1px solid white;
+  line-height: 200px;
+  background-image: url(../img/contest_h1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-contest article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  /* overflow: hidden; */
+}
+
+.map {
+  position: relative;
+  text-align: center;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  -webkit-transform: translateX(55%);
+          transform: translateX(55%);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.contest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 55%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.contest .no-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contest .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.contest .contest-city {
+  width: 54.3vw;
+  font-size: 4.6rem;
+  text-align: right;
+  color: black;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(137, 165, 192, 0.9);
+  padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.contest-name:hover {
+  cursor: pointer;
+}
+
+.contest .contest-name {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rgba(137, 165, 192, 0.6);
+  color: black;
+  padding-left: 10px;
+  font-size: 3rem;
+}
+
+.contest ul {
+  display: block;
+  list-style: none;
+  background-color: rgba(137, 165, 192, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  padding-left: 10px;
+}
+
+.contest .novisible {
+  display: none;
+}
+
+.contest ul li {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.contest ul li::before {
+  content: "✔ ";
+}
+
+.contest ul li a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.contest ul li a:hover {
+  color: white;
+}
+
+.map div {
+  position: absolute;
+  font-family: 'Lato', sans-serif;
+}
+
+.map-szczecin {
+  top: 19%;
+  left: 11%;
+}
+
+.map-gdansk {
+  top: 6%;
+  left: 44%;
+}
+
+.map-poznan {
+  top: 40%;
+  left: 30%;
+}
+
+.map-warszawa {
+  top: 43%;
+  left: 62%;
+}
+
+.map-wroclaw {
+  top: 60%;
+  left: 29%;
+}
+
+.map-krakow {
+  top: 80%;
+  left: 55%;
+}
+
+.map-olawa {
+  top: 63%;
+  left: 31%;
+}
+
+.map-laskowice {
+  top: 61%;
+  left: 33%;
+}
+
+.map-henrykow {
+  top: 66%;
+  left: 27%;
+}
+
+.map-sobotka {
+  top: 63%;
+  left: 24%;
+}
+
+.map-kolobrzeg {
+  top: 10%;
+  left: 18%;
+}
+
+.map-brzeg {
+  top: 66%;
+  left: 34%;
+}
+
+.fa-dot-circle:hover {
+  font-size: 2rem;
+  cursor: pointer;
+  color: yellow;
+  -webkit-transform: translate(-5%, -25%);
+          transform: translate(-5%, -25%);
+}
+
+.fa-dot-circle:hover span {
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.map img {
+  width: 85%;
+  height: auto;
+}
+
+/* calculators*/
+.section-calculators .calculators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.section-calculators .calculators article {
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-calculators .calculators article h2 {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 2.5rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.section-calculators .calculators article h2:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.section-calculators .calculators article p {
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+
+.calc-visible {
+  display: none;
+}
+
+/* tabele Danielsa */
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+table tr {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+table tr:hover {
+  background-color: brown;
+}
+
+table td {
+  width: 8%;
+  font-size: 2rem;
+}
+
+/* calculator BMI */
+.calc-bmi-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calc-bmi-flex .bmi-form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  background-color: blue;
+  text-align: center;
+}
+
+.calc-bmi-flex .bmi-result {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  background-color: brown;
+}
+
+.calc-bmi-flex .bmi-result .bmi-result-p1,
+.calc-bmi-flex .bmi-result .bmi-result-p3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.calc-bmi-flex .bmi-result .bmi-result-p2 {
+  font-size: 7rem;
+  text-align: center;
+}
+
+.calc-bmi-flex .bmi-scope {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  background-color: yellow;
+}
+
+.input-bmi-weight {
+  background-color: cadetblue;
+}
+
+.input-bmi-weight input {
+  font-size: 4rem;
+  width: 9rem;
+  text-align: center;
+}
+
+.input-bmi-height {
+  background-color: chocolate;
+}
+
+.input-bmi-height input {
+  width: 9rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.button-calculate,
+.button-clean {
+  display: inline-block;
+  width: 120px;
+  padding: 15px 15px;
+  margin: 15px 15px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: center;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button-calculate {
+  background-color: green;
+}
+
+.button-clean {
+  background-color: red;
+}
+
+.button-calculate:hover {
+  background-color: white;
+  color: green;
+}
+
+.button-clean:hover {
+  background-color: white;
+  color: red;
+}
+
+.calc-distance-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+input,
+select {
+  font-size: 2rem;
+}
+
+input {
+  width: 50px;
+  height: 4rem;
+  text-align: center;
+}
+
+select {
+  height: 3rem;
+}
+
+.calc-input {
+  text-align: center;
 }
 
 /*links*/
