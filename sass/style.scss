@@ -10,7 +10,9 @@
 @import 'contest';
 
 /* calculators*/
-@import 'calculators';
+@import 'calculators/calculators';
+@import 'calculators/calculator_bmi';
+@import 'calculators/buttons';
 
 /*links*/
 @import 'links';
