@@ -1,18 +1,20 @@
-//KALKULATORY
+//calculators
 
-// funkcje do pokazywania kalkulatorow
+// function show calculators
 const calcH2s = document.querySelectorAll(".calculators h2");
 
 calcH2s.forEach(function (calcH2) {
     calcH2.addEventListener('click', function () {
-        this.nextElementSibling.classList.toggle("calc-visible"); //przełącza klasę następnego brata po this czyli po h2
+        this.nextElementSibling.classList.toggle("calc-novisible"); //przełącza klasę następnego brata po this czyli po h2 
+        this.nextElementSibling.classList.toggle("calc-visible");
+
     })
 })
 
-//kalkulator BMI
+//calculator BMI
 
-const btnCalcBmi = document.querySelector(".bmi-form .button-calculate");
-const btnCleanBmi = document.querySelector(".bmi-form .button-clean");
+const btnCalcBmi = document.querySelector(".calc-bmi-flex .button-calculate");
+const btnCleanBmi = document.querySelector(".calc-bmi-flex .button-clean");
 const bmiAlert = document.querySelector(".bmi-result-p3");
 
 function bmiCalc(e) {
@@ -72,14 +74,14 @@ const distanceResult = document.querySelector(".calc-distances .result-p1");
 
 function distanceCalc(e) {
     e.preventDefault();
-    tempoMin = eval(document.distance.tempoMin.value);
-    tempoSek = eval(document.distance.tempoSek.value);
-    timeH = eval(document.distance.timeH.value);
-    timeMin = eval(document.distance.timeMin.value);
-    timeSek = eval(document.distance.timeSek.value);
+    let tempoMin = eval(document.distance.tempoMin.value);
+    let tempoSek = eval(document.distance.tempoSek.value);
+    let timeH = eval(document.distance.timeH.value);
+    let timeMin = eval(document.distance.timeMin.value);
+    let timeSek = eval(document.distance.timeSek.value);
 
-    tempoResult = (tempoMin * 60 + tempoSek);
-    timeResult = (timeH * 3600 + timeMin * 60 + tempoSek);
+    let tempoResult = (tempoMin * 60 + tempoSek);
+    let timeResult = (timeH * 3600 + timeMin * 60 + tempoSek);
 
     if (tempoResult > 0 && timeResult > 0) {
         distanceKm = Math.floor(timeResult / tempoResult);
@@ -106,23 +108,23 @@ btnCleanDistance.addEventListener("click", distanceReset);
 
 //kalkulator czasu odcinka
 
-const btnCalcEpisode = document.querySelector(".episode-time-form .button-calculate");
-const btnCleanEpisode = document.querySelector(".episode-time-form .button-clean");
+const btnCalcEpisode = document.querySelector(".calc-episode-time .button-calculate");
+const btnCleanEpisode = document.querySelector(".calc-episode-time .button-clean");
 const episodeResult = document.querySelector(".episode-time-result-p2");
 
 function episodeCalc(e) {
     e.preventDefault();
-    tempoMin = eval(document.episode.tempoMin.value);
-    tempoSek = eval(document.episode.tempoSek.value);
-    episode = eval(document.episode.distance.value);
+    let tempoMin = eval(document.episode.tempoMin.value);
+    let tempoSek = eval(document.episode.tempoSek.value);
+    let episode = eval(document.episode.distance.value);
 
-    tempoEpisode = tempoMin * 60 + tempoSek;
-    timeEpisode = tempoEpisode / 1000 * episode;
-    episodeH = Math.floor(timeEpisode / 3600);
+    let tempoEpisode = tempoMin * 60 + tempoSek;
+    let timeEpisode = tempoEpisode / 1000 * episode;
+    let episodeH = Math.floor(timeEpisode / 3600);
 
     timeEpisode = timeEpisode - episodeH * 3600;
-    episodeMin = Math.floor(timeEpisode / 60);
-    episodeSek = Math.round(timeEpisode - Math.round(episodeMin) * 60);
+    let episodeMin = Math.floor(timeEpisode / 60);
+    let episodeSek = Math.round(timeEpisode - Math.round(episodeMin) * 60);
 
     if (tempoMin + tempoSek > 0) {
         episodeResult.textContent = "Czas odcznika to:" + episodeH + "h " + episodeMin + "min " + episodeSek + "sek" //dac w grawisy
@@ -144,19 +146,19 @@ btnCalcEpisode.addEventListener("click", episodeCalc);
 btnCleanEpisode.addEventListener("click", episodeReset);
 
 //kalkulator tempa biegu
-const btnCalcPalceofRunning = document.querySelector(".place-of-running-form .button-calculate");
-const btnCleanPalceofRunning = document.querySelector(".place-of-running-form .button-clean");
+const btnCalcPalceofRunning = document.querySelector(".calc-place-of-running .button-calculate");
+const btnCleanPalceofRunning = document.querySelector(".calc-place-of-running .button-clean");
 const PalceofRunningTempoResult = document.querySelector(".place-of-running-tempo-result-p2");
 const PalceofRunningSpeedResult = document.querySelector(".place-of-running-speed-result-p4");
 
 function placeOfRunningCalc(e) {
     e.preventDefault();
-    distanceKm = eval(document.placeofrunning.distancekm.value);
-    distanceM = eval(document.placeofrunning.distancem.value);
-    distanceChoice = eval(document.placeofrunning.placeofrunningdistances.value);
-    timeH = eval(document.placeofrunning.timeH.value);
-    timeM = eval(document.placeofrunning.timeM.value);
-    timeSek = eval(document.placeofrunning.timeSek.value);
+    let distanceKm = eval(document.placeofrunning.distancekm.value);
+    let distanceM = eval(document.placeofrunning.distancem.value);
+    let distanceChoice = eval(document.placeofrunning.placeofrunningdistances.value);
+    let timeH = eval(document.placeofrunning.timeH.value);
+    let timeM = eval(document.placeofrunning.timeM.value);
+    let timeSek = eval(document.placeofrunning.timeSek.value);
 
     if (timeH + timeM + timeSek <= 0 || distanceKm + distanceM + distanceChoice <= 0) {
         PalceofRunningTempoResult.textContent = "uzupełnij brakujące pola";
@@ -168,12 +170,12 @@ function placeOfRunningCalc(e) {
         distance = distanceKm + distanceM / 1000
     }
 
-    time = (timeH * 3600 + timeM * 60 + timeSek) / 3600
-    speed = Math.round(distance / time * 1000) / 1000
+    let time = (timeH * 3600 + timeM * 60 + timeSek) / 3600
+    let speed = Math.round(distance / time * 1000) / 1000
 
-    timeKm = Math.floor((timeH * 3600 + timeM * 60 + timeSek) / distance)
-    timeMin = Math.floor(timeKm / 60)
-    timeSekund = Math.round(timeKm - Math.round(timeMin) * 60)
+    let timeKm = Math.floor((timeH * 3600 + timeM * 60 + timeSek) / distance)
+    let timeMin = Math.floor(timeKm / 60)
+    let timeSekund = Math.round(timeKm - Math.round(timeMin) * 60)
 
     if (timeMin + timeSek > 0 && distance > 0) {
         PalceofRunningTempoResult.textContent = 'Tempo = ' + timeMin + "' " + timeSekund + '" / km'

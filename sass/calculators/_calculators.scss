@@ -15,8 +15,20 @@
 
             }
 
-            .calc-visible {
+            .calc-novisible {
                 display: none;
+                // transition: 2s;
+                // height: 0px;
+                // overflow: hidden;
+
+            }
+
+            .calc-visible {
+                display: block;
+                // overflow: hidden;
+                // transition: 2s;
+                // height: 250px;
+
 
             }
 

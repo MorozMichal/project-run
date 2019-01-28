@@ -14,7 +14,7 @@
 
 <body>
 
-  <!-- <nav>
+  <nav>
     <ul>
       <li><a class="nav-start" href="#">start</a></li>
       <li><a class="nav-previews" href="#">zapowiedzi</a></li>
@@ -261,13 +261,13 @@
         </div>
       </div>
     </article>
-  </section> -->
+  </section>
 
   <section class="section-calculators">
     <div class="calculators">
       <article class="calc-BMI">
         <h2>kalkulator BMI</h2>
-        <div class="calc-visible">
+        <div class="calc-novisible">
           <div class="calc-bmi-flex">
             <div class="bmi-form">
               <form name="bmi">
@@ -293,9 +293,11 @@
           </div>
         </div>
       </article>
+
+
       <article class="calc-distances">
         <h2>kalkulator odległości</h2>
-        <div class="calc-visible">
+        <div class="calc-novisible">
           <form action="" name="distance">
             <p>Planowane tempo biegu:</p>
             <p><input type="number" value="6" min="0" max="20" name="tempoMin">min
@@ -312,9 +314,10 @@
           </div>
         </div>
       </article>
+
       <article class="calc-episode-time">
         <h2>kalkulator czasu odcinka</h2>
-        <div class="calc-visible">
+        <div class="calc-novisible">
           <div class="calc-episode-time-flex">
             <div class="episode-time-form">
               <form action="" name="episode">
@@ -340,9 +343,11 @@
           </div>
         </div>
       </article>
+
+
       <article class="calc-place-of-running">
         <h2>kalkulator tempa biegu</h2>
-        <div class="calc-visible">
+        <div class="calc-novisible">
           <div>
             <p>Wybierz dystans</p>
             <div class="calc-place-of-running-flex">
@@ -383,10 +388,10 @@
                 <p class="place-of-running-speed-result-p3">Twoja prędkość:</p>
                 <p class="place-of-running-speed-result-p4"></p>
               </div>
-              <div class="button-wrapper">
-                <button class="button-calculate">oblicz</button>
-                <button class="button-clean">wyczyść</button>
-              </div>
+            </div>
+            <div class="button-wrapper">
+              <button class="button-calculate">oblicz</button>
+              <button class="button-clean">wyczyść</button>
             </div>
           </div>
         </div>
@@ -396,7 +401,7 @@
     </div>
   </section>
 
-  <!-- <section class="section-links">
+  <section class="section-links">
     <article>
       <div class="links">
         <div class="link-element">
@@ -471,9 +476,9 @@
     <div class="footer-copy">
       <p>&copy; wszelkie prawa zastrzeżone</p>
     </div>
-  </footer> -->
+  </footer>
   <script src="js/calculators.js"></script>
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>

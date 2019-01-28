@@ -296,8 +296,12 @@ nav ul li a:hover {
   font-weight: 900;
 }
 
-.section-calculators .calculators article .calc-visible {
+.section-calculators .calculators article .calc-novisible {
   display: none;
+}
+
+.section-calculators .calculators article .calc-visible {
+  display: block;
 }
 
 .section-calculators .calculators article h2 {
