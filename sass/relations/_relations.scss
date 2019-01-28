@@ -1,0 +1,29 @@
+/* sekcja z relacjami z biegów */
+
+.section-relations h1 {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    line-height: 200px;
+    background-image: url(../img/previews_h1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.relations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.relations div {
+    flex-basis: 25%;
+    height: 20rem;
+    flex-grow: 1;
+    text-align: center;
+    background-color: rgb(101, 27, 150);
+    border: 1px solid white;
+    line-height: 20rem;
+    font-size: 3rem;
+}

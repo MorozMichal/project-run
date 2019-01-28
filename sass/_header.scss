@@ -1,0 +1,27 @@
+/* sekcja baneru headera */
+
+header {
+    height: 92vh;
+    background-image: url(../img/runway_1920.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+    color: black;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    animation: header-h1 2s;
+
+}

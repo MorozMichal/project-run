@@ -6,8 +6,18 @@
 /* navigation*/
 @import 'nav';
 
+/* header */
+@import 'header';
+
+/* previews */
+@import 'previews/previews';
+
+/* relations */
+@import 'relations/relations';
+
 /* contest*/
-@import 'contest';
+@import 'contest/contest';
+@import 'contest/maps';
 
 /* calculators*/
 @import 'calculators/calculators';

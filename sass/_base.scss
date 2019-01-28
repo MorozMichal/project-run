@@ -4,3 +4,20 @@ body {
     margin: 0 auto;
     font-size: 10px;
 }
+
+/* nagłówki poszczsgólnych sekcji */
+
+.section-previews h1,
+.section-relations h1,
+.section-contest h1,
+.section-calculators h1,
+.section-links h1 {
+    background-color: rgb(245, 135, 35);
+    line-height: 7vh;
+    color: white;
+    letter-spacing: 0.2rem;
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+}
