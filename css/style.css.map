@@ -6,8 +6,8 @@
         "../sass/_reset.scss",
         "../sass/_variables.scss",
         "../sass/_base.scss",
-        "../sass/_nav.scss",
-        "../sass/_header.scss",
+        "../sass/pages/_nav.scss",
+        "../sass/pages/_header.scss",
         "../sass/previews/_previews.scss",
         "../sass/relations/_relations.scss",
         "../sass/contest/_contest.scss",
@@ -15,8 +15,8 @@
         "../sass/calculators/_calculators.scss",
         "../sass/calculators/_calculator_bmi.scss",
         "../sass/calculators/_buttons.scss",
-        "../sass/_links.scss",
-        "../sass/_footer.scss"
+        "../sass/pages/_links.scss",
+        "../sass/pages/_footer.scss"
     ],
     "names": [],
     "file": "style.css"
