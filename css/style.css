@@ -319,6 +319,71 @@ div.previews-div-active {
   font-size: 3rem;
 }
 
+/* running */
+.running-arms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.running-arms .running-arm {
+  background-color: yellow;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.running-arms .running-arm img {
+  height: 60px;
+}
+
+.running-arms .running-arm img:hover {
+  -webkit-animation: arm 2s linear infinite;
+          animation: arm 2s linear infinite;
+}
+
+@-webkit-keyframes arm {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes arm {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.running-arms .running-city {
+  background-color: red;
+  width: 500px;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.running-arms .running-city h2 {
+  line-height: 60px;
+}
+
 /* contest*/
 /* sekcja polecane zawody */
 .section-contest h1 {
