@@ -328,8 +328,10 @@ div.previews-div-active {
 
 .section-running .running-contest {
   display: none;
-  -webkit-transform: translate(100%);
-          transform: translate(100%);
+  background-color: blue;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
 .section-running .section-running-wrapper {
@@ -338,6 +340,9 @@ div.previews-div-active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 0 auto;
 }
 
 .section-running .section-running-wrapper .running-arms {

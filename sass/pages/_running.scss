@@ -1,16 +1,23 @@
 .section-running {
     display: flex;
+    // justify-content: center;
 
     .running-contest {
         display: none;
-        transform: translate(100%);
-    }
+        // transform: translate(200%);
+        background-color: blue;
+        flex-grow: 2;
 
+
+    }
 
 
     .section-running-wrapper {
         display: flex;
         flex-wrap: wrap;
+        // justify-content: center;
+        flex-basis: 100%;
+        margin: 0 auto;
 
         .running-arms {
             flex-basis: 100%;
