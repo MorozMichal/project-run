@@ -327,11 +327,66 @@ div.previews-div-active {
 }
 
 .section-running .running-contest {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
   background-color: blue;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+}
+
+.section-running .running-contest .novisible {
+  display: none;
+}
+
+.section-running .running-contest .no-active {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 62vw;
+}
+
+.section-running .running-contest .contest-city {
+  font-size: 4.6rem;
+  text-align: right;
+  color: black;
+  background-color: rgba(137, 165, 192, 0.9);
+  padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.section-running .running-contest .contest-name {
+  background-color: rgba(137, 165, 192, 0.6);
+  color: black;
+  padding-left: 10px;
+  font-size: 3rem;
+}
+
+.section-running .running-contest ul {
+  display: block;
+  list-style: none;
+  background-color: rgba(137, 165, 192, 0.3);
+  padding-left: 10px;
+}
+
+.section-running .running-contest ul li {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.section-running .running-contest ul li a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.section-running .running-contest ul li a:hover {
+  color: white;
+}
+
+.section-running .running-contest ul li::before {
+  content: "✔ ";
 }
 
 .section-running .section-running-wrapper {
@@ -340,42 +395,58 @@ div.previews-div-active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  margin: 0 auto;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
 .section-running .section-running-wrapper .running-arms {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   border: 1px solid white;
 }
 
 .section-running .section-running-wrapper .running-arms .running-arm {
-  background-color: yellow;
   width: 100px;
   text-align: center;
   padding: 5px;
 }
 
 .section-running .section-running-wrapper .running-arms .running-arm img {
-  height: 40px;
+  height: 30px;
 }
 
 .section-running .section-running-wrapper .running-arms .running-city {
-  background-color: red;
-  width: 300px;
-  font-size: 20px;
+  background-color: rgba(210, 210, 210, 0.2);
+  width: 250px;
+  font-size: 16px;
   padding: 5px;
-  line-height: 40px;
+  line-height: 30px;
+}
+
+.section-running .section-running-wrapper .running-arms h2 {
+  position: relative;
+}
+
+.section-running .section-running-wrapper .running-arms span {
+  position: absolute;
+  right: 0;
+  font-weight: 400;
+  font-size: 10px;
+  padding: 5px;
+  line-height: 25px;
+}
+
+.section-running .section-running-wrapper .running-arms .running-city:hover {
+  background-color: rgba(210, 210, 210, 0.8);
+  cursor: pointer;
 }
 
 @-webkit-keyframes arm {
@@ -400,115 +471,11 @@ div.previews-div-active {
   }
 }
 
-/* contest*/
-/* sekcja polecane zawody */
-.section-contest h1 {
-  border-top: 1px solid white;
-  line-height: 200px;
-  background-image: url(../img/contest_h1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.section-contest article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  /* overflow: hidden; */
-}
-
-.contest {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 55%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.contest .no-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contest .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-}
-
-.contest .contest-city {
-  width: 54.3vw;
-  font-size: 4.6rem;
-  text-align: right;
-  color: black;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  background-color: rgba(137, 165, 192, 0.9);
-  padding-right: 40px;
-  margin-bottom: 10px;
-}
-
 .contest-name:hover {
   cursor: pointer;
 }
 
-.contest .contest-name {
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  background-color: rgba(137, 165, 192, 0.6);
-  color: black;
-  padding-left: 10px;
-  font-size: 3rem;
-}
-
-.contest ul {
-  display: block;
-  list-style: none;
-  background-color: rgba(137, 165, 192, 0.3);
-  /* background-color: rgba(0, 0, 0, 0.1); */
-  padding-left: 10px;
-}
-
-.contest .novisible {
-  display: none;
-}
-
-.contest ul li {
-  font-size: 1.8rem;
-  line-height: 2.7rem;
-}
-
-.contest ul li::before {
-  content: "✔ ";
-}
-
-.contest ul li a {
-  font-size: 2rem;
-  text-decoration: none;
-  color: black;
-}
-
-.contest ul li a:hover {
-  color: white;
-}
-
+/* contest*/
 .map {
   position: relative;
   text-align: center;
