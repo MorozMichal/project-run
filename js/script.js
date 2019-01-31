@@ -45,8 +45,8 @@ buttonAllCity.forEach(function (buttonCity, index) {
         showContest();
         this.style.color = "red";
         AllContents[index].style.order = "-1";
-        AllContents[index].style.transform = "translateX(0%)";;
-        AllContents[index].style.transition = "1s linear";;
+        AllContents[index].style.transform = "translateX(0%)";
+        AllContents[index].style.transition = "1s linear";
 
         // if (index == 2) {
         //     contestSzczecin.style.order = "-1";

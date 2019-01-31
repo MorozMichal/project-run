@@ -320,7 +320,11 @@ div.previews-div-active {
 }
 
 /* running */
-.running-arms {
+.section-running-wrapper {
+  position: relative;
+}
+
+.section-running-wrapper .running-arms {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,22 +337,26 @@ div.previews-div-active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid white;
 }
 
-.running-arms .running-arm {
+.section-running-wrapper .running-arms .running-arm {
   background-color: yellow;
-  width: 100px;
+  width: 70px;
   text-align: center;
   padding: 10px;
 }
 
-.running-arms .running-arm img {
+.section-running-wrapper .running-arms .running-arm img {
   height: 60px;
 }
 
-.running-arms .running-arm img:hover {
-  -webkit-animation: arm 2s linear infinite;
-          animation: arm 2s linear infinite;
+.section-running-wrapper .running-arms .running-city {
+  background-color: red;
+  width: 300px;
+  font-size: 25px;
+  padding: 10px;
+  line-height: 60px;
 }
 
 @-webkit-keyframes arm {
@@ -371,17 +379,6 @@ div.previews-div-active {
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
-}
-
-.running-arms .running-city {
-  background-color: red;
-  width: 500px;
-  font-size: 30px;
-  padding: 10px;
-}
-
-.running-arms .running-city h2 {
-  line-height: 60px;
 }
 
 /* contest*/
