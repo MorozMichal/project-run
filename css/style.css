@@ -349,12 +349,33 @@ div.previews-div-active {
 }
 
 .section-running .running-contest .contest-city {
-  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.5rem;
   text-align: right;
   color: black;
   background-color: rgba(137, 165, 192, 0.9);
-  padding-right: 40px;
   margin-bottom: 10px;
+}
+
+.section-running .running-contest .contest-city span {
+  width: 50%;
+}
+
+.section-running .running-contest .contest-city :nth-child(1) {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.section-running .running-contest .contest-city :nth-child(2) {
+  padding-right: 30px;
+  line-height: calc(4rem + 10px);
+}
+
+.section-running .running-contest .contest-city img {
+  padding-top: 10px;
+  height: 4rem;
 }
 
 .section-running .running-contest .contest-name {
@@ -371,16 +392,24 @@ div.previews-div-active {
   padding-left: 10px;
 }
 
-.section-running .running-contest ul .button-running {
+.section-running .running-contest ul p {
+  text-align: center;
+}
+
+.section-running .running-contest ul p .button-running {
   background-color: green;
-  width: 10rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
   font-size: 1rem;
-  font-weight: 900;
   color: white;
   border-radius: 2rem;
   cursor: pointer;
+  border: 1px #46b446 solid;
+  background-color: #46aa46;
+}
+
+.section-running .running-contest ul p .button-running:hover {
+  background-color: #46ff46;
 }
 
 .section-running .running-contest ul li {

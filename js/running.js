@@ -28,10 +28,6 @@ h2Cities.forEach(function (h2City, index) {
     })
 })
 
-
-
-
-
 //funkcja chowania i zmiany kolejnosci wyswietlania divo poszczegolnch miast
 function reset() {
     const noActive = document.querySelectorAll(".no-active");
