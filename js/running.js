@@ -65,3 +65,13 @@ buttonAllCity.forEach(function (buttonCity, index) {
 
     })
 });
+
+const runningContestNames = document.querySelectorAll(".contest-name");
+
+runningContestNames.forEach(function (e) {
+    e.addEventListener("click", function () {
+        this.nextElementSibling.classList.toggle("novisible")
+
+    })
+
+})
