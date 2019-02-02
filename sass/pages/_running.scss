@@ -55,7 +55,7 @@
             background-color: rgba(137, 165, 192, 0.6);
             color: black;
             padding-left: 10px;
-            font-size: 2.5rem;
+            font-size: 2rem;
 
         }
 
@@ -92,8 +92,8 @@
 
 
             li {
-                font-size: 1.8rem;
-                line-height: 2.7rem;
+                font-size: 1.5rem;
+                line-height: 2.4rem;
 
                 a {
                     font-size: 2rem;
@@ -111,7 +111,26 @@
             }
 
             li::before {
-                content: "✔ ";
+                font-family: "Font Awesome 5 Free";
+                padding-right: 15px;
+                font-weight: 700;
+
+            }
+
+            li:nth-of-type(1)::before {
+                content: "\f073";
+
+            }
+
+
+            li:nth-of-type(2)::before {
+                content: "\f70c";
+
+            }
+
+            li:nth-of-type(3)::before {
+                content: "\f554";
+
             }
 
         }

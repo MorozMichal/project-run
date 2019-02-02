@@ -34,7 +34,7 @@ function reset() {
     for (let i = 0; i < noActive.length; i++) {
         noActive[i].style.order = "1"; //nadanie wszystkim div kolejnosci 
         noActive[i].style.transform = "translateX(150%)" //chowa posotałe divy na prawo poza stronę
-        noActive[i].style.transition = "0.2s linear"; //czas chowania sie diva w prawa strone
+        noActive[i].style.transition = "0.2s"; //czas chowania sie diva w prawa strone
 
     }
 }
@@ -42,7 +42,7 @@ function reset() {
 //funkcja przesuwa elementy przy pierwszym zaladowaniu strony
 function showContest() {
     const SectionContestContest = document.querySelector(".running-contest");
-    SectionContestContest.style.transition = "0.5s linear"; //czas wjazdu opisu w lewa strone
+    SectionContestContest.style.transition = "0.5s"; //czas wjazdu opisu w lewa strone
     SectionContestContest.style.transform = "translateX(0%)"; // przesuniecie sie opisu do pozycji 0
 
 }
