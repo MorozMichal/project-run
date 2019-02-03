@@ -12,6 +12,10 @@
 
         }
 
+        .visuallyhidden {
+            opacity: 0;
+        }
+
         .no-active {
             flex-direction: column;
             width: 55vw;
@@ -69,16 +73,16 @@
                 text-align: center;
 
                 .button-running {
-                    background-color: green;
-                    padding: 0.5rem 1rem;
+
                     margin: 0.5rem;
-                    font-size: 1rem;
-                    // font-weight: 900;
+                    font-size: 2rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
                     color: white;
-                    border-radius: 2rem;
+                    border-radius: 100%;
                     cursor: pointer;
                     border: 1px rgb(70, 180, 70) solid;
-                    background-color: rgb(70, 170, 70);
+                    background-color: rgb(96, 91, 175);
 
                     &:hover {
                         background-color: rgb(70, 255, 70);
@@ -112,19 +116,22 @@
 
             li::before {
                 font-family: "Font Awesome 5 Free";
-                padding-right: 15px;
+                padding-right: 20px;
                 font-weight: 700;
+
+
 
             }
 
             li:nth-of-type(1)::before {
                 content: "\f073";
 
+
             }
 
 
             li:nth-of-type(2)::before {
-                content: "\f70c";
+                content: "\f4d7";
 
             }
 
