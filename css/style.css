@@ -305,18 +305,87 @@ div.previews-div-active {
           justify-content: center;
 }
 
-.relations div {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  height: 20rem;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: center;
-  background-color: #651b96;
-  border: 1px solid white;
-  line-height: 20rem;
-  font-size: 3rem;
+.relations .relation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin: 15px 0;
+}
+
+.relations .relation .relation-images {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.relations .relation .relation-images .relation-1st-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1.5rem;
+}
+
+.relations .relation .relation-images .relation-1st-image img {
+  border-radius: 10%;
+}
+
+.relations .relation .relation-images .relation-all-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.relations .relation .relation-images .relation-all-images img {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  border-radius: 10%;
+  margin: 2px;
+}
+
+.relations .relation .relation-images .novisible {
+  display: none;
+}
+
+.relations .relation .relation-1st-descrition {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.relations .relation .relation-1st-descrition h3 {
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.relations .relation .relation-1st-descrition p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+.relations .relation .relation-1st-descrition .novisible {
+  display: none;
+}
+
+.relations .relation .relation-1st-descrition:hover {
+  cursor: pointer;
+}
+
+.relations .relation .relation-1st-descrition:hover p {
+  text-decoration: underline;
 }
 
 /* running */
@@ -536,100 +605,6 @@ div.previews-div-active {
 }
 
 /* contest*/
-.map {
-  position: relative;
-  text-align: center;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  -webkit-transform: translateX(55%);
-          transform: translateX(55%);
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.map div {
-  position: absolute;
-  font-family: 'Lato', sans-serif;
-}
-
-.map-szczecin {
-  top: 19%;
-  left: 11%;
-}
-
-.map-gdansk {
-  top: 6%;
-  left: 44%;
-}
-
-.map-poznan {
-  top: 40%;
-  left: 30%;
-}
-
-.map-warszawa {
-  top: 43%;
-  left: 62%;
-}
-
-.map-wroclaw {
-  top: 60%;
-  left: 29%;
-}
-
-.map-krakow {
-  top: 80%;
-  left: 55%;
-}
-
-.map-olawa {
-  top: 63%;
-  left: 31%;
-}
-
-.map-laskowice {
-  top: 61%;
-  left: 33%;
-}
-
-.map-henrykow {
-  top: 66%;
-  left: 27%;
-}
-
-.map-sobotka {
-  top: 63%;
-  left: 24%;
-}
-
-.map-kolobrzeg {
-  top: 10%;
-  left: 18%;
-}
-
-.map-brzeg {
-  top: 66%;
-  left: 34%;
-}
-
-.fa-dot-circle:hover {
-  font-size: 2rem;
-  cursor: pointer;
-  color: yellow;
-  -webkit-transform: translate(-5%, -25%);
-          transform: translate(-5%, -25%);
-}
-
-.fa-dot-circle:hover span {
-  font-size: 2rem;
-  font-family: 'Lato', sans-serif;
-}
-
-.map img {
-  width: 85%;
-  height: auto;
-}
-
 /* calculators*/
 .section-calculators .calculators {
   display: -webkit-box;

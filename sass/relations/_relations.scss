@@ -15,15 +15,81 @@
     flex-wrap: wrap;
     justify-content: center;
 
-}
+    .relation {
+        display: flex;
+        align-items: center;
+        flex-basis: 50%;
+        margin: 15px 0;
 
-.relations div {
-    flex-basis: 25%;
-    height: 20rem;
-    flex-grow: 1;
-    text-align: center;
-    background-color: rgb(101, 27, 150);
-    border: 1px solid white;
-    line-height: 20rem;
-    font-size: 3rem;
+        .relation-images {
+            flex-basis: 30%;
+
+            .relation-1st-image {
+                display: flex;
+                padding: 0 1.5rem;
+
+                img {
+                    border-radius: 10%;
+
+                }
+
+            }
+
+            .relation-all-images {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                img {
+                    flex-basis: 32%;
+                    border-radius: 10%;
+                    margin: 2px;
+                }
+            }
+
+            .novisible {
+                display: none;
+            }
+
+        }
+
+        .relation-1st-descrition {
+            align-self: flex-start;
+            flex-basis: 70%;
+
+
+
+            h3 {
+                font-size: 1.5rem;
+                padding: 10px 0;
+            }
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                font-weight: 500;
+
+
+            }
+
+            .novisible {
+                display: none;
+            }
+
+
+        }
+
+        .relation-1st-descrition:hover {
+            cursor: pointer;
+        }
+
+        .relation-1st-descrition:hover p {
+            text-decoration: underline;
+        }
+
+
+    }
+
+
 }
