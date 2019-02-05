@@ -2,20 +2,45 @@ const firstDescriptions = [...document.querySelectorAll('.relation-1st-descritio
 const allDescriptions = [...document.querySelectorAll('.relation-1st-descrition p.novisible')]
 const relations = [...document.querySelectorAll('.relation')] //cały tekst
 //button w nagłówku artykułu
-
 const allImages = [...document.querySelectorAll('.relation-all-images')] //sekcja z wszystkimi obrazkami
 const oneImages = [...document.querySelectorAll('.relation-1st-image')] //sekcja z pojedynczym obraziekm
-
 const closeBtns = [...document.querySelectorAll('.relation-1st-descrition .close')]
 const showBtns = [...document.querySelectorAll('.relation-1st-descrition .show')]
 
+
+function resetRelations() {
+    for (let i = 0; i < relations.length; i++) {
+        relations[i].style.transition = "0.5s"
+        relations[i].style.flexBasis = "50%"
+        relations[i].style.order = "0"
+    }
+    for (let i = 0; i < allDescriptions.length; i++) {
+        allDescriptions[i].classList.add('novisible')
+        allDescriptions[i].style.flexBasis = "30%"
+    }
+    for (let i = 0; i < allImages.length; i++) {
+        allImages[i].classList.add('novisible')
+    }
+    for (let i = 0; i < oneImages.length; i++) {
+        oneImages[i].classList.remove('novisible')
+    }
+    for (let i = 0; i < showBtns.length; i++) {
+        showBtns[i].classList.remove('novisible')
+    }
+    for (let i = 0; i < closeBtns.length; i++) {
+        closeBtns[i].classList.add('novisible')
+    }
+}
+
+
 showBtns.forEach(function (showBtn, index) {
     showBtn.addEventListener("click", function () {
+        resetRelations()
         firstDescriptions[index].style.color = "red";
         allDescriptions[index].classList.toggle('novisible')
         allDescriptions[index].style.flexBasis = "30%"
-        relations[index].style.transition = "1s"
-        relations[index].style.flexBasis = "100%"
+        relations[index].style.transition = "0.5s"
+        relations[index].style.flexBasis = "90%"
         relations[index].style.order = "-1"
         allImages[index].classList.toggle('novisible')
         oneImages[index].classList.toggle('novisible')
@@ -29,7 +54,7 @@ closeBtns.forEach(function (closeBtn, index) {
         firstDescriptions[index].style.color = "red";
         allDescriptions[index].classList.toggle('novisible')
         allDescriptions[index].style.flexBasis = "50%"
-        relations[index].style.transition = "1s"
+        relations[index].style.transition = "0.5s"
         relations[index].style.flexBasis = "50%"
         relations[index].style.order = "0"
         allImages[index].classList.toggle('novisible')
