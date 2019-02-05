@@ -24,6 +24,7 @@
         .relation-images {
             flex-basis: 30%;
 
+
             .relation-1st-image {
                 display: flex;
                 padding: 0 1.5rem;
@@ -41,10 +42,12 @@
                 flex-wrap: wrap;
                 justify-content: space-around;
 
+
                 img {
                     flex-basis: 32%;
                     border-radius: 10%;
                     margin: 2px;
+
                 }
             }
 
@@ -63,6 +66,16 @@
             h3 {
                 font-size: 1.5rem;
                 padding: 10px 0;
+                position: relative;
+
+                .close,
+                .show {
+                    position: absolute;
+                    right: 0;
+                    width: 60px;
+                    line-height: 1.5rem;
+                    text-align: center;
+                }
             }
 
             p {
@@ -79,15 +92,6 @@
 
 
         }
-
-        .relation-1st-descrition:hover {
-            cursor: pointer;
-        }
-
-        .relation-1st-descrition:hover p {
-            text-decoration: underline;
-        }
-
 
     }
 

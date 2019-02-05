@@ -368,6 +368,16 @@ div.previews-div-active {
 .relations .relation .relation-1st-descrition h3 {
   font-size: 1.5rem;
   padding: 10px 0;
+  position: relative;
+}
+
+.relations .relation .relation-1st-descrition h3 .close,
+.relations .relation .relation-1st-descrition h3 .show {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  line-height: 1.5rem;
+  text-align: center;
 }
 
 .relations .relation .relation-1st-descrition p {
@@ -378,14 +388,6 @@ div.previews-div-active {
 
 .relations .relation .relation-1st-descrition .novisible {
   display: none;
-}
-
-.relations .relation .relation-1st-descrition:hover {
-  cursor: pointer;
-}
-
-.relations .relation .relation-1st-descrition:hover p {
-  text-decoration: underline;
 }
 
 /* running */
