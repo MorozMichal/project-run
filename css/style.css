@@ -284,17 +284,10 @@ div.previews-div-active {
 
 /* relations */
 /* sekcja z relacjami z biegów */
-.section-relations h1 {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  line-height: 200px;
-  background-image: url(../img/previews_h1.png);
+.relations {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.relations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,6 +299,7 @@ div.previews-div-active {
 }
 
 .relations .relation {
+  background-color: #9eb0c9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +308,7 @@ div.previews-div-active {
           align-items: center;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  margin: 15px 0;
+  margin: 1px 0px;
 }
 
 .relations .relation .relation-images {
@@ -327,6 +321,7 @@ div.previews-div-active {
   display: -ms-flexbox;
   display: flex;
   padding: 0 1.5rem;
+  width: 80%;
 }
 
 .relations .relation .relation-images .relation-1st-image img {
@@ -363,26 +358,34 @@ div.previews-div-active {
       align-self: flex-start;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .relations .relation .relation-1st-descrition h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 10px 0;
   position: relative;
+}
+
+.relations .relation .relation-1st-descrition h3 i {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.relations .relation .relation-1st-descrition h3 i:hover {
+  cursor: pointer;
 }
 
 .relations .relation .relation-1st-descrition h3 .close,
 .relations .relation .relation-1st-descrition h3 .show {
   position: absolute;
   right: 0;
-  width: 60px;
   line-height: 1.5rem;
-  text-align: center;
 }
 
 .relations .relation .relation-1st-descrition p {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
 }
 
@@ -392,6 +395,10 @@ div.previews-div-active {
 
 /* running */
 .section-running {
+  background-image: url(/img/background_running.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,7 +548,6 @@ div.previews-div-active {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  border: 1px solid white;
 }
 
 .section-running .section-running-wrapper .running-arms .running-arm {
@@ -638,7 +644,7 @@ div.previews-div-active {
 }
 
 .section-calculators .calculators article h2 {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(137, 165, 192, 0.9);
   font-size: 1rem;
   line-height: 3rem;
   text-transform: uppercase;
@@ -649,7 +655,7 @@ div.previews-div-active {
 }
 
 .section-calculators .calculators article h2:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(137, 165, 192, 0.6);
   color: white;
 }
 

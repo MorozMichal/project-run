@@ -1,33 +1,28 @@
 /* sekcja z relacjami z biegów */
 
-.section-relations h1 {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    line-height: 200px;
-    background-image: url(../img/previews_h1.png);
+.relations {
+    // background-image: url(/img/relations/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.relations {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
     .relation {
+        background-color: rgb(158, 176, 201);
         display: flex;
         align-items: center;
         flex-basis: 50%;
-        margin: 15px 0;
+        margin: 1px 0px;
 
         .relation-images {
             flex-basis: 30%;
 
-
             .relation-1st-image {
                 display: flex;
                 padding: 0 1.5rem;
+                width: 80%;
 
                 img {
                     border-radius: 10%;
@@ -60,28 +55,37 @@
         .relation-1st-descrition {
             align-self: flex-start;
             flex-basis: 70%;
-
-
+            color: rgba(0, 0, 0, 0.9);
 
             h3 {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 padding: 10px 0;
                 position: relative;
+
+                i {
+                    padding-left: 4rem;
+                    padding-right: 4rem;
+                }
+
+                i:hover {
+                    cursor: pointer;
+
+                }
 
                 .close,
                 .show {
                     position: absolute;
                     right: 0;
-                    width: 60px;
                     line-height: 1.5rem;
-                    text-align: center;
+
                 }
             }
 
             p {
-                font-size: 1.2rem;
-                line-height: 1.8rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
                 font-weight: 500;
+
 
 
             }
