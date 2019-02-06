@@ -25,35 +25,72 @@
 
     }
 
+
+
     .section-previews-racing {
         flex-basis: 35%;
         display: flex;
         flex-wrap: wrap;
+        transition: 2s;
+        transform: translateX(90%);
 
-
-        .preview {
-            flex-basis: 50%;
-            text-align: center;
-            align-self: center;
-            // border: 1px solid yellow;
-            padding: 10px 0;
+        .section-previews-banner {
+            flex-basis: 10%;
+            position: relative;
             background-color: rgba(210, 210, 210, 0.7);
 
-            p:nth-child(1) {
-                font-weight: 900;
-                font-size: 1rem;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.2rem;
+                padding: 100px 0;
+
             }
 
-            p {
-                font-size: 0.7rem;
+            i:hover {
+                cursor: pointer;
+                color: white;
             }
 
         }
 
-        .preview:hover {
-            background-color: rgba(210, 210, 210, 0.3);
-            cursor: pointer;
+        .section-previews-all {
+            display: flex;
+            flex-basis: 90%;
+            flex-wrap: wrap;
+
+            .preview {
+                flex-basis: 50%;
+                text-align: center;
+                align-self: center;
+                padding: 10px 0;
+                background-color: rgba(210, 210, 210, 0.7);
+
+                p:nth-child(1) {
+                    font-weight: 900;
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+
+            }
+
+            .preview:hover {
+                background-color: rgba(210, 210, 210, 0.3);
+                cursor: pointer;
+            }
+
+
         }
+
+    }
+
+    .section-previews-racing-visible {
+        transform: translateX(0%);
 
     }
 }

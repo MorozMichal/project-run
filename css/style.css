@@ -159,9 +159,45 @@ header h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: translateX(90%);
+          transform: translateX(90%);
 }
 
-.section-previews .section-previews-racing .preview {
+.section-previews .section-previews-racing .section-previews-banner {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  position: relative;
+  background-color: rgba(210, 210, 210, 0.7);
+}
+
+.section-previews .section-previews-racing .section-previews-banner i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  padding: 100px 0;
+}
+
+.section-previews .section-previews-racing .section-previews-banner i:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.section-previews .section-previews-racing .section-previews-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section-previews .section-previews-racing .section-previews-all .preview {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   text-align: center;
@@ -172,18 +208,23 @@ header h1 {
   background-color: rgba(210, 210, 210, 0.7);
 }
 
-.section-previews .section-previews-racing .preview p:nth-child(1) {
+.section-previews .section-previews-racing .section-previews-all .preview p:nth-child(1) {
   font-weight: 900;
   font-size: 1rem;
 }
 
-.section-previews .section-previews-racing .preview p {
+.section-previews .section-previews-racing .section-previews-all .preview p {
   font-size: 0.7rem;
 }
 
-.section-previews .section-previews-racing .preview:hover {
+.section-previews .section-previews-racing .section-previews-all .preview:hover {
   background-color: rgba(210, 210, 210, 0.3);
   cursor: pointer;
+}
+
+.section-previews .section-previews-racing-visible {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 /* relations */
