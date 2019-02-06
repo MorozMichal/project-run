@@ -1,13 +1,11 @@
-const previewsDivs = document.querySelectorAll(".previews>div");
+const previews = [...document.querySelectorAll('.preview')]
+const previewContent = [...document.querySelectorAll('.preview-content')]
 
-previewsDivs.forEach(function (previewsDiv) {
-    previewsDiv.addEventListener("click", function () {
-        for (let i = 0; i < previewsDivs.length; i++) {
-            // previewsDivs[i].classList.add("previews-div-noactive"); //zbedne tak samo dziala bez
-            previewsDivs[i].classList.remove("previews-div-active");
+previews.forEach(function (preview, index) {
+    preview.addEventListener("click", function () {
+        for (let i = 0; i < previewContent.length; i++) {
+            previewContent[i].style.opacity = "0"
         }
-        this.classList.add("previews-div-active");
-        // this.classList.remove("previews-div-noactive"); //zbedne tak samo dziala bez
+        previewContent[index].style.opacity = "1"
     })
-
 })
