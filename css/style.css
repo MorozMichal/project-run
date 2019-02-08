@@ -14,21 +14,6 @@ body {
 }
 
 /* nagłówki poszczsgólnych sekcji */
-.section-previews h1,
-.section-relations h1,
-.section-contest h1,
-.section-calculators h1,
-.section-links h1 {
-  background-color: #f58723;
-  line-height: 7vh;
-  color: white;
-  letter-spacing: 0.2rem;
-  font-size: 4rem;
-  text-align: center;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
 /* navigation*/
 nav ul {
   display: -webkit-box;
@@ -99,6 +84,33 @@ header {
   position: relative;
 }
 
+header .header-wrapper-menu {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  text-align: right;
+  padding-right: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  line-height: 3rem;
+  height: 3rem;
+  z-index: 1000;
+}
+
+header .header-wrapper-menu .header-menu {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+header .header-wrapper-menu .header-menu i {
+  padding-left: 1rem;
+}
+
+header .header-wrapper-menu .header-menu:hover {
+  cursor: pointer;
+  color: white;
+}
+
 header h1 {
   position: absolute;
   top: 50%;
@@ -147,8 +159,8 @@ header h1 {
   left: 0;
   opacity: 0;
   font-size: 100px;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .section-previews .section-previews-racing {
@@ -159,8 +171,8 @@ header h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transform: translateX(90%);
           transform: translateX(90%);
 }
@@ -220,6 +232,35 @@ header h1 {
 .section-previews .section-previews-racing .section-previews-all .preview:hover {
   background-color: rgba(210, 210, 210, 0.3);
   cursor: pointer;
+}
+
+.section-previews .animation-previews-button {
+  -webkit-animation: animation-previews-button 1.5s linear infinite;
+          animation: animation-previews-button 1.5s linear infinite;
+}
+
+@-webkit-keyframes animation-previews-button {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-previews-button {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .section-previews .section-previews-racing-visible {

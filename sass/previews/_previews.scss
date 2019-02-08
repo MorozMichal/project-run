@@ -7,6 +7,7 @@
     background-position: top;
     background-size: cover;
 
+
     .section-previews-content {
         flex-basis: 65%;
         text-align: center;
@@ -20,7 +21,7 @@
             left: 0;
             opacity: 0;
             font-size: 100px;
-            transition: 2s;
+            transition: 1s;
         }
 
     }
@@ -31,7 +32,7 @@
         flex-basis: 35%;
         display: flex;
         flex-wrap: wrap;
-        transition: 2s;
+        transition: 1s;
         transform: translateX(90%);
 
         .section-previews-banner {
@@ -47,6 +48,7 @@
                 font-size: 1.2rem;
                 padding: 100px 0;
 
+
             }
 
             i:hover {
@@ -55,6 +57,8 @@
             }
 
         }
+
+
 
         .section-previews-all {
             display: flex;
@@ -85,6 +89,25 @@
             }
 
 
+        }
+
+    }
+
+    .animation-previews-button {
+        animation: animation-previews-button 1.5s linear infinite;
+    }
+
+    @keyframes animation-previews-button {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
         }
 
     }
