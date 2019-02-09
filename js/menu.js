@@ -1,7 +1,6 @@
 const headerMenu = document.querySelector('.header-wrapper-menu')
 
 //funkcja zmieniające tło menu
-
 function showMenu() {
     window.addEventListener("scroll", function () {
         const previewsOffsetTop = document.querySelector('.section-previews').offsetTop //odległość od góry
@@ -15,6 +14,7 @@ function showMenu() {
 
 }
 showMenu()
+
 //inny rodzaj funkcji zmieniającej tło menu
 // window.addEventListener("scroll", function () {
 // const headerHeight = document.querySelector('header').clientHeight
@@ -24,6 +24,21 @@ showMenu()
 //         headerMenu1.style.backgroundColor = "transparent"
 //     }
 // })
+
+
+
+//funckcja pokazująca li menu z opóźnieniem, zrobić żeby opóżnienie było na kazde li z osobna
+headerMenu.addEventListener("click", function () {
+    const liMenu = [...document.querySelectorAll('.menu li')]
+    setTimeout(function () {
+        for (let i = 0; i < liMenu.length; i++) {
+            liMenu[i].style.transition = "0.5s"
+            liMenu[i].style.transform = "translate(0%)"
+        }
+    }, 500)
+});
+
+
 
 //funckja pokazująca menu
 const menu = document.querySelector('.menu')
