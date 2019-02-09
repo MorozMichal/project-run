@@ -1,6 +1,7 @@
 const headerMenu = document.querySelector('.header-wrapper-menu')
 
 //funkcja zmieniające tło menu
+
 function showMenu() {
     window.addEventListener("scroll", function () {
         const previewsOffsetTop = document.querySelector('.section-previews').offsetTop //odległość od góry
@@ -15,48 +16,38 @@ function showMenu() {
 }
 showMenu()
 
-//inny rodzaj funkcji zmieniającej tło menu
-// window.addEventListener("scroll", function () {
-// const headerHeight = document.querySelector('header').clientHeight
-//     if (scrollY > headerHeight) {
-//         headerMenu1.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
-//     } else {
-//         headerMenu1.style.backgroundColor = "transparent"
-//     }
-// })
-
-
-
-//funckcja pokazująca li menu z opóźnieniem, zrobić żeby opóżnienie było na kazde li z osobna
-headerMenu.addEventListener("click", function () {
-    const liMenu = [...document.querySelectorAll('.menu li')]
-    setTimeout(function () {
-        for (let i = 0; i < liMenu.length; i++) {
-            liMenu[i].style.transition = "0.5s"
-            liMenu[i].style.transform = "translate(0%)"
-        }
-    }, 500)
-});
-
-
 
 //funckja pokazująca menu
 const menu = document.querySelector('.menu')
 const menuShowBtn = document.querySelector('.header-menu')
 const menuCloseBtn = document.querySelector('.menu-close')
+const liMenu = document.querySelectorAll('.menu li')
 
 menuShowBtn.addEventListener("click", function () {
     menu.style.transform = "translate(0%)"
     menuShowBtn.style.opacity = "0"
+    //pokazuje pokolei z opóznieniem li menu
+    let timeA = 0.5;
+    for (let i = 0; i < liMenu.length; i++) {
+        liMenu[i].style.transition = timeA + 's'
+        liMenu[i].style.transform = "translate(0%)"
+        timeA = timeA + 0.2
+    }
 })
 
 menuCloseBtn.addEventListener("click", function () {
     menu.style.transform = "translate(100%)"
     menuShowBtn.style.opacity = "1"
+    //chowa z opóżnieniem li menu
+    let timeA = 0.5;
+    for (let i = 0; i < liMenu.length; i++) {
+        liMenu[i].style.transition = timeA + 's'
+        liMenu[i].style.transform = "translate(100%)"
+        timeA = timeA + 0.2
+    }
 })
 
-
-//chowanie manu po kliknęciu na każda z sekcio oprócz footer i header
+//chowanie manu po kliknęciu na każda z sekcio oprócz header
 const clickAreas = document.querySelectorAll('section')
 
 clickAreas.forEach(function (clickArea) {
@@ -66,14 +57,6 @@ clickAreas.forEach(function (clickArea) {
     })
 
 })
-
-
-// const header = document.querySelector("header")
-
-// header.addEventListener("click", function () {
-//     menu.style.transform = "translate(100%)"
-//     menuShowBtn.style.opacity = "1"
-// })
 
 const footer = document.querySelector("footer")
 
