@@ -45,19 +45,26 @@ body {
   letter-spacing: 0.1rem;
 }
 
-.menu li a:hover {
-  color: rgba(255, 255, 255, 0.9);
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.menu li:hover a {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .menu li:nth-child(1) {
+  line-height: 2.5rem;
   font-size: 1.5rem;
-  padding-top: 1rem;
+  padding: 0;
   padding-right: 4rem;
   text-align: right;
   border-bottom: none;
 }
 
 .menu li:nth-child(1):hover {
+  background-color: none;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -80,8 +87,8 @@ header .header-wrapper-menu {
   padding-right: 3.5rem;
   background-color: transparent;
   position: fixed;
-  line-height: 3.5rem;
-  height: 3.5rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
   z-index: 1000;
 }
 
@@ -114,6 +121,47 @@ header h1 {
   width: 100%;
   text-transform: uppercase;
   text-align: center;
+}
+
+header .header-button-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 3rem;
+  -webkit-animation: headerButtonDown 2s linear infinite;
+          animation: headerButtonDown 2s linear infinite;
+}
+
+header .header-button-down:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes headerButtonDown {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes headerButtonDown {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* previews */
@@ -206,6 +254,9 @@ header h1 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
   padding: 10px 0;
   background-color: rgba(210, 210, 210, 0.7);
 }

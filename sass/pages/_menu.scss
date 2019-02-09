@@ -25,21 +25,29 @@
 
         }
 
-        a:hover {
-            color: rgba(255, 255, 255, 0.9);
-        }
     }
 
+    li:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+
+    }
+
+    li:hover a {
+        color: rgba(0, 0, 0, 0.5);
+    }
 
     li:nth-child(1) {
+        line-height: 2.5rem;
         font-size: 1.5rem;
-        padding-top: 1rem;
+        padding: 0;
         padding-right: 4rem;
         text-align: right;
         border-bottom: none;
     }
 
     li:nth-child(1):hover {
+        background-color: none;
         cursor: pointer;
         color: rgba(255, 255, 255, 0.9);
     }

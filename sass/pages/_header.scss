@@ -15,8 +15,8 @@ header {
         padding-right: 3.5rem;
         background-color: transparent;
         position: fixed;
-        line-height: 3.5rem;
-        height: 3.5rem;
+        line-height: 2.5rem;
+        height: 2.5rem;
         z-index: 1000;
 
         .header-menu {
@@ -54,4 +54,33 @@ header {
 
     }
 
+    .header-button-down {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0.5rem 3rem;
+        animation: headerButtonDown 2s linear infinite;
+    }
+
+    .header-button-down:hover {
+        cursor: pointer;
+    }
+
+}
+
+@keyframes headerButtonDown {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

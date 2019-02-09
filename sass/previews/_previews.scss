@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-
     overflow: hidden;
 
 
@@ -27,8 +26,6 @@
         }
 
     }
-
-
 
     .section-previews-racing {
         flex-basis: 35%;
@@ -60,8 +57,6 @@
 
         }
 
-
-
         .section-previews-all {
             display: flex;
             flex-basis: 90%;
@@ -71,6 +66,7 @@
                 flex-basis: 50%;
                 text-align: center;
                 align-self: center;
+                align-self: stretch;
                 padding: 10px 0;
                 background-color: rgba(210, 210, 210, 0.7);
 
@@ -89,7 +85,6 @@
                 background-color: rgba(210, 210, 210, 0.3);
                 cursor: pointer;
             }
-
 
         }
 
