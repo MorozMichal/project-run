@@ -1,7 +1,6 @@
 const headerMenu = document.querySelector('.header-wrapper-menu')
 
 //funkcja zmieniające tło menu
-
 function showMenu() {
     window.addEventListener("scroll", function () {
         const menuButton = document.querySelector('.header-menu')
@@ -19,51 +18,65 @@ function showMenu() {
 }
 showMenu()
 
-
 //funckja pokazująca menu
 const menu = document.querySelector('.menu')
 const menuShowBtn = document.querySelector('.header-menu')
 const menuCloseBtn = document.querySelector('.menu-close')
 const liMenu = document.querySelectorAll('.menu li')
 
+//funkcja pokazująca li menu z opóźnieniem
+function liDelayShow() {
+    let timeDelay = 0.5
+    for (let i = 0; i < liMenu.length; i++) {
+        liMenu[i].style.transition = `${timeDelay}s`
+        liMenu[i].style.transform = "translate(0%)"
+        timeDelay += 0.2
+    }
+}
+
+//funkcja chowająca li menu z opóżnienem
+function liDelayHide() {
+    let timeDelay = 0.5
+    for (let i = 0; i < liMenu.length; i++) {
+        liMenu[i].style.transition = `${timeDelay}s`
+        liMenu[i].style.transform = "translate(100%)"
+        timeDelay += 0.2
+    }
+}
+
+//pokaznie menu po kliknięciu w button menu
 menuShowBtn.addEventListener("click", function () {
     menu.style.transform = "translate(0%)"
     menuShowBtn.style.opacity = "0"
-    //pokazuje pokolei z opóznieniem li menu
-    let timeA = 0.5;
-    for (let i = 0; i < liMenu.length; i++) {
-        liMenu[i].style.transition = timeA + 's'
-        liMenu[i].style.transform = "translate(0%)"
-        timeA = timeA + 0.2
-    }
+    liDelayShow()
+
 })
 
+//chowanie menu po kliknięciu w button X
 menuCloseBtn.addEventListener("click", function () {
     menu.style.transform = "translate(100%)"
     menuShowBtn.style.opacity = "1"
-    //chowa z opóżnieniem li menu
-    let timeA = 0.5;
-    for (let i = 0; i < liMenu.length; i++) {
-        liMenu[i].style.transition = timeA + 's'
-        liMenu[i].style.transform = "translate(100%)"
-        timeA = timeA + 0.2
-    }
+    liDelayHide()
+
 })
 
-//chowanie manu po kliknęciu na każda z sekcio oprócz header
+//chowanie menu po kliknęciu na każdą inna  z sekcji oprócz header i footer
 const clickAreas = document.querySelectorAll('section')
 
 clickAreas.forEach(function (clickArea) {
     clickArea.addEventListener("click", function () {
         menu.style.transform = "translate(100%)"
         menuShowBtn.style.opacity = "1"
+        liDelayHide()
     })
 
 })
 
+//chowanie menu po kliknęciu w sekcję footer
 const footer = document.querySelector("footer")
 
 footer.addEventListener("click", function () {
     menu.style.transform = "translate(100%)"
     menuShowBtn.style.opacity = "1"
+    liDelayHide()
 })

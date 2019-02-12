@@ -8,6 +8,7 @@ calcH2s.forEach(function (calcH2) {
         this.nextElementSibling.classList.toggle("calc-novisible"); //przełącza klasę następnego brata po this czyli po h2 
         this.nextElementSibling.classList.toggle("calc-visible");
 
+
     })
 })
 
