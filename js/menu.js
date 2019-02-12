@@ -1,22 +1,18 @@
 const headerMenu = document.querySelector('.header-wrapper-menu')
 
 //funkcja zmieniające tło menu
-function showMenu() {
-    window.addEventListener("scroll", function () {
-        const menuButton = document.querySelector('.header-menu')
-        const previewsOffsetTop = document.querySelector('.section-previews').offsetTop //odległość od góry
-        if (scrollY > previewsOffsetTop) {
-            headerMenu.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
-            menuButton.style.color = "rgba(0, 0, 0, 0.7)"
+window.addEventListener("scroll", function () {
+    const menuButton = document.querySelector('.header-menu')
+    const previewsOffsetTop = document.querySelector('.section-previews').offsetTop //odległość od góry
+    if (scrollY > previewsOffsetTop) {
+        headerMenu.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
+        menuButton.style.color = "rgba(0, 0, 0, 0.7)"
 
-        } else {
-            headerMenu.style.backgroundColor = "transparent"
-            menuButton.style.color = "rgba(255, 255, 255, 0.3)"
-        }
-    })
-
-}
-showMenu()
+    } else {
+        headerMenu.style.backgroundColor = "transparent"
+        menuButton.style.color = "rgba(255, 255, 255, 0.3)"
+    }
+})
 
 //funckja pokazująca menu
 const menu = document.querySelector('.menu')

@@ -923,8 +923,6 @@ footer .footer-logo {
       flex-basis: 100%;
   font-size: 2rem;
   line-height: calc(2rem + 2rem);
-  -webkit-animation: footer-logo linear 1.5s;
-          animation: footer-logo linear 1.5s;
 }
 
 @media screen and (min-width: 739px) {
