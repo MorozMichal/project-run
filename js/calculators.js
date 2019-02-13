@@ -40,7 +40,7 @@ function bmiCalc(e) {
             bmiAlert.textContent = "I STOPIEŃ OTYŁOŚCI";
         } else if (obliczenie <= 39.99) {
             bmiAlert.textContent = "II STOPIEŃ OTYŁOŚCI";
-        } else if (obliczenie >= 40.00) {
+        } else {
             bmiAlert.textContent = "III STOPIEŃ OTYŁOŚCI";
         }
     } else {
