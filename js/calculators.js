@@ -156,9 +156,7 @@ function placeOfRunningCalc(e) {
 
     if (timeH + timeM + timeSek <= 0 || distanceKm + distanceM + distanceChoice <= 0) {
         PalceofRunningTempoResult.textContent = "uzupełnij brakujące pola";
-    }
-
-    if (distanceChoice > 0) {
+    } else if (distanceChoice > 0) {
         distance = distanceChoice
     } else {
         distance = distanceKm + distanceM / 1000
