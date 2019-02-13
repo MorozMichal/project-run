@@ -28,26 +28,19 @@ function bmiCalc(e) {
         document.querySelector(".bmi-result-p2").textContent = obliczenie;
         if (obliczenie < 16.00) {
             bmiAlert.textContent = "WYGŁODZENIE";
-        }
-        if (obliczenie >= 16.00 && obliczenie <= 16.99) {
+        } else if (obliczenie >= 16.00 && obliczenie <= 16.99) {
             bmiAlert.textContent = "WYCHUDZENIE";
-        }
-        if (obliczenie >= 17.00 && obliczenie <= 18.49) {
+        } else if (obliczenie >= 17.00 && obliczenie <= 18.49) {
             bmiAlert.textContent = "NIEDOWAGA";
-        }
-        if (obliczenie >= 18.50 && obliczenie <= 24.99) {
+        } else if (obliczenie >= 18.50 && obliczenie <= 24.99) {
             bmiAlert.textContent = "PRAWIDŁOWA WAGA";
-        }
-        if (obliczenie >= 25.00 && obliczenie <= 29.99) {
+        } else if (obliczenie >= 25.00 && obliczenie <= 29.99) {
             bmiAlert.textContent = "NADWAGA";
-        }
-        if (obliczenie >= 30.00 && obliczenie <= 34.99) {
+        } else if (obliczenie >= 30.00 && obliczenie <= 34.99) {
             bmiAlert.textContent = "I STOPIEŃ OTYŁOŚCI";
-        }
-        if (obliczenie >= 35.00 && obliczenie <= 39.99) {
+        } else if (obliczenie >= 35.00 && obliczenie <= 39.99) {
             bmiAlert.textContent = "II STOPIEŃ OTYŁOŚCI";
-        }
-        if (obliczenie >= 40.00) {
+        } else if (obliczenie >= 40.00) {
             bmiAlert.textContent = "III STOPIEŃ OTYŁOŚCI";
         }
     } else {

@@ -2,7 +2,7 @@
 const footerLogo = document.querySelector('.footer-logo')
 const footerPosition = document.querySelector('.footer-logo').offsetTop
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
     if (scrollY > footerPosition) {
         footerLogo.style.animation = "footer-logo linear 1.5s"
     } else {
