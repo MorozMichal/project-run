@@ -23,7 +23,7 @@ h2Cities.forEach(function (h2City, index) {
 });
 
 //funkcja chowania i zmiany kolejnosci wyswietlania divo poszczegolnch miast
-function reset() {
+const reset = function () {
   const noActive = document.querySelectorAll(".no-active");
   for (let i = 0; i < noActive.length; i++) {
     noActive[i].style.order = "1"; //nadanie wszystkim div kolejnosci
@@ -33,7 +33,7 @@ function reset() {
 }
 
 //funkcja przesuwa elementy przy pierwszym zaladowaniu strony
-function showContest() {
+const showContest = function () {
   const SectionContestContest = document.querySelector(".running-contest");
   SectionContestContest.style.transition = "0.5s"; //czas wjazdu opisu w lewa strone
   SectionContestContest.style.transform = "translateX(0%)"; // przesuniecie sie opisu do pozycji 0

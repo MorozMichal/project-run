@@ -21,7 +21,7 @@ const menuCloseBtn = document.querySelector('.menu-close')
 const liMenu = document.querySelectorAll('.menu li')
 
 //funkcja pokazująca li menu z opóźnieniem
-function liDelayShow() {
+const liDelayShow = function () {
     let timeDelay = 0.5
     for (let i = 0; i < liMenu.length; i++) {
         liMenu[i].style.transition = `${timeDelay}s`
@@ -31,7 +31,7 @@ function liDelayShow() {
 }
 
 //funkcja chowająca li menu z opóżnienem
-function liDelayHide() {
+const liDelayHide = function () {
     let timeDelay = 0.5
     for (let i = 0; i < liMenu.length; i++) {
         liMenu[i].style.transition = `${timeDelay}s`

@@ -18,7 +18,7 @@ const btnCalcBmi = document.querySelector(".calc-bmi-flex .button-calculate");
 const btnCleanBmi = document.querySelector(".calc-bmi-flex .button-clean");
 const bmiAlert = document.querySelector(".bmi-result-p3");
 
-function bmiCalc(e) {
+const bmiCalc = function (e) {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     let weight = document.bmi.weight.value;
     let height = document.bmi.height.value;
@@ -49,7 +49,7 @@ function bmiCalc(e) {
 
 };
 
-function bmiReset(e) {
+const bmiReset = function (e) {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     document.bmi.weight.value = "";
     document.bmi.height.value = "";
@@ -66,7 +66,7 @@ const btnCalcDistance = document.querySelector(".calc-distances .button-calculat
 const btnCleanDistance = document.querySelector(".calc-distances .button-clean");
 const distanceResult = document.querySelector(".calc-distances .result-p1");
 
-function distanceCalc(e) {
+const distanceCalc = function (e) {
     e.preventDefault();
     let tempoMin = eval(document.distance.tempoMin.value);
     let tempoSek = eval(document.distance.tempoSek.value);
@@ -86,7 +86,7 @@ function distanceCalc(e) {
     }
 }
 
-function distanceReset(e) {
+const distanceReset = function (e) {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     document.distance.tempoMin.value = "0";
     document.distance.tempoSek.value = "0";
@@ -106,7 +106,7 @@ const btnCalcEpisode = document.querySelector(".calc-episode-time .button-calcul
 const btnCleanEpisode = document.querySelector(".calc-episode-time .button-clean");
 const episodeResult = document.querySelector(".episode-time-result-p2");
 
-function episodeCalc(e) {
+const episodeCalc = function (e) {
     e.preventDefault();
     let tempoMin = eval(document.episode.tempoMin.value);
     let tempoSek = eval(document.episode.tempoSek.value);
@@ -127,7 +127,7 @@ function episodeCalc(e) {
     }
 }
 
-function episodeReset(e) {
+const episodeReset = function (e) {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     document.episode.tempoMin.value = "0";
     document.episode.tempoSek.value = "0";
@@ -145,7 +145,7 @@ const btnCleanPalceofRunning = document.querySelector(".calc-place-of-running .b
 const PalceofRunningTempoResult = document.querySelector(".place-of-running-tempo-result-p2");
 const PalceofRunningSpeedResult = document.querySelector(".place-of-running-speed-result-p4");
 
-function placeOfRunningCalc(e) {
+const placeOfRunningCalc = function (e) {
     e.preventDefault();
     let distanceKm = eval(document.placeofrunning.distancekm.value);
     let distanceM = eval(document.placeofrunning.distancem.value);
@@ -176,7 +176,7 @@ function placeOfRunningCalc(e) {
 
 }
 
-function placeOfRunningReset(e) {
+const placeOfRunningReset = function (e) {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     document.placeofrunning.timeH.value = "0";
     document.placeofrunning.timeM.value = "0";

@@ -15,7 +15,7 @@ const showBtns = [
   ...document.querySelectorAll(".relation-1st-descrition .show")
 ];
 
-function resetRelations() {
+const resetRelations = function () {
   for (let i = 0; i < relations.length; i++) {
     relations[i].style.transition = "0.5s";
     relations[i].style.flexBasis = "50%";
@@ -39,8 +39,8 @@ function resetRelations() {
   }
 }
 
-showBtns.forEach(function(showBtn, index) {
-  showBtn.addEventListener("click", function() {
+showBtns.forEach(function (showBtn, index) {
+  showBtn.addEventListener("click", function () {
     resetRelations();
     allDescriptions[index].classList.toggle("novisible");
     allDescriptions[index].style.flexBasis = "30%";
@@ -54,8 +54,8 @@ showBtns.forEach(function(showBtn, index) {
   });
 });
 
-closeBtns.forEach(function(closeBtn, index) {
-  closeBtn.addEventListener("click", function() {
+closeBtns.forEach(function (closeBtn, index) {
+  closeBtn.addEventListener("click", function () {
     allDescriptions[index].classList.toggle("novisible");
     allDescriptions[index].style.flexBasis = "50%";
     relations[index].style.transition = "0.5s";
