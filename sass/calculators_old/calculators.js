@@ -1,16 +1,14 @@
 //calculators
 
 // function show calculators
-const calcH2s = document.querySelectorAll(".section-calculators-header h2");
-const calcContent = [...document.querySelectorAll(".calc-novisible")]
+const calcH2s = document.querySelectorAll(".calculators h2");
 
-calcH2s.forEach(function (calcH2, index) {
+calcH2s.forEach(function (calcH2) {
     calcH2.addEventListener('click', function () {
-        for (let i = 0; i < calcContent.length; i++) {
-            calcContent[i].classList.add('calc-novisible')
-        }
-        calcContent[index].style.transition = "1.5s"
-        calcContent[index].classList.remove('calc-novisible')
+        this.nextElementSibling.classList.toggle("calc-novisible"); //przełącza klasę następnego brata po this czyli po h2 
+        this.nextElementSibling.classList.toggle("calc-visible");
+
+
     })
 })
 

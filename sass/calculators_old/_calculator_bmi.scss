@@ -1,0 +1,28 @@
+/* calculator BMI */
+
+.calc-bmi-flex {
+    display: flex;
+    flex-direction: column;
+
+    .bmi-form {
+
+        form {
+            display: flex;
+            flex-direction: row;
+
+            .input-bmi-weight {
+                flex-basis: 50%;
+                margin-left: 15%;
+
+            }
+
+            .input-bmi-height {
+                flex-basis: 50%;
+                margin-right: 15%;
+            }
+        }
+
+    }
+
+
+}

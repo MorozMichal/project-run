@@ -1,11 +1,24 @@
 .section-calculators {
-    .calculators {
-        display: flex;
-        flex-direction: column;
+    background-image: url(../img/background_calculators.jpg);
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+
+    .section-calculators-content {
+        flex-basis: 60%;
+        position: relative;
 
         article {
-            border: 1px solid white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
+            transition: 1s;
 
             p {
                 font-size: 1rem;
@@ -16,41 +29,35 @@
             }
 
             .calc-novisible {
-                display: none;
-                // transition: 2s;
-                // height: 0px;
-                // overflow: hidden;
-
+                opacity: 0;
+                transition: 1s;
             }
 
-            .calc-visible {
-                display: block;
-                // overflow: hidden;
-                // transition: 2s;
-                // height: 250px;
 
+        }
 
+    }
+
+    .section-calculators-header {
+        flex-basis: 40%;
+
+        h2 {
+            background-color: rgba(137, 165, 192, 0.2);
+            font-size: 1rem;
+            line-height: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s linear;
+
+            &:hover {
+                background-color: rgba(137, 165, 192, 0.5);
+                color: white;
             }
 
-            h2 {
-                background-color: rgba(137, 165, 192, 0.9);
-                font-size: 1rem;
-                line-height: 3rem;
-                text-transform: uppercase;
-                text-align: center;
-                cursor: pointer;
-                transition: 0.3s linear;
-
-                &:hover {
-                    background-color: rgba(137, 165, 192, 0.6);
-                    color: white;
-                }
-
-                @media screen and (min-width: 760px) {
-                    font-size: 1.5rem;
-                    line-height: 4rem;
-                }
-
+            @media screen and (min-width: 760px) {
+                font-size: 1.5rem;
+                line-height: 6rem;
             }
 
         }
@@ -69,6 +76,7 @@
         width: 4rem;
 
     }
+
 }
 
 .input-episode-distance input {

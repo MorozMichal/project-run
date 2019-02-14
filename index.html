@@ -32,6 +32,7 @@
     <li><a class="nav-links" href="#">linki</a></li>
     <li><a class="nav-contact" href="#footer">kontakt</a></li>
   </ul>
+
   <section class="section-previews">
     <div class="section-previews-content">
       <div class="preview-content">
@@ -201,6 +202,8 @@
       </div>
     </div>
   </section>
+
+  <!-- STARA WERSJA ZAPOWIEDZI-->
   <!-- <section class="section-previews">
     <article>
       <div class="previews">
@@ -527,8 +530,6 @@
     </article>
   </section>
 
-
-
   <section class="section-running">
     <div class="section-running-wrapper">
       <div class=" running-arms">
@@ -792,8 +793,148 @@
     </div>
   </section>
 
-
   <section class="section-calculators">
+    <div class="section-calculators-content">
+      <div class="calculators">
+        <article class="calc-BMI">
+          <div class="calc-novisible">
+            <div class="calc-bmi-flex">
+              <div class="bmi-form">
+                <form name="bmi">
+                  <div class="input-bmi-weight">
+                    <p>Masa ciała w kg</p>
+                    <input type="number" value="" name="weight">
+                  </div>
+                  <div class="input-bmi-height">
+                    <p>Wzrost w cm</p>
+                    <input type="number" value="" name="height">
+                  </div>
+                </form>
+              </div>
+              <div class="bmi-result">
+                <p class="bmi-result-p1">Twój wynik to</p>
+                <p class="bmi-result-p2"></p>
+                <p class="bmi-result-p3"></p>
+              </div>
+              <div class="button-wrapper">
+                <button class="button-calculate">oblicz</button>
+                <button class="button-clean">wyczyść</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="calc-distances">
+          <div class="calc-novisible">
+            <form action="" name="distance">
+              <p>Planowane tempo biegu:</p>
+              <p><input type="number" value="6" min="0" max="20" name="tempoMin">min
+                <input type="number" value="0" min="0" max="59" name="tempoSek">sek</p>
+              <p>Planowany czas biegu:</p>
+              <p><input type="number" value="1" min="0" max="59" name="timeH">h
+                <input type="number" value="0" min="0" max="59" name="timeMin">min
+                <input type="number" value="0" min="0" max="59" name="timeSek">sek</p>
+            </form>
+            <p>Dystans: <span class="result-p1"></span></p>
+            <div class="button-wrapper">
+              <button class="button-calculate">oblicz</button>
+              <button class="button-clean">wyczyść</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="calc-episode-time">
+          <div class="calc-novisible">
+            <div class="calc-episode-time-flex">
+              <div class="episode-time-form">
+                <form action="" name="episode">
+                  <div class="input-episode-tempo">
+                    <p>Planowane tempo biegu:</p>
+                    <p><input type="number" value="0" name="tempoMin">min
+                      <input type="number" value="0" name="tempoSek">sek</p>
+                  </div>
+                  <div class="input-episode-distance">
+                    <p>Dystans odcinka(metry):
+                      <input type="number" value="0" name="distance">m</p>
+                  </div>
+                </form>
+              </div>
+              <div class="episode-time-result">
+                <p class="episode-time-result-p1">Twój czas odcinka to:</p>
+                <p class="episode-time-result-p2"></p>
+              </div>
+              <div class="button-wrapper">
+                <button class="button-calculate">oblicz</button>
+                <button class="button-clean">wyczyść</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="calc-place-of-running">
+          <div class="calc-novisible">
+            <div>
+              <p>Wybierz dystans</p>
+              <div class="calc-place-of-running-flex">
+                <div class="place-of-running-form">
+                  <form name="placeofrunning">
+                    <select name="placeofrunningdistances">
+                      <option value="0"></option>
+                      <option value="1">1 km</option>
+                      <option value="3">3 km</option>
+                      <option value="5">5 km</option>
+                      <option value="10">10 km</option>
+                      <option value="12">12 km</option>
+                      <option value="15">15 km</option>
+                      <option value="21.097">21.097 km (półmaraton)</option>
+                      <option value="30">30 km</option>
+                      <option value="42.195">42.195 km (maraton)</option>
+                    </select>
+                    <div class="input-place-of-running-distance">
+                      <p>lub podaj:
+                        <input type="number" value="0" name="distancekm">km
+                        <input type="number" value="0" name="distancem">m</p>
+                    </div>
+                    <div class="input-place-of-running-time">
+                      <p>Planowany wynik:</p>
+                      <p><input type="number" value="0" name="timeH">h
+                        <input type="number" value="0" name="timeM">min
+                        <input type="number" value="0" name="timeSek">sek</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="place-of-running-result">
+                <div>
+                  <p class="place-of-running-tempo-result-p1">Twoje tempo:</p>
+                  <p class="place-of-running-tempo-result-p2"></p>
+                </div>
+                <div>
+                  <p class="place-of-running-speed-result-p3">Twoja prędkość:</p>
+                  <p class="place-of-running-speed-result-p4"></p>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button-calculate">oblicz</button>
+                <button class="button-clean">wyczyść</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="section-calculators-header">
+      <h2>kalkulator BMI</h2>
+      <h2>kalkulator odległości</h2>
+      <h2>kalkulator czasu odcinka</h2>
+      <h2>kalkulator tempa biegu</h2>
+    </div>
+  </section>
+
+
+  <!-- STARA WERSJA KALKULATORA-->
+  <!-- <section class="section-calculators">
     <div class="calculators">
       <article class="calc-BMI">
         <h2>kalkulator BMI</h2>
@@ -929,7 +1070,7 @@
     </div>
     </article>
     </div>
-  </section>
+  </section> -->
 
   <section class="section-links">
     <article>
