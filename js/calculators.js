@@ -3,14 +3,20 @@
 // function show calculators
 const calcH2s = document.querySelectorAll(".section-calculators-header h2");
 const calcContent = [...document.querySelectorAll(".calc-novisible")]
+const calcArticle = [...document.querySelectorAll(".calculators article")]
 
 calcH2s.forEach(function (calcH2, index) {
     calcH2.addEventListener('click', function () {
         for (let i = 0; i < calcContent.length; i++) {
             calcContent[i].classList.add('calc-novisible')
         }
+        for (let i = 0; i < calcArticle.length; i++) {
+            calcArticle[i].style.zIndex = "-1"
+        }
         calcContent[index].style.transition = "1.5s"
         calcContent[index].classList.remove('calc-novisible')
+        calcArticle[index].style.zIndex = "1"
+
     })
 })
 

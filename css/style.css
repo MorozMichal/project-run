@@ -668,6 +668,7 @@ header .header-button-down:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 100%;
   text-align: center;
   -webkit-transition: 1s;
   transition: 1s;
@@ -709,7 +710,7 @@ header .header-button-down:hover {
 @media screen and (min-width: 760px) {
   .section-calculators .section-calculators-header h2 {
     font-size: 1.5rem;
-    line-height: 6rem;
+    line-height: 7rem;
   }
 }
 
