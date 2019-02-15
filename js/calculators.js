@@ -1,103 +1,100 @@
-//calculators
-
 // function show calculators
-const calcH2s = document.querySelectorAll(".section-calculators-header h2");
-const calcContent = [...document.querySelectorAll(".calc-novisible")]
-const calcArticle = [...document.querySelectorAll(".calculators article")]
+const calcH2s = document.querySelectorAll(".section-calculators-header h2")
+const calcContents = document.querySelectorAll(".calc-novisible")
+const calcArticles = document.querySelectorAll(".calculators article")
 
-calcH2s.forEach(function (calcH2, index) {
-    calcH2.addEventListener('click', function () {
-        for (let i = 0; i < calcArticle.length; i++) {
-            calcArticle[i].style.transition = "0.5s"
-            calcArticle[i].style.zIndex = "-1"
-        }
-        for (let i = 0; i < calcContent.length; i++) {
-            calcContent[i].classList.add('calc-novisible')
-        }
+calcH2s.forEach((calcH2, index) => {
+    calcH2.addEventListener('click', () => {
+        calcArticles.forEach(calcArticle => {
+            calcArticle.style.transition = "0.5s"
+            calcArticle.style.zIndex = "-1"
+        })
+        calcContents.forEach(calcContent => calcContent.classList.add('calc-novisible'))
 
-        calcContent[index].style.transition = "1s"
-        calcContent[index].classList.remove('calc-novisible')
-        calcArticle[index].style.zIndex = "1"
+        calcContents[index].style.transition = "1s"
+        calcContents[index].classList.remove('calc-novisible')
+        calcArticles[index].style.zIndex = "1"
 
     })
 })
 
 //calculator BMI
-
 const btnCalcBmi = document.querySelector(".calc-bmi-flex .button-calculate");
 const btnCleanBmi = document.querySelector(".calc-bmi-flex .button-clean");
-const bmiAlert = document.querySelector(".bmi-result-p3");
+const bmiInfo = document.querySelector(".bmi-result-p3");
+const bmiAlert = document.querySelector(".bmi-result-p2");
 
-const bmiCalc = function (e) {
+const bmiCalc = (e) => {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     let weight = document.bmi.weight.value;
     let height = document.bmi.height.value;
 
     if (weight > 0 && height > 0) {
-        let obliczenie = (weight / (height / 100 * height / 100)).toFixed(2); //toFixed(2) zaokrągla do dwóch miejsce po przecinku
-        document.querySelector(".bmi-result-p2").textContent = obliczenie;
-        if (obliczenie < 16.00) {
-            bmiAlert.textContent = "WYGŁODZENIE";
-        } else if (obliczenie <= 16.99) {
-            bmiAlert.textContent = "WYCHUDZENIE";
-        } else if (obliczenie <= 18.49) {
-            bmiAlert.textContent = "NIEDOWAGA";
-        } else if (obliczenie <= 24.99) {
-            bmiAlert.textContent = "PRAWIDŁOWA WAGA";
-        } else if (obliczenie <= 29.99) {
-            bmiAlert.textContent = "NADWAGA";
-        } else if (obliczenie <= 34.99) {
-            bmiAlert.textContent = "I STOPIEŃ OTYŁOŚCI";
-        } else if (obliczenie <= 39.99) {
-            bmiAlert.textContent = "II STOPIEŃ OTYŁOŚCI";
+        let score = (weight / (height / 100 * height / 100)).toFixed(2); //toFixed(2) zaokrągla do dwóch miejsce po przecinku
+        document.querySelector(".bmi-result-p2").textContent = score;
+        if (score < 16.00) {
+            bmiInfo.textContent = "WYGŁODZENIE";
+        } else if (score <= 16.99) {
+            bmiInfo.textContent = "WYCHUDZENIE";
+        } else if (score <= 18.49) {
+            bmiInfo.textContent = "NIEDOWAGA";
+        } else if (score <= 24.99) {
+            bmiInfo.textContent = "PRAWIDŁOWA WAGA";
+        } else if (score <= 29.99) {
+            bmiInfo.textContent = "NADWAGA";
+        } else if (score <= 34.99) {
+            bmiInfo.textContent = "I STOPIEŃ OTYŁOŚCI";
+        } else if (score <= 39.99) {
+            bmiInfo.textContent = "II STOPIEŃ OTYŁOŚCI";
         } else {
-            bmiAlert.textContent = "III STOPIEŃ OTYŁOŚCI";
+            bmiInfo.textContent = "III STOPIEŃ OTYŁOŚCI";
         }
     } else {
-        document.querySelector(".bmi-result-p2").textContent = "coś nie tak!!";
+        bmiAlert.textContent = "PROSZĘ PODAĆ PRAWIDŁOWE DANE";
+        bmiInfo.textContent = "";
     }
 
 };
 
-const bmiReset = function (e) {
+const bmiReset = (e) => {
     e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
     document.bmi.weight.value = "";
     document.bmi.height.value = "";
-    document.querySelector(".bmi-result-p2").textContent = "";
     bmiAlert.textContent = "";
+    bmiInfo.textContent = "";
 }
 
 btnCalcBmi.addEventListener("click", bmiCalc);
 btnCleanBmi.addEventListener("click", bmiReset);
 
 //kalkulator dystansu
-
 const btnCalcDistance = document.querySelector(".calc-distances .button-calculate");
 const btnCleanDistance = document.querySelector(".calc-distances .button-clean");
 const distanceResult = document.querySelector(".calc-distances .result-p1");
 
-const distanceCalc = function (e) {
+const distanceCalc = (e) => {
     e.preventDefault();
-    let tempoMin = eval(document.distance.tempoMin.value);
-    let tempoSek = eval(document.distance.tempoSek.value);
-    let timeH = eval(document.distance.timeH.value);
-    let timeMin = eval(document.distance.timeMin.value);
-    let timeSek = eval(document.distance.timeSek.value);
+    let tempoMin = document.distance.tempoMin.value * 1; //*1 zmiania na liczbę bez eval(zawartość)
+    let tempoSek = document.distance.tempoSek.value * 1;
+    let timeH = document.distance.timeH.value * 1;
+    let timeMin = document.distance.timeMin.value * 1;
+    let timeSek = document.distance.timeSek.value * 1;
 
     let tempoResult = (tempoMin * 60 + tempoSek);
-    let timeResult = (timeH * 3600 + timeMin * 60 + tempoSek);
+    let timeResult = (timeH * 3600 + timeMin * 60 + timeSek);
+    let distanceKm = Math.floor(timeResult / tempoResult);
+
+    let distanceM = Math.round(timeResult / tempoResult * 1000 - distanceKm * 1000);
 
     if (tempoResult > 0 && timeResult > 0) {
-        distanceKm = Math.floor(timeResult / tempoResult);
-        distanceM = Math.round(timeResult / tempoResult * 1000 - distanceKm * 1000);
-        distanceResult.textContent = distanceKm + " km " + distanceM + " m " //dac w grafisy
+        distanceResult.textContent = `${distanceKm} km ${distanceM} m`
     } else {
-        distanceResult.textContent = "Podałeś złe dane";
+        distanceResult.textContent = "PROSZĘ PODAC PRAWIDŁOWE DANE";
     }
 }
 
-const distanceReset = function (e) {
-    e.preventDefault(); //dzieki temu nie odswieza strony po klikcnieciu buttona
+const distanceReset = (e) => {
+    e.preventDefault();
     document.distance.tempoMin.value = "0";
     document.distance.tempoSek.value = "0";
     document.distance.timeH.value = "0";
@@ -111,7 +108,6 @@ btnCalcDistance.addEventListener("click", distanceCalc);
 btnCleanDistance.addEventListener("click", distanceReset);
 
 //kalkulator czasu odcinka
-
 const btnCalcEpisode = document.querySelector(".calc-episode-time .button-calculate");
 const btnCleanEpisode = document.querySelector(".calc-episode-time .button-clean");
 const episodeResult = document.querySelector(".episode-time-result-p2");
