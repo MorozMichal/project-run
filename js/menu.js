@@ -1,78 +1,75 @@
 const headerMenu = document.querySelector('.header-wrapper-menu')
+const menuShowBtn = document.querySelector('.header-menu')
+const previewsOffsetTop = document.querySelector('.section-previews').offsetTop //odległość od góry
 
 //funkcja zmieniające tło menu
-window.addEventListener("scroll", function () {
-    const menuButton = document.querySelector('.header-menu')
-    const previewsOffsetTop = document.querySelector('.section-previews').offsetTop //odległość od góry
+window.addEventListener("scroll", () => {
     if (scrollY > previewsOffsetTop) {
         headerMenu.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
-        menuButton.style.color = "rgba(0, 0, 0, 0.7)"
-
+        menuShowBtn.style.color = "rgba(0, 0, 0, 0.7)"
     } else {
         headerMenu.style.backgroundColor = "transparent"
-        menuButton.style.color = "rgba(255, 255, 255, 0.3)"
+        menuShowBtn.style.color = "rgba(255, 255, 255, 0.3)"
     }
 })
 
 //funckja pokazująca menu
 const menu = document.querySelector('.menu')
-const menuShowBtn = document.querySelector('.header-menu')
 const menuCloseBtn = document.querySelector('.menu-close')
-const liMenu = document.querySelectorAll('.menu li')
+const menuLis = document.querySelectorAll('.menu li')
 
 //funkcja pokazująca li menu z opóźnieniem
-const liDelayShow = function () {
+const liDelayShow = () => {
     let timeDelay = 0.5
-    for (let i = 0; i < liMenu.length; i++) {
-        liMenu[i].style.transition = `${timeDelay}s`
-        liMenu[i].style.transform = "translate(0%)"
-        timeDelay += 0.2
-    }
+    let timeDelayPlus = 0.2
+    menuLis.forEach(menuLi => {
+        menuLi.style.transition = `${timeDelay}s`
+        menuLi.style.transform = "translate(0%)"
+        timeDelay += timeDelayPlus
+    })
+
 }
 
 //funkcja chowająca li menu z opóżnienem
-const liDelayHide = function () {
+const liDelayHide = () => {
     let timeDelay = 0.5
-    for (let i = 0; i < liMenu.length; i++) {
-        liMenu[i].style.transition = `${timeDelay}s`
-        liMenu[i].style.transform = "translate(100%)"
-        timeDelay += 0.2
-    }
+    let timeDelayPlus = 0.2
+    menuLis.forEach(menuLi => {
+        menuLi.style.transition = `${timeDelay}s`
+        menuLi.style.transform = "translate(100%)"
+        timeDelay += timeDelayPlus
+    })
+
 }
 
 //pokaznie menu po kliknięciu w button menu
-menuShowBtn.addEventListener("click", function () {
+menuShowBtn.addEventListener("click", () => {
     menu.style.transform = "translate(0%)"
     menuShowBtn.style.opacity = "0"
     liDelayShow()
 
 })
 
-//chowanie menu po kliknięciu w button X
-menuCloseBtn.addEventListener("click", function () {
+//funkcja chowająca menu
+const menuHide = () => {
     menu.style.transform = "translate(100%)"
     menuShowBtn.style.opacity = "1"
+}
+
+//chowanie menu po kliknięciu w button X
+menuCloseBtn.addEventListener("click", () => {
+    menuHide()
     liDelayHide()
 
 })
 
-//chowanie menu po kliknęciu na każdą inna  z sekcji oprócz header i footer
-const clickAreas = document.querySelectorAll('section')
+//chowanie menu po kliknęciu na każdą inna sekcję oprócz header
+const clickAreas = document.querySelectorAll('.clickAreas')
 
-clickAreas.forEach(function (clickArea) {
-    clickArea.addEventListener("click", function () {
-        menu.style.transform = "translate(100%)"
-        menuShowBtn.style.opacity = "1"
+clickAreas.forEach(clickArea => {
+    clickArea.addEventListener("click", () => {
+        menuHide()
         liDelayHide()
     })
 
-})
-
-//chowanie menu po kliknęciu w sekcję footer
-const footer = document.querySelector("footer")
-
-footer.addEventListener("click", function () {
-    menu.style.transform = "translate(100%)"
-    menuShowBtn.style.opacity = "1"
-    liDelayHide()
 })

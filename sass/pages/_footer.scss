@@ -11,7 +11,6 @@ footer {
         flex-basis: 100%;
         font-size: $font-size-xxl;
         line-height: calc(#{$font-size-xxl} + 2rem); //jak jest zmienna w calc trzeba wstawiać #{}
-        // animation: footer-logo linear 1.5s; //dodano za pomocą JS zrobić toggle class
 
         @media screen and (min-width: 739px) {
             flex-basis: 60%;
