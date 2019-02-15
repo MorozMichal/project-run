@@ -7,13 +7,15 @@ const calcArticle = [...document.querySelectorAll(".calculators article")]
 
 calcH2s.forEach(function (calcH2, index) {
     calcH2.addEventListener('click', function () {
+        for (let i = 0; i < calcArticle.length; i++) {
+            calcArticle[i].style.transition = "0.5s"
+            calcArticle[i].style.zIndex = "-1"
+        }
         for (let i = 0; i < calcContent.length; i++) {
             calcContent[i].classList.add('calc-novisible')
         }
-        for (let i = 0; i < calcArticle.length; i++) {
-            calcArticle[i].style.zIndex = "-1"
-        }
-        calcContent[index].style.transition = "1.5s"
+
+        calcContent[index].style.transition = "1s"
         calcContent[index].classList.remove('calc-novisible')
         calcArticle[index].style.zIndex = "1"
 

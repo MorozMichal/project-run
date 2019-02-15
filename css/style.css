@@ -445,10 +445,6 @@ header .header-button-down:hover {
   display: none;
 }
 
-.section-running .running-contest .visuallyhidden {
-  opacity: 0;
-}
-
 .section-running .running-contest .no-active {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -594,6 +590,11 @@ header .header-button-down:hover {
   font-size: 16px;
   padding: 5px;
   line-height: 30px;
+}
+
+.section-running .section-running-wrapper .running-arms .running-city-arms-animation {
+  -webkit-animation: arm 2s infinite linear;
+          animation: arm 2s infinite linear;
 }
 
 .section-running .section-running-wrapper .running-arms h2 {
