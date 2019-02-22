@@ -195,10 +195,12 @@ header .header-button-down:hover {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
   font-size: 100px;
-  -webkit-transition: 1s;
-  transition: 1s;
+}
+
+.section-previews .section-previews-content .animation-preview-content {
+  -webkit-animation: animation-preview-content 2s linear;
+          animation: animation-preview-content 2s linear;
 }
 
 .section-previews .section-previews-racing {
@@ -301,6 +303,24 @@ header .header-button-down:hover {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes animation-preview-content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-preview-content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

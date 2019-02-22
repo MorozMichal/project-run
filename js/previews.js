@@ -5,7 +5,8 @@ class PreviewCity {
         this.description = description;
         this.content = content
         this.previewsAll = document.querySelector(".section-previews-all");
-        this.previewContents = document.querySelector('.preview-content')
+        this.previewContents = document.querySelector('.preview-content');
+        this.previewsContent = document.querySelector('.section-previews-content')
     }
 
     addPreview() {
@@ -28,8 +29,9 @@ class PreviewCity {
     }
 
     addContent() {
+        this.previewsContent.appendChild(previewContent)
         this.previewContents.textContent = `${this.content}`
-        this.previewContents.style.opacity = "1"
+        this.previewContents.classList.add('animation-preview-content');
     }
 }
 
@@ -112,7 +114,7 @@ previews.forEach((preview, index) => {
 
 /* ---------------------------------------------------------------------------- */
 // const previews = document.querySelectorAll('.preview')
-// const previewContents = document.querySelectorAll('.preview-content')
+const previewContents = document.querySelector('.preview-content')
 const btnShowPreviews = document.querySelector('.section-previews-banner i')
 const previewsAllRacings = document.querySelector('.section-previews-racing')
 
@@ -123,7 +125,7 @@ btnShowPreviews.addEventListener('click', () => {
     btnShowPreviews.classList.toggle('fa-angle-left')
     btnShowPreviews.classList.toggle('animation-previews-button')
     if (btnShowPreviews.classList.contains('fa-angle-left')) { //sprawdzenie czy element ma daną klasę
-        previewContents.forEach(previewContent => previewContent.style.opacity = "0")
+        previewContents.textContent = ""
     }
 
 })

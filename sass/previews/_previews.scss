@@ -20,10 +20,15 @@
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 0;
             font-size: 100px;
-            transition: 1s;
+
         }
+
+        .animation-preview-content {
+            animation: animation-preview-content 2s linear;
+        }
+
+
 
     }
 
@@ -107,6 +112,16 @@
             opacity: 0;
         }
 
+    }
+
+    @keyframes animation-preview-content {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     .section-previews-racing-visible {
