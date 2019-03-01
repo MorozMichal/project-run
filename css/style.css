@@ -195,7 +195,7 @@ header .header-button-down:hover {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 100px;
+  font-size: 2rem;
 }
 
 .section-previews .section-previews-content .animation-preview-content {
@@ -253,12 +253,6 @@ header .header-button-down:hover {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
   padding: 10px 0;
   background-color: rgba(210, 210, 210, 0.7);
 }
