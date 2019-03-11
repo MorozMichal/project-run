@@ -1,4 +1,4 @@
-//dodanie animacie dla logo footer przy pozycji scrolla 
+//dodanie animacji dla logo footer przy pozycji scrolla 
 const footerLogo = document.querySelector('.footer-logo')
 const footerPosition = document.querySelector('.footer-logo').offsetTop
 
