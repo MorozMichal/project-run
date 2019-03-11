@@ -938,7 +938,6 @@ header .header-button-down:hover {
 
 /* footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -948,37 +947,39 @@ footer {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: #323232;
   text-align: center;
-  color: white;
 }
 
 footer .footer-logo {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  font-weight: 600;
   font-size: 2rem;
-  line-height: calc(2rem + 2rem);
+  line-height: calc(2rem + 1.5rem);
 }
 
-@media screen and (min-width: 739px) {
+@media (min-width: 739px) {
   footer .footer-logo {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
-    font-size: 4rem;
-    line-height: calc(2rem + 4rem);
+    font-size: 3rem;
+    line-height: calc(3rem + 1.5rem);
   }
 }
 
 @-webkit-keyframes footer-logo {
   0% {
-    color: rgba(0, 0, 0, 0.2);
+    color: #323232;
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
   }
   90% {
-    color: rgba(0, 0, 0, 0.2);
+    color: #323232;
   }
   100% {
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
@@ -986,27 +987,26 @@ footer .footer-logo {
 
 @keyframes footer-logo {
   0% {
-    color: rgba(0, 0, 0, 0.2);
+    color: #323232;
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
   }
   90% {
-    color: rgba(0, 0, 0, 0.2);
+    color: #323232;
   }
   100% {
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
 }
 
 footer .footer-social-media {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1014,58 +1014,44 @@ footer .footer-social-media {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 2rem;
+  line-height: calc(2rem + 1.5rem);
 }
 
 @media screen and (min-width: 739px) {
   footer .footer-social-media {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
+    font-size: 3rem;
+    line-height: calc(3rem + 1.5rem);
   }
 }
 
 footer .footer-social-media div {
   -ms-flex-preferred-size: 34%;
       flex-basis: 34%;
-  font-size: 4rem;
   cursor: pointer;
 }
 
-footer .footer-social-media div :hover {
-  color: brown;
+footer .footer-social-media div:hover {
+  color: rgba(50, 50, 50, 0.6);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-@media screen and (min-width: 739px) {
-  footer .footer-social-media div {
-    font-size: 5rem;
-  }
-}
-
 footer .footer-contact {
-  padding-top: 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-footer .footer-contact h2 {
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  font-size: 1rem;
-  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer .footer-contact .footer-contact-form {
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1075,37 +1061,34 @@ footer .footer-contact .footer-contact-form {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 70%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+footer .footer-contact .footer-contact-form h2 {
   width: 100%;
+  background-color: #323232;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: calc(1rem + 1.5rem);
+  color: rgba(255, 255, 255, 0.6);
 }
 
-footer .footer-contact .footer-contact-form div {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  width: 100%;
-  background-color: rgba(31, 31, 36, 0.9);
-  color: white;
-}
-
-footer .footer-contact .footer-contact-form .footer-contact-form-name {
-  height: 2rem;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-@media screen and (min-width: 739px) {
-  footer .footer-contact .footer-contact-form .footer-contact-form-name {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-}
-
+footer .footer-contact .footer-contact-form .footer-contact-form-name,
 footer .footer-contact .footer-contact-form .footer-contact-form-mail {
-  height: 2rem;
+  border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  height: 2rem;
+  text-align: center;
+  font-family: roboto;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (min-width: 739px) {
+  footer .footer-contact .footer-contact-form .footer-contact-form-name,
   footer .footer-contact .footer-contact-form .footer-contact-form-mail {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -1113,29 +1096,42 @@ footer .footer-contact .footer-contact-form .footer-contact-form-mail {
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-text {
-  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  height: 5rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
   font-family: roboto;
+  font-size: 0.8rem;
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-send {
-  border: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #323232;
   border-radius: 4%;
-  background-color: rgba(31, 31, 36, 0.9);
+  border: none;
   -ms-flex-preferred-size: 5rem;
       flex-basis: 5rem;
-  margin: 1rem auto;
+  margin: 0.5rem auto 1rem auto;
   height: 2.5rem;
   cursor: pointer;
+}
+
+footer .footer-contact .footer-contact-form .footer-contact-form-send:hover {
+  background-color: rgba(50, 50, 50, 0.6);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 footer .footer-copy {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  font-size: 0.625rem;
-  line-height: 1.5rem;
+  font-size: 0.6rem;
+  line-height: calc(0.6rem + 1.5rem);
+  background-color: #323232;
+  color: rgba(255, 255, 255, 0.6);
 }
 /*# sourceMappingURL=style.css.map */
