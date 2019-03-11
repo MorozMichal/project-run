@@ -2,15 +2,11 @@
 @import 'variables';
 @import 'base';
 
-
-// /* navigation*/
-// @import 'pages/nav';
-
 /* menu*/
-@import 'pages/menu';
+@import 'menu/menu';
 
 /* header */
-@import 'pages/header';
+@import 'header/header';
 
 /* previews */
 @import 'previews/previews';
@@ -19,11 +15,7 @@
 @import 'relations/relations';
 
 /* running */
-@import 'pages/running';
-
-/* contest*/
-// @import 'contest/contest';
-// @import 'contest/maps';
+@import 'running/running';
 
 /* calculators*/
 @import 'calculators/calculators';
@@ -31,7 +23,7 @@
 @import 'calculators/buttons';
 
 /*links*/
-@import 'pages/links';
+@import 'links/links';
 
 /* footer */
-@import 'pages/footer';
+@import 'footer/footer';
