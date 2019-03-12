@@ -947,7 +947,7 @@ footer {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: rgba(50, 50, 50, 0.2);
   color: #323232;
   text-align: center;
 }
@@ -962,8 +962,8 @@ footer .footer-logo {
 
 @media (min-width: 739px) {
   footer .footer-logo {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     font-size: 3rem;
     line-height: calc(3rem + 1.5rem);
   }
@@ -979,7 +979,7 @@ footer .footer-logo {
     color: #323232;
   }
   100% {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
@@ -995,7 +995,7 @@ footer .footer-logo {
     color: #323232;
   }
   100% {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
   }
@@ -1016,12 +1016,13 @@ footer .footer-social-media {
           align-items: center;
   font-size: 2rem;
   line-height: calc(2rem + 1.5rem);
+  color: rgba(50, 50, 50, 0.2);
 }
 
 @media screen and (min-width: 739px) {
   footer .footer-social-media {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     font-size: 3rem;
     line-height: calc(3rem + 1.5rem);
   }
@@ -1034,7 +1035,7 @@ footer .footer-social-media div {
 }
 
 footer .footer-social-media div:hover {
-  color: rgba(50, 50, 50, 0.6);
+  color: #323232;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1068,11 +1069,11 @@ footer .footer-contact .footer-contact-form {
 
 footer .footer-contact .footer-contact-form h2 {
   width: 100%;
-  background-color: #323232;
+  background-color: rgba(50, 50, 50, 0.2);
   text-transform: uppercase;
   font-size: 1rem;
   line-height: calc(1rem + 1.5rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-name,
@@ -1084,7 +1085,7 @@ footer .footer-contact .footer-contact-form .footer-contact-form-mail {
   text-align: center;
   font-family: roboto;
   font-size: 0.8rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (min-width: 739px) {
@@ -1096,7 +1097,7 @@ footer .footer-contact .footer-contact-form .footer-contact-form-mail {
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-text {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1109,8 +1110,8 @@ footer .footer-contact .footer-contact-form .footer-contact-form-text {
 
 footer .footer-contact .footer-contact-form .footer-contact-form-send {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #323232;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(50, 50, 50, 0.2);
   border-radius: 4%;
   border: none;
   -ms-flex-preferred-size: 5rem;
@@ -1121,7 +1122,7 @@ footer .footer-contact .footer-contact-form .footer-contact-form-send {
 }
 
 footer .footer-contact .footer-contact-form .footer-contact-form-send:hover {
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: #323232;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1132,6 +1133,6 @@ footer .footer-copy {
   font-size: 0.6rem;
   line-height: calc(0.6rem + 1.5rem);
   background-color: #323232;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
 }
 /*# sourceMappingURL=style.css.map */
