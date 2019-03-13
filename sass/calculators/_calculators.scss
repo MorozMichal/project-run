@@ -1,16 +1,13 @@
 .section-calculators {
-    background-image: url(../img/background_calculators.jpg);
-    // background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    min-height: 100vh;
-
+    // background-image: url(../img/background_calculators.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     display: flex;
     flex-direction: row;
 
     .section-calculators-content {
-        flex-basis: 60%;
+        flex-basis: 70%;
         position: relative;
 
         article {
@@ -41,14 +38,33 @@
     }
 
     .section-calculators-header {
-        flex-basis: 40%;
+        flex-basis: 30%;
+        text-align: center;
+
+        i {
+            display: block;
+            font-size: $font-size-xxl;
+            color: $color-secondary-opacity;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+
+            @media screen and (min-width: 760px) {
+                padding-bottom: 1rem;
+                font-size: $font-size-xxxl;
+
+            }
+
+
+        }
+
+
 
         h2 {
-            background-color: rgba(137, 165, 192, 0.2);
-            font-size: 1rem;
-            line-height: 3rem;
+            background-color: $color-primary-opacity;
+            font-size: $font-size-sm;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
             text-transform: uppercase;
-            text-align: center;
             cursor: pointer;
             transition: 0.3s linear;
 
@@ -58,8 +74,8 @@
             }
 
             @media screen and (min-width: 760px) {
-                font-size: 1.5rem;
-                line-height: 7rem;
+                font-size: $font-size-md;
+
             }
 
         }

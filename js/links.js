@@ -12,6 +12,5 @@ window.addEventListener('scroll', () => {
             }, i * 700 + 700);
         }
 
-
     }
 })
