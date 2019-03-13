@@ -5,8 +5,10 @@
     background-position: center;
     min-height: 100vh;
 
+
     @media (min-width: 500px) {
         background-size: cover;
+
     }
 
 
@@ -27,7 +29,7 @@
 
 
         .link-element {
-            padding: 2rem;
+            padding: 4rem;
             opacity: 0;
 
             @media (min-width: 500px) {

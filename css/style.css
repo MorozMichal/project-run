@@ -661,6 +661,7 @@ header .header-button-down:hover {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -861,7 +862,7 @@ header .header-button-down:hover {
 }
 
 .section-links .links .link-element {
-  padding: 2rem;
+  padding: 4rem;
   opacity: 0;
 }
 
