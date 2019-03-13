@@ -3,6 +3,7 @@
     background-image: url(/img/background_running.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
 
     @media (min-width: 500px) {
         background-size: cover;
@@ -40,8 +41,8 @@
             i {
                 color: $color-secondary-opacity;
                 font-size: $font-size-xxl;
-                transform: rotate(-20deg);
-                transition: 0.5s;
+                transform: rotateX(-360deg);
+                transition: .5s;
 
                 @media (min-width: 749px) {
                     font-size: 4.5rem;
@@ -50,7 +51,10 @@
             }
 
             a {
+                display: inline-block;
+                transform: rotate(380deg);
                 text-decoration: none;
+                transition: .5s;
 
             }
 
@@ -60,15 +64,15 @@
 
             }
 
+            a:hover {
+                // letter-spacing: 0.2rem;
+                transform: rotate(0deg);
+            }
+
             h2 {
                 margin-top: 1rem;
                 font-size: $font-size-md;
                 color: $color-primary;
-
-                // @media (min-width: 749px) {
-                //     font-size: $font-size-lg;
-                // }
-
             }
 
         }

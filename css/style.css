@@ -818,6 +818,7 @@ header .header-button-down:hover {
   background-image: url(/img/background_running.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100vh;
 }
 
 @media (min-width: 500px) {
@@ -881,10 +882,10 @@ header .header-button-down:hover {
 .section-links .links .link-element i {
   color: rgba(50, 50, 50, 0.7);
   font-size: 3rem;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: rotateX(-360deg);
+          transform: rotateX(-360deg);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media (min-width: 749px) {
@@ -894,11 +895,21 @@ header .header-button-down:hover {
 }
 
 .section-links .links .link-element a {
+  display: inline-block;
+  -webkit-transform: rotate(380deg);
+          transform: rotate(380deg);
   text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .section-links .links .link-element a:hover i {
   color: rgba(50, 50, 50, 0.9);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.section-links .links .link-element a:hover {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
