@@ -20,8 +20,8 @@ calcH2s.forEach((calcH2, index) => {
 });
 
 //calculator BMI
-const btnCalcBmi = document.querySelector(".calc-bmi-flex .button-calculate");
-const btnCleanBmi = document.querySelector(".calc-bmi-flex .button-clean");
+const btnCalcBmi = document.querySelector(".calc-bmi .button-calculate");
+const btnCleanBmi = document.querySelector(".calc-bmi .button-clean");
 const bmiInfo = document.querySelector(".bmi-result-p3");
 const bmiAlert = document.querySelector(".bmi-result-p2");
 
@@ -95,11 +95,11 @@ const distanceCalc = e => {
 
 const distanceReset = e => {
     e.preventDefault();
-    document.distance.tempoMin.value = "0";
-    document.distance.tempoSek.value = "0";
-    document.distance.timeH.value = "0";
-    document.distance.timeMin.value = "0";
-    document.distance.timeSek.value = "0";
+    document.distance.tempoMin.value = "";
+    document.distance.tempoSek.value = "";
+    document.distance.timeH.value = "";
+    document.distance.timeMin.value = "";
+    document.distance.timeSek.value = "";
     distanceResult.textContent = "";
 };
 
@@ -134,9 +134,9 @@ const episodeCalc = e => {
 
 const episodeReset = e => {
     e.preventDefault();
-    document.episode.tempoMin.value = "0";
-    document.episode.tempoSek.value = "0";
-    document.episode.distance.value = "0";
+    document.episode.tempoMin.value = "";
+    document.episode.tempoSek.value = "";
+    document.episode.distance.value = "";
     episodeResult.textContent = "";
 };
 

@@ -80,17 +80,18 @@
 
     input,
     select {
+        border-radius: 7px;
         background-color: rgb(213, 213, 213);
         border: none;
         border-bottom: 1px solid black;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align: center;
         margin: 0 0.3rem;
-        height: 3rem;
+        height: 2rem;
     }
 
     input {
-        width: 4rem;
+        width: 6rem;
 
     }
 

@@ -497,14 +497,8 @@
         <article class="calc-bmi calc-novisible">
           <form name="bmi">
             <p class="form-description">Kalkutalor BMI</p>
-            <div class="input-bmi-weight">
-              <p>Masa ciała</p>
-              <p><input type="number" value="" name="weight"> kg</p>
-            </div>
-            <div class="input-bmi-height">
-              <p>Wzrost</p>
-              <p><input type="number" value="" name="height"> cm</p>
-            </div>
+            <label>Waga<input type="number" name="weight" placeholder="kg">kg</label>
+            <label>Wzrost<input type="number" name="height" placeholder="cm">cm</label>
           </form>
           <div class="bmi-result">
             <p class="bmi-result-p1">Twój wynik to</p>
@@ -514,17 +508,18 @@
           <div class="button-wrapper">
             <button class="button-calculate">oblicz</button>
             <button class="button-clean">wyczyść</button>
+          </div>
         </article>
 
         <article class="calc-distances calc-novisible">
-          <form action="" name="distance">
+          <form name="distance">
             <p>Planowane tempo biegu:</p>
-            <p><input type="number" value="6" min="0" max="20" name="tempoMin">min
-              <input type="number" value="0" min="0" max="59" name="tempoSek">sek</p>
+            <label><input type="number" min="0" max="20" name="tempoMin" placeholder="min">min</label>
+            <label><input type="number" min="0" max="59" name="tempoSek" placeholder="sek">sek</label>
             <p>Planowany czas biegu:</p>
-            <p><input type="number" value="1" min="0" max="59" name="timeH">h
-              <input type="number" value="0" min="0" max="59" name="timeMin">min
-              <input type="number" value="0" min="0" max="59" name="timeSek">sek</p>
+            <label><input type="number" min="0" max="59" name="timeH" placeholder="h">h</label>
+            <label><input type="number" min="0" max="59" name="timeMin" placeholder="min">min</label>
+            <label><input type="number" min="0" max="59" name="timeSek" placeholder="sek">sek</label>
           </form>
           <p>Dystans: <span class="result-p1"></span></p>
           <div class="button-wrapper">
@@ -539,12 +534,12 @@
               <form action="" name="episode">
                 <div class="input-episode-tempo">
                   <p>Planowane tempo biegu:</p>
-                  <p><input type="number" value="0" name="tempoMin">min
-                    <input type="number" value="0" name="tempoSek">sek</p>
+                  <label><input type="number" name="tempoMin" placeholder="min">min</label>
+                  <label><input type="number" name="tempoSek" placeholder="sek">sek</label>
                 </div>
                 <div class="input-episode-distance">
-                  <p>Dystans odcinka(metry):
-                    <input type="number" value="0" name="distance">m</p>
+                  <p>Dystans odcinka(metry):</p>
+                  <label><input type="number" value="0" name="distance" placeholder="m">m</label>
                 </div>
               </form>
             </div>

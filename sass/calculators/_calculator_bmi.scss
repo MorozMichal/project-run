@@ -14,20 +14,11 @@
             padding-top: 0.5rem;
         }
 
-        p {
-            padding-bottom: 0.5rem;
-        }
-
-        .input-bmi-weight {
-            background-color: red;
+        label {
             padding-bottom: 1rem;
-
+            font-size: 1rem;
         }
 
-        .input-bmi-height {
-            background-color: blue;
-            padding-bottom: 1rem;
-        }
     }
 
     .bmi-result {}
