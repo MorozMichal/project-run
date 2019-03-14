@@ -4,19 +4,19 @@
     display: flex;
     flex-direction: column;
 
+
+
     form {
         display: flex;
         flex-direction: column;
 
-        .form-description {
-            background-color: yellow;
-            text-transform: uppercase;
-            padding-top: 0.5rem;
-        }
+
 
         label {
             padding-bottom: 1rem;
             font-size: 1rem;
+
+
         }
 
     }

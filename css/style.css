@@ -685,9 +685,28 @@ header .header-button-down:hover {
   transition: 1s;
 }
 
+.section-calculators .section-calculators-content article .calculator-description {
+  background-color: yellow;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+}
+
 .section-calculators .section-calculators-content article p {
   font-size: 1rem;
   font-weight: 900;
+}
+
+.section-calculators .section-calculators-content article form .result {
+  display: block;
+}
+
+.section-calculators .section-calculators-content article form fieldset {
+  border: none;
+  text-align: center;
+}
+
+.section-calculators .section-calculators-content article form fieldset legend {
+  width: 100%;
 }
 
 .section-calculators .section-calculators-content .calc-novisible {
@@ -754,6 +773,10 @@ header .header-button-down:hover {
   width: 6rem;
 }
 
+.section-calculators .input-result {
+  width: 22rem;
+}
+
 .input-episode-distance input {
   width: 6rem;
 }
@@ -777,12 +800,6 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.calc-bmi form .form-description {
-  background-color: yellow;
-  text-transform: uppercase;
-  padding-top: 0.5rem;
 }
 
 .calc-bmi form label {

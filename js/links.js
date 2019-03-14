@@ -8,7 +8,6 @@ window.addEventListener('scroll', () => {
             setTimeout(() => {
                 links[i].style.opacity = "1"
                 links[i].style.transition = "1s"
-                console.log(i)
             }, i * 700 + 700);
         }
 

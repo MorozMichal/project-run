@@ -20,11 +20,35 @@
             text-align: center;
             transition: 1s;
 
+            .calculator-description {
+                background-color: yellow;
+                text-transform: uppercase;
+                padding-top: 0.5rem;
+            }
+
             p {
                 font-size: 1rem;
                 // padding: 0.4rem 0.5rem;
                 font-weight: 900;
 
+            }
+
+            form {
+
+                .result {
+                    display: block;
+                }
+
+                fieldset {
+
+                    border: none;
+                    text-align: center;
+
+                    legend {
+                        width: 100%;
+
+                    }
+                }
             }
 
 
@@ -79,7 +103,8 @@
     }
 
     input,
-    select {
+    select,
+        {
         border-radius: 7px;
         background-color: rgb(213, 213, 213);
         border: none;
@@ -92,6 +117,11 @@
 
     input {
         width: 6rem;
+
+    }
+
+    .input-result {
+        width: 22rem;
 
     }
 
