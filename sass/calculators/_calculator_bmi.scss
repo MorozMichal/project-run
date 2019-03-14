@@ -1,28 +1,37 @@
 /* calculator BMI */
 
-.calc-bmi-flex {
+.calc-bmi {
     display: flex;
     flex-direction: column;
 
-    .bmi-form {
+    form {
+        display: flex;
+        flex-direction: column;
 
-        form {
-            display: flex;
-            flex-direction: row;
-
-            .input-bmi-weight {
-                flex-basis: 50%;
-                margin-left: 15%;
-
-            }
-
-            .input-bmi-height {
-                flex-basis: 50%;
-                margin-right: 15%;
-            }
+        .form-description {
+            background-color: yellow;
+            text-transform: uppercase;
+            padding-top: 0.5rem;
         }
 
+        p {
+            padding-bottom: 0.5rem;
+        }
+
+        .input-bmi-weight {
+            background-color: red;
+            padding-bottom: 1rem;
+
+        }
+
+        .input-bmi-height {
+            background-color: blue;
+            padding-bottom: 1rem;
+        }
     }
 
+    .bmi-result {}
+
+    .button-wrapper {}
 
 }
