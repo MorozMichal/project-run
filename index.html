@@ -493,95 +493,99 @@
 
   <section class="section-calculators clickAreas">
     <div class="section-calculators-content">
-      <div class="calculators">
-        <article class="calc-bmi calc-novisible">
-          <p class="calculator-description">Kalkutalor BMI</p>
-          <form name="bmi">
-            <label>Waga<input type="text" name="weight" placeholder="w kg">kg</label>
-            <label>Wzrost<input type="text" name="height" placeholder="w cm">cm</label>
-            <label>Twój wynik<input class="input-result" type="text" readonly="readonly" name="result" placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
-            <div class="button-wrapper">
-              <button class="button-calculate">oblicz</button>
-              <button class="button-clean">wyczyść</button>
-            </div>
-          </form>
-        </article>
-        <article class="calc-distances calc-novisible">
-          <p class="calculator-description">Kalkulator dystansu</p>
-          <form name="distance">
-            <fieldset>
-              <legend>Planowane tempo biegu:</legend>
-              <label><input type="text" name="tempoMin" placeholder="min">min</label>
-              <label><input type="text" name="tempoSek" placeholder="sek">sek</label>
-            </fieldset>
-            <fieldest>
-              <legend>Planowany czas biegu:</legend>
-              <label><input type="text" name="timeH" placeholder="h">h</label>
-              <label><input type="text" name="timeMin" placeholder="min">min</label>
-              <label><input type="text" name="timeSek" placeholder="sek">sek</label>
-            </fieldest>
-            <label class="result">Przebyty dystans<input class="input-result" type="text" readonly="readonly" name="result"
-                placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
-            <div class="button-wrapper">
-              <button class="button-calculate">oblicz</button>
-              <button class="button-clean">wyczyść</button>
-            </div>
-          </form>
-        </article>
-        <article class="calc-episode-time calc-novisible">
-          <p class="calculator-description">Kalkulator odcinka</p>
-          <form name="episode">
-            <fieldset>
-              <legend>Planowane tempo biegu:</legend>
-              <label><input type="number" name="tempoMin" placeholder="min">min</label>
-              <label><input type="number" name="tempoSek" placeholder="sek">sek</label>
-            </fieldset>
-            <label>Dystans odcinka:<input type="number" name="distance" placeholder="metry">m</label>
-            <label class="result">Czas odcinka<input class="input-result" type="text" readonly="readonly" name="result"
-                placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
-            <div class="button-wrapper">
-              <button class="button-calculate">oblicz</button>
-              <button class="button-clean">wyczyść</button>
-            </div>
-          </form>
-        </article>
-        <article class="calc-place-of-running calc-novisible">
-          <p class="calculator-description">Kalkulator tempa biegu</p>
-          <form name="placeofrunning">
-            <select name="placeofrunningdistances">
-              <option value="0">Wybierz dystans</option>
-              <option value="1">1 km</option>
-              <option value="3">3 km</option>
-              <option value="5">5 km</option>
-              <option value="10">10 km</option>
-              <option value="12">12 km</option>
-              <option value="15">15 km</option>
-              <option value="21.097">21.097 km (półmaraton)</option>
-              <option value="30">30 km</option>
-              <option value="42.195">42.195 km (maraton)</option>
-            </select>
-            <fieldset>
-              <legend>lub podaj</legend>
-              <label><input type="text" name="distancekm" placeholder="km">km</label>
-              <label><input type="text" name="distancem" placeholder="m">m</label>
-            </fieldset>
-            <fieldset>
-              <legend>Planowany wynik:</legend>
-              <label><input type="text" name="timeH" placeholder="h">h</label>
-              <label><input type="text" name="timeM" placeholder="min">min </label>
-              <label><input type="text" name="timeSek" placeholder="sek">sek</label>
-            </fieldset>
-            <label class="result result-tempo">Tempo:<input class="input-result" type="text" readonly="readonly" name="result-tempo"
-                placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
-            <label class="result result-speed">Prędkość<input class="input-result" type="text" readonly="readonly" name="result-speed"
-                placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
-            <div class="button-wrapper">
-              <button class="button-calculate">oblicz</button>
-              <button class="button-clean">wyczyść</button>
-            </div>
-          </form>
-        </article>
-      </div>
+
+      <article class="calc-bmi calc-novisible">
+        <div class="calculator-description">
+          <p>Kalkutalor BMI</p>
+        </div>
+        <form name="bmi">
+          <label>Waga<input type="text" name="weight" placeholder="w kg">kg</label>
+          <label>Wzrost<input type="text" name="height" placeholder="w cm">cm</label>
+          <label>Twój wynik<input class="input-result" type="text" readonly="readonly" name="result" placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
+          <div class="button-wrapper">
+            <button class="button-calculate">oblicz</button>
+            <button class="button-clean">wyczyść</button>
+          </div>
+        </form>
+      </article>
+
+      <article class="calc-distances calc-novisible">
+        <p class="calculator-description">Kalkulator dystansu</p>
+        <form name="distance">
+          <fieldset>
+            <legend>Planowane tempo biegu:</legend>
+            <label><input type="text" name="tempoMin" placeholder="min">min</label>
+            <label><input type="text" name="tempoSek" placeholder="sek">sek</label>
+          </fieldset>
+          <fieldest>
+            <legend>Planowany czas biegu:</legend>
+            <label><input type="text" name="timeH" placeholder="h">h</label>
+            <label><input type="text" name="timeMin" placeholder="min">min</label>
+            <label><input type="text" name="timeSek" placeholder="sek">sek</label>
+          </fieldest>
+          <label class="result">Przebyty dystans<input class="input-result" type="text" readonly="readonly" name="result"
+              placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
+          <div class="button-wrapper">
+            <button class="button-calculate">oblicz</button>
+            <button class="button-clean">wyczyść</button>
+          </div>
+        </form>
+      </article>
+
+      <article class="calc-episode-time calc-novisible">
+        <p class="calculator-description">Kalkulator odcinka</p>
+        <form name="episode">
+          <fieldset>
+            <legend>Planowane tempo biegu:</legend>
+            <label><input type="number" name="tempoMin" placeholder="min">min</label>
+            <label><input type="number" name="tempoSek" placeholder="sek">sek</label>
+          </fieldset>
+          <label>Dystans odcinka:<input type="number" name="distance" placeholder="metry">m</label>
+          <label class="result">Czas odcinka<input class="input-result" type="text" readonly="readonly" name="result"
+              placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
+          <div class="button-wrapper">
+            <button class="button-calculate">oblicz</button>
+            <button class="button-clean">wyczyść</button>
+          </div>
+        </form>
+      </article>
+
+      <article class="calc-place-of-running calc-novisible">
+        <p class="calculator-description">Kalkulator tempa biegu</p>
+        <form name="placeofrunning">
+          <select name="placeofrunningdistances">
+            <option value="0">Wybierz dystans</option>
+            <option value="1">1 km</option>
+            <option value="3">3 km</option>
+            <option value="5">5 km</option>
+            <option value="10">10 km</option>
+            <option value="12">12 km</option>
+            <option value="15">15 km</option>
+            <option value="21.097">21.097 km (półmaraton)</option>
+            <option value="30">30 km</option>
+            <option value="42.195">42.195 km (maraton)</option>
+          </select>
+          <fieldset>
+            <legend>lub podaj</legend>
+            <label><input type="text" name="distancekm" placeholder="km">km</label>
+            <label><input type="text" name="distancem" placeholder="m">m</label>
+          </fieldset>
+          <fieldset>
+            <legend>Planowany wynik:</legend>
+            <label><input type="text" name="timeH" placeholder="h">h</label>
+            <label><input type="text" name="timeM" placeholder="min">min </label>
+            <label><input type="text" name="timeSek" placeholder="sek">sek</label>
+          </fieldset>
+          <label class="result result-tempo">Tempo:<input class="input-result" type="text" readonly="readonly" name="result-tempo"
+              placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
+          <label class="result result-speed">Prędkość<input class="input-result" type="text" readonly="readonly" name="result-speed"
+              placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
+          <div class="button-wrapper">
+            <button class="button-calculate">oblicz</button>
+            <button class="button-clean">wyczyść</button>
+          </div>
+        </form>
+      </article>
     </div>
     <div class="section-calculators-header">
       <h2><i class="far fa-smile-wink"></i>BMI</h2>
