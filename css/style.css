@@ -719,16 +719,80 @@ header .header-button-down:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: 80%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.section-calculators .section-calculators-content article form .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-calculators .section-calculators-content article form .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: yellow;
+  height: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-calculators .section-calculators-content article form .result .input-result {
+  font-size: 0.5rem;
+}
+
+.section-calculators .section-calculators-content article form .result-tempo,
+.section-calculators .section-calculators-content article form .result-speed {
+  height: 10%;
+}
+
+.section-calculators .section-calculators-content article form .button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: blue;
+  height: 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section-calculators .section-calculators-content .calc-novisible {
@@ -781,6 +845,36 @@ header .header-button-down:hover {
 
 /* calculator BMI */
 /* calculators buttons */
+.button-wrapper .button-calculate,
+.button-wrapper .button-clean {
+  width: 10rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.button-wrapper .button-calculate {
+  border: 1px #46b446 solid;
+  background-color: #46aa46;
+}
+
+.button-wrapper .button-calculate:hover {
+  background-color: #46ff46;
+}
+
+.button-wrapper .button-clean {
+  border: 1px #b44646 solid;
+  background-color: #aa4646;
+}
+
+.button-wrapper .button-clean:hover {
+  background-color: #ff4646;
+}
+
 /*links*/
 /* links section */
 .section-links {
