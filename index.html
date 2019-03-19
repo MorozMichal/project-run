@@ -498,11 +498,12 @@
         <p class="calculator-description">Kalkutalor BMI</p>
         <form name="bmi">
           <div class="input-wrapper">
-            <label>Waga<input type="text" name="weight" placeholder="w kg">kg</label>
-            <label>Wzrost<input type="text" name="height" placeholder="w cm">cm</label>
+            <label>Waga<input type="text" name="weight" placeholder="w kilogramach">kg</label>
+            <label>Wzrost<input type="text" name="height" placeholder="w centymetrach">cm</label>
           </div>
-          <label class="result">Twój wynik<input class="input-result" type="text" readonly="readonly" name="result"
-              placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
+          <div></div>
+          <label class="result">Twój wynik
+            <input class="input-result" type="text" readonly="readonly" name="result" placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
           <div class="button-wrapper">
             <button class="button-calculate">oblicz</button>
             <button class="button-clean">wyczyść</button>
@@ -516,15 +517,15 @@
           <div class="input-wrapper">
             <fieldset>
               <legend>Planowane tempo biegu:</legend>
-              <label><input type="text" name="tempoMin" placeholder="min">min</label>
-              <label><input type="text" name="tempoSek" placeholder="sek">sek</label>
+              <label><input type="text" name="tempoMin" placeholder="minut"><span>min</span></label>
+              <label><input type="text" name="tempoSek" placeholder="w sekund"><span>sek</span></label>
             </fieldset>
-            <fieldest>
+            <fieldset>
               <legend>Planowany czas biegu:</legend>
-              <label><input type="text" name="timeH" placeholder="h">h</label>
-              <label><input type="text" name="timeMin" placeholder="min">min</label>
-              <label><input type="text" name="timeSek" placeholder="sek">sek</label>
-            </fieldest>
+              <label><input type="text" name="timeH" placeholder="godzin"><span>h</span></label>
+              <label><input type="text" name="timeMin" placeholder="minut"><span>min</span></label>
+              <label><input type="text" name="timeSek" placeholder="sekund"><span>sek</span></label>
+            </fieldset>
           </div>
           <label class="result">Przebyty dystans<input class="input-result" type="text" readonly="readonly" name="result"
               placeholder="Podaj dane powyżej i wciśnij oblicz"></label>
@@ -541,10 +542,13 @@
           <div class="input-wrapper">
             <fieldset>
               <legend>Planowane tempo biegu:</legend>
-              <label><input type="number" name="tempoMin" placeholder="min">min</label>
-              <label><input type="number" name="tempoSek" placeholder="sek">sek</label>
+              <label><input type="text" name="tempoMin" placeholder="min"><span>min</span></label>
+              <label><input type="text" name="tempoSek" placeholder="sek"><span>sek</span></label>
             </fieldset>
-            <label>Dystans odcinka:<input type="number" name="distance" placeholder="metry">m</label>
+            <fieldset>
+              <legend>Dystans odcinka:</legend>
+              <label><input type="text" name="distance" placeholder="metry"><span>m</span></label>
+            </fieldset>
           </div>
           <label class="result">Czas odcinka<input class="input-result" type="text" readonly="readonly" name="result"
               placeholder="Podaj dane powyżej i wciśnij oblicz"></label>

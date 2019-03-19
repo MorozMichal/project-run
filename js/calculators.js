@@ -1,7 +1,7 @@
 /* --------------------- FUNCTION SHOW CALCULATORS ---------------------  */
 const calcH2s = document.querySelectorAll(".section-calculators-header h2");
 const calcContents = document.querySelectorAll(".calc-novisible");
-const calcArticles = document.querySelectorAll(".calculators article");
+const calcArticles = document.querySelectorAll(".section-calculators-content article");
 
 calcH2s.forEach((calcH2, index) => {
     calcH2.addEventListener("click", () => {
