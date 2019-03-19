@@ -55,6 +55,14 @@
                     align-items: center;
                     justify-content: center;
 
+                    select {
+                        width: 60%;
+                        font-size: 1rem;
+                        margin: 0 .4rem;
+                        border-radius: 2rem;
+
+                    }
+
 
                     label {
                         display: flex;
@@ -68,10 +76,8 @@
                         input {
                             text-align: center;
                             font-size: 0.8rem;
-                            padding-top: 0.5rem;
-                            padding-bottom: 0.5rem;
-                            margin-left: 0.4rem;
-                            margin-right: 0.4rem;
+                            padding: .5rem 0;
+                            margin: 0 .4rem;
                             border-radius: 2rem;
                         }
 
@@ -80,25 +86,23 @@
                     fieldset {
                         display: flex;
                         flex-direction: column;
-                        width: 100%;
+                        width: 70%;
                         font-size: 1rem;
                         // border: none;
 
-
-                        label {
-
-
-                            span {
-                                text-align: left;
-                                width: 2rem;
-                            }
-
+                        legend {
+                            text-align: left;
+                            width: 100%;
 
                         }
+
+                        span {
+                            text-align: left;
+                            width: 2rem;
+                        }
+
+
                     }
-
-
-
 
                 }
 
@@ -116,12 +120,9 @@
                         text-align: center;
                         width: 100%;
                         font-size: 0.8rem;
-                        padding-top: 0.5rem;
-                        padding-bottom: 0.5rem;
-                        margin-left: 1rem;
-                        margin-right: 1rem;
+                        padding: .5rem 0;
+                        margin: 0 1rem;
                     }
-
 
                 }
 
@@ -129,7 +130,6 @@
                 .result-speed {
                     height: 12.5%;
                 }
-
 
                 .button-wrapper {
                     display: flex;
@@ -141,7 +141,6 @@
                     align-items: center;
                 }
             }
-
 
         }
 

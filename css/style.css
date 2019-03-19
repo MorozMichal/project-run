@@ -752,6 +752,13 @@ header .header-button-down:hover {
           justify-content: center;
 }
 
+.section-calculators .section-calculators-content article form .input-wrapper select {
+  width: 60%;
+  font-size: 1rem;
+  margin: 0 .4rem;
+  border-radius: 2rem;
+}
+
 .section-calculators .section-calculators-content article form .input-wrapper label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -773,10 +780,8 @@ header .header-button-down:hover {
 .section-calculators .section-calculators-content article form .input-wrapper label input {
   text-align: center;
   font-size: 0.8rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
+  padding: .5rem 0;
+  margin: 0 .4rem;
   border-radius: 2rem;
 }
 
@@ -788,11 +793,16 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 70%;
   font-size: 1rem;
 }
 
-.section-calculators .section-calculators-content article form .input-wrapper fieldset label span {
+.section-calculators .section-calculators-content article form .input-wrapper fieldset legend {
+  text-align: left;
+  width: 100%;
+}
+
+.section-calculators .section-calculators-content article form .input-wrapper fieldset span {
   text-align: left;
   width: 2rem;
 }
@@ -820,10 +830,8 @@ header .header-button-down:hover {
   text-align: center;
   width: 100%;
   font-size: 0.8rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding: .5rem 0;
+  margin: 0 1rem;
 }
 
 .section-calculators .section-calculators-content article form .result-tempo,
@@ -897,7 +905,6 @@ header .header-button-down:hover {
   }
 }
 
-/* calculator BMI */
 /* calculators buttons */
 .button-wrapper .button-calculate,
 .button-wrapper .button-clean {
