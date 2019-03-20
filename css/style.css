@@ -667,7 +667,7 @@ header .header-button-down:hover {
 }
 
 .section-calculators .section-calculators-content {
-  background-color: red;
+  background-color: rgba(50, 50, 50, 0.2);
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
   position: relative;
@@ -709,7 +709,6 @@ header .header-button-down:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: yellow;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 900;
@@ -728,9 +727,6 @@ header .header-button-down:hover {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   height: 90%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .section-calculators .section-calculators-content article form .input-wrapper {
@@ -743,19 +739,17 @@ header .header-button-down:hover {
           flex-direction: column;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: 55%;
+  height: 62.5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .section-calculators .section-calculators-content article form .input-wrapper select {
   width: 60%;
   font-size: 1rem;
-  margin: 0 .4rem;
   border-radius: 2rem;
 }
 
@@ -765,9 +759,6 @@ header .header-button-down:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -781,7 +772,7 @@ header .header-button-down:hover {
   text-align: center;
   font-size: 0.8rem;
   padding: .5rem 0;
-  margin: 0 .4rem;
+  margin: 0.2rem 0.4rem;
   border-radius: 2rem;
 }
 
@@ -793,13 +784,15 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
+  width: 100%;
   font-size: 1rem;
+  border: none;
 }
 
 .section-calculators .section-calculators-content article form .input-wrapper fieldset legend {
   text-align: left;
-  width: 100%;
+  margin-left: 1rem;
+  width: 90%;
 }
 
 .section-calculators .section-calculators-content article form .input-wrapper fieldset span {
@@ -815,46 +808,30 @@ header .header-button-down:hover {
       flex-wrap: wrap;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  background-color: yellow;
-  height: 25%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 27.5%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .section-calculators .section-calculators-content article form .result .input-result {
   text-align: center;
   width: 100%;
   font-size: 0.8rem;
-  padding: .5rem 0;
-  margin: 0 1rem;
+  font-weight: 900;
+  padding: .4rem 0;
+  margin: 0.3rem 0.3rem;
+  border-radius: 1rem;
 }
 
 .section-calculators .section-calculators-content article form .result-tempo,
 .section-calculators .section-calculators-content article form .result-speed {
-  height: 12.5%;
-}
-
-.section-calculators .section-calculators-content article form .button-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  background-color: blue;
-  height: 20%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: calc(27.5% /2);
 }
 
 .section-calculators .section-calculators-content .calc-novisible {
@@ -878,8 +855,7 @@ header .header-button-down:hover {
 
 @media screen and (min-width: 760px) {
   .section-calculators .section-calculators-header i {
-    padding-bottom: 1rem;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -906,11 +882,26 @@ header .header-button-down:hover {
 }
 
 /* calculators buttons */
+.button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .button-wrapper .button-calculate,
 .button-wrapper .button-clean {
-  width: 10rem;
+  width: 6rem;
   padding: 0.4rem;
-  margin: 0.4rem;
+  margin: .2rem;
   font-size: 1rem;
   font-weight: 900;
   color: white;

@@ -7,8 +7,7 @@
     flex-direction: row;
 
     .section-calculators-content {
-        background-color: red;
-        // background-color: $color-primary-opacity;
+        background-color: $color-primary-opacity;
         flex-basis: 70%;
         position: relative;
 
@@ -32,7 +31,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background-color: yellow;
                 text-transform: uppercase;
                 font-size: 1rem;
                 font-weight: 900;
@@ -45,30 +43,26 @@
                 flex-wrap: wrap;
                 flex-basis: 100%;
                 height: 90%;
-                justify-content: center;
 
                 .input-wrapper {
                     display: flex;
                     flex-direction: column;
                     flex-basis: 100%;
-                    height: 55%;
+                    height: 62.5%;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-around;
 
                     select {
                         width: 60%;
                         font-size: 1rem;
-                        margin: 0 .4rem;
                         border-radius: 2rem;
 
                     }
 
-
                     label {
                         display: flex;
                         flex-wrap: wrap;
-                        flex-basis: 30%;
-                        width: 100%;
+                        // flex-basis: 30%;
                         align-items: center;
                         justify-content: center;
                         font-size: 1.2rem;
@@ -77,7 +71,7 @@
                             text-align: center;
                             font-size: 0.8rem;
                             padding: .5rem 0;
-                            margin: 0 .4rem;
+                            margin: 0.2rem 0.4rem;
                             border-radius: 2rem;
                         }
 
@@ -86,13 +80,14 @@
                     fieldset {
                         display: flex;
                         flex-direction: column;
-                        width: 70%;
+                        width: 100%;
                         font-size: 1rem;
-                        // border: none;
+                        border: none;
 
                         legend {
                             text-align: left;
-                            width: 100%;
+                            margin-left: 1rem;
+                            width: 90%;
 
                         }
 
@@ -110,36 +105,31 @@
                     display: flex;
                     flex-wrap: wrap;
                     flex-basis: 100%;
-                    background-color: yellow;
-                    height: 25%;
-                    align-items: center;
+                    height: 27.5%;
+                    align-content: center;
+                    text-align: center;
                     justify-content: center;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
+                    font-weight: 900;
 
                     .input-result {
                         text-align: center;
                         width: 100%;
                         font-size: 0.8rem;
-                        padding: .5rem 0;
-                        margin: 0 1rem;
+                        font-weight: 900;
+                        padding: .4rem 0;
+                        margin: 0.3rem 0.3rem;
+                        border-radius: 1rem;
                     }
 
                 }
 
                 .result-tempo,
                 .result-speed {
-                    height: 12.5%;
+                    height: calc(27.5% /2);
                 }
 
-                .button-wrapper {
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-basis: 100%;
-                    background-color: blue;
-                    height: 20%;
-                    justify-content: center;
-                    align-items: center;
-                }
+
             }
 
         }
@@ -162,8 +152,7 @@
             padding: 0.5rem 0;
 
             @media screen and (min-width: 760px) {
-                padding-bottom: 1rem;
-                font-size: $font-size-xxxl;
+                font-size: $font-size-xxl;
 
             }
 
