@@ -1,5 +1,5 @@
 class showRelations {
-  constructor(firstImage, [allImagess], nameRelation, firstDescription, fullDescription) {
+  constructor(firstImage, [...allImagess], nameRelation, firstDescription, fullDescription) {
     this.nameRelation = nameRelation
     this.firstDescription = firstDescription
     this.fullDescription = fullDescription
@@ -13,11 +13,16 @@ class showRelations {
   addImages() {
     this.sectionImages = document.querySelectorAll('.relation-all-images')
 
-    this.sectionImages.forEach(s => {
+    this.allImagess.forEach(s => {
       const oneImage = document.createElement('img')
       s.appendChild(oneImage)
       console.log(this.allImagess)
     })
+
+    // this.allImagess.forEach(e => {
+    //   `<img src="/img/relations/${e}>`
+    //   console.log(e)
+    // })}
 
   }
 
@@ -31,6 +36,7 @@ class showRelations {
       `<div class="relation-images">
 <div class="relation-1st-image "><img src="/img/relations/${this.firstImage}"></div>
 <div class="relation-all-images novisible">
+
   </div>
 </div>
 <div class="relation-1st-descrition">
@@ -86,7 +92,7 @@ arrayRelations.push(trzeciaRelacja);
 
 arrayRelations.forEach(relation => {
   relation.addRelation()
-  relation.addImages()
+  // relation.addImages()
 });
 
 
