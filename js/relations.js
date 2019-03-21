@@ -1,15 +1,20 @@
-const arrayRelations = [];
-
 class showRelations {
-  constructor(firstImage, allImagess, nameRelation, firstDescription, fullDescription, arrayRelations) {
+  constructor(firstImage, allImagess, nameRelation, firstDescription, fullDescription) {
     this.nameRelation = nameRelation
     this.firstDescription = firstDescription
     this.fullDescription = fullDescription
     this.firstImage = firstImage
     this.allImagess = allImagess
-    this.arrayRelations = arrayRelations
 
     this.relationsAll = document.querySelector(".relations")
+
+  }
+
+  addImages() {
+    this.sectionImages = document.querySelectorAll('.relation-all-images')
+    const oneImage = document.createElement('div')
+    this.sectionImages.forEach(s => s.appendChild(oneImage))
+
   }
 
   addRelation() {
@@ -22,15 +27,6 @@ class showRelations {
       `<div class="relation-images">
 <div class="relation-1st-image "><img src="/img/relations/${this.firstImage}"></div>
 <div class="relation-all-images novisible">
-  <img src="/img/relations/${this.arrayRelations}">
-  <img src="/img/relations/${this.allImagess[1]}">
-  <img src="/img/relations/${this.allImagess[2]}">
-  <img src="/img/relations/${this.allImagess[3]}">
-  <img src="/img/relations/${this.allImagess[4]}">
-  <img src="/img/relations/${this.allImagess[5]}">
-  <img src="/img/relations/${this.allImagess[6]}">
-  <img src="/img/relations/${this.allImagess[7]}">
-  <img src="/img/relations/${this.allImagess[8]}">
   </div>
 </div>
 <div class="relation-1st-descrition">
@@ -39,9 +35,23 @@ class showRelations {
 <p class="novisible">${this.fullDescription}</p>
 </div>`
   }
+
+
 }
 
+// {
+/* <img src="/img/relations/${arrayRelations[0].allImagess[1]}">
+<img src="/img/relations/${this.allImagess[1]}">
+<img src="/img/relations/${this.allImagess[2]}">
+<img src="/img/relations/${this.allImagess[3]}">
+<img src="/img/relations/${this.allImagess[4]}">
+<img src="/img/relations/${this.allImagess[5]}">
+<img src="/img/relations/${this.allImagess[6]}">
+<img src="/img/relations/${this.allImagess[7]}">
+<img src="/img/relations/${this.allImagess[8]}"> */
+// }
 
+const arrayRelations = [];
 
 const pierwszaRelacja = new showRelations(
   "relation1.jpg",
@@ -62,6 +72,7 @@ const drugaRelacja = new showRelations(
 arrayRelations.push(drugaRelacja);
 
 arrayRelations.forEach(relation => relation.addRelation()); //dodanie wszystkim elementom tablicy metody addRelation
+arrayRelations.forEach(relation => relation.addImages());
 
 
 
