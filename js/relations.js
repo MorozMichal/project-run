@@ -1,3 +1,76 @@
+const arrayRelations = [];
+
+class showRelations {
+  constructor(firstImage, allImagess, nameRelation, firstDescription, fullDescription, arrayRelations) {
+    this.nameRelation = nameRelation
+    this.firstDescription = firstDescription
+    this.fullDescription = fullDescription
+    this.firstImage = firstImage
+    this.allImagess = allImagess
+    this.arrayRelations = arrayRelations
+
+    this.relationsAll = document.querySelector(".relations")
+  }
+
+  addRelation() {
+    const articleRelation = document.createElement("article");
+    articleRelation.classList.add("relation");
+
+    this.relationsAll.appendChild(articleRelation);
+
+    articleRelation.innerHTML =
+      `<div class="relation-images">
+<div class="relation-1st-image "><img src="/img/relations/${this.firstImage}"></div>
+<div class="relation-all-images novisible">
+  <img src="/img/relations/${this.arrayRelations}">
+  <img src="/img/relations/${this.allImagess[1]}">
+  <img src="/img/relations/${this.allImagess[2]}">
+  <img src="/img/relations/${this.allImagess[3]}">
+  <img src="/img/relations/${this.allImagess[4]}">
+  <img src="/img/relations/${this.allImagess[5]}">
+  <img src="/img/relations/${this.allImagess[6]}">
+  <img src="/img/relations/${this.allImagess[7]}">
+  <img src="/img/relations/${this.allImagess[8]}">
+  </div>
+</div>
+<div class="relation-1st-descrition">
+<h3>${this.nameRelation}<i class="fas fa-caret-down show"></i><i class="fas fa-times close novisible"></i></h3>
+<p>${this.firstDescription}</p>
+<p class="novisible">${this.fullDescription}</p>
+</div>`
+  }
+}
+
+
+
+const pierwszaRelacja = new showRelations(
+  "relation1.jpg",
+  ['relation1.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation1.jpg', 'relation1.jpg'],
+  "Pierwsza Relacja",
+  "Poznań",
+  "Pierwsza cała relacja",
+);
+arrayRelations.push(pierwszaRelacja);
+
+const drugaRelacja = new showRelations(
+  "relation2.jpg",
+  ['relation1.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation5.jpg'],
+  "Druga Relacja",
+  "Warszawa",
+  "Druga cała relacja",
+);
+arrayRelations.push(drugaRelacja);
+
+arrayRelations.forEach(relation => relation.addRelation()); //dodanie wszystkim elementom tablicy metody addRelation
+
+
+
+
+
+
+
+
+
 //ukryte teksty artykułów
 const allDescriptions = document.querySelectorAll(".relation-1st-descrition p.novisible");
 //cały tekst
