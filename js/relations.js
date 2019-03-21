@@ -1,5 +1,5 @@
 class showRelations {
-  constructor(firstImage, allImagess, nameRelation, firstDescription, fullDescription) {
+  constructor(firstImage, [allImagess], nameRelation, firstDescription, fullDescription) {
     this.nameRelation = nameRelation
     this.firstDescription = firstDescription
     this.fullDescription = fullDescription
@@ -12,8 +12,12 @@ class showRelations {
 
   addImages() {
     this.sectionImages = document.querySelectorAll('.relation-all-images')
-    const oneImage = document.createElement('div')
-    this.sectionImages.forEach(s => s.appendChild(oneImage))
+
+    this.sectionImages.forEach(s => {
+      const oneImage = document.createElement('img')
+      s.appendChild(oneImage)
+      console.log(this.allImagess)
+    })
 
   }
 
@@ -55,7 +59,7 @@ const arrayRelations = [];
 
 const pierwszaRelacja = new showRelations(
   "relation1.jpg",
-  ['relation1.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation1.jpg', 'relation1.jpg'],
+  ['relation0.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation1.jpg', 'relation1.jpg'],
   "Pierwsza Relacja",
   "Poznań",
   "Pierwsza cała relacja",
@@ -71,8 +75,19 @@ const drugaRelacja = new showRelations(
 );
 arrayRelations.push(drugaRelacja);
 
-arrayRelations.forEach(relation => relation.addRelation()); //dodanie wszystkim elementom tablicy metody addRelation
-arrayRelations.forEach(relation => relation.addImages());
+const trzeciaRelacja = new showRelations(
+  "relation2.jpg",
+  ['relation5.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation5.jpg'],
+  "Trzecia Relacja",
+  "Warszawa",
+  "Trzecia cała relacja",
+);
+arrayRelations.push(trzeciaRelacja);
+
+arrayRelations.forEach(relation => {
+  relation.addRelation()
+  relation.addImages()
+});
 
 
 
