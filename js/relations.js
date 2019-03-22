@@ -10,21 +10,34 @@ class showRelations {
 
   }
 
-  addImages() {
-    this.sectionImages = document.querySelectorAll('.relation-all-images')
+  // addImages() {
+  // const sectionImages = document.querySelectorAll('.relation-all-images')
 
-    this.allImagess.forEach(s => {
-      const oneImage = document.createElement('img')
-      s.appendChild(oneImage)
-      console.log(this.allImagess)
-    })
+  // this.allImagess.forEach(s => {
+  //   const oneImage = document.createElement('img')
+  //   this.appendChild(oneImage)
+  //   oneImage.src = "ss"
+  //   console.log(this.allImagess)
+  // })
 
-    // this.allImagess.forEach(e => {
-    //   `<img src="/img/relations/${e}>`
-    //   console.log(e)
-    // })}
+  // this.allImagess.forEach(e => {
+  //   const sectionImages = document.querySelector('.relation-all-images')
+  //   const oneImage = document.createElement('img')
+  //   sectionImages.appendChild(oneImage)
+  //   oneImage.src = `/img/relations/${e}`
+  //   console.log(e)
+  // })
 
-  }
+  // const dd = function () {
+  // const sectionImages = [...document.querySelectorAll('.relation-all-images')]
+  // for (let i = 0; i < sectionImages.length; i++) {
+  // console.log(sectionImages)
+  // }
+  // sectionImages.forEach(e => console.log(e))
+  // }
+
+  // dd()
+  // }
 
   addRelation() {
     const articleRelation = document.createElement("article");
@@ -34,15 +47,15 @@ class showRelations {
 
     articleRelation.innerHTML =
       `<div class="relation-images">
-<div class="relation-1st-image "><img src="/img/relations/${this.firstImage}"></div>
-<div class="relation-all-images novisible">
-
-  </div>
-</div>
+     <div class="relation-1st-image "><img src="/img/relations/${this.firstImage}"></div>
+      <div class="relation-all-images novisible">
+      </div>
+     
+     </div>
 <div class="relation-1st-descrition">
-<h3>${this.nameRelation}<i class="fas fa-caret-down show"></i><i class="fas fa-times close novisible"></i></h3>
-<p>${this.firstDescription}</p>
-<p class="novisible">${this.fullDescription}</p>
+    <h3>${this.nameRelation}<i class="fas fa-caret-down show"></i><i class="fas fa-times close novisible"></i></h3>
+     <p>${this.firstDescription}</p>
+    <p class="novisible">${this.fullDescription}</p>
 </div>`
   }
 
@@ -94,10 +107,6 @@ arrayRelations.forEach(relation => {
   relation.addRelation()
   // relation.addImages()
 });
-
-
-
-
 
 
 
@@ -159,3 +168,13 @@ closeBtns.forEach((closeBtn, index) => {
 // this.previousElementSibling.//poprzedni element 
 // this.previousElementSibling.lastElementChild. //ostatnie dziecko poprzedniego elementu 
 // this.previousElementSibling.firstElementChild. //pierwsze dziecko poprzedniego elementu
+
+
+const sectionImages = document.querySelectorAll('.relation-all-images')
+console.log(sectionImages)
+
+const aa = function () {
+  sectionImages.forEach(e => console.log(e))
+}
+
+aa()
