@@ -19,10 +19,11 @@ class showRelations {
       console.log(this.allImagess)
     })
 
-    // this.allImagess.forEach(e => {
-    //   `<img src="/img/relations/${e}>`
-    //   console.log(e)
-    // })}
+    this.allImagess.forEach(e => {
+      `<img src="/img/relations/${e}>`
+      console.log(e)
+    })
+
 
   }
 
