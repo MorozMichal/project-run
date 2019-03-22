@@ -1,5 +1,5 @@
 class showRelations {
-  constructor(firstImage, [...allImagess], nameRelation, firstDescription, fullDescription) {
+  constructor(firstImage, allImagess, nameRelation, firstDescription, fullDescription) {
     this.nameRelation = nameRelation
     this.firstDescription = firstDescription
     this.fullDescription = fullDescription
@@ -10,63 +10,72 @@ class showRelations {
 
   }
 
-  addImages() {
-    this.sectionImages = document.querySelectorAll('.relation-all-images')
-
-    this.allImagess.forEach(s => {
-      const oneImage = document.createElement('img')
-      s.appendChild(oneImage)
-      console.log(this.allImagess)
-    })
-
-    this.allImagess.forEach(e => {
-      `<img src="/img/relations/${e}>`
-      console.log(e)
-    })
-
-
-  }
-
   addRelation() {
     const articleRelation = document.createElement("article");
     articleRelation.classList.add("relation");
-
     this.relationsAll.appendChild(articleRelation);
 
-    articleRelation.innerHTML =
-      `<div class="relation-images">
-<div class="relation-1st-image "><img src="/img/relations/${this.firstImage}"></div>
-<div class="relation-all-images novisible">
+    const relationImages = document.createElement('div');
+    relationImages.classList.add('relation-images');
+    articleRelation.appendChild(relationImages)
 
-  </div>
-</div>
-<div class="relation-1st-descrition">
-<h3>${this.nameRelation}<i class="fas fa-caret-down show"></i><i class="fas fa-times close novisible"></i></h3>
-<p>${this.firstDescription}</p>
-<p class="novisible">${this.fullDescription}</p>
-</div>`
+    const relation1stImage = document.createElement("div");
+    relation1stImage.classList.add('relation-1st-image');
+    relationImages.appendChild(relation1stImage)
+
+    const relationFirstImage = document.createElement("img")
+    relationFirstImage.src = `/img/relations/${this.firstImage}`
+    relation1stImage.appendChild(relationFirstImage)
+
+    const relationAllImages = document.createElement('div');
+    relationAllImages.classList.add('relation-all-images');
+    relationAllImages.classList.add('novisible');
+    relationImages.appendChild(relationAllImages);
+
+    for (let i = 0; i < this.allImagess.length; i++) {
+      const relationOneImage = document.createElement('img')
+      relationOneImage.src = `/img/relations/${this.allImagess[i]}`
+      relationAllImages.appendChild(relationOneImage)
+    }
+
+    const relation1stDescription = document.createElement('div');
+    relation1stDescription.classList.add('relation-1st-descrition');
+    articleRelation.appendChild(relation1stDescription);
+
+    const relationButton = document.createElement('h3')
+    relationButton.textContent = `${this.nameRelation}`
+    relation1stDescription.appendChild(relationButton)
+
+    const buttonShow = document.createElement('i')
+    buttonShow.classList.add('fas')
+    buttonShow.classList.add('fa-caret-down')
+    buttonShow.classList.add('show')
+    relationButton.appendChild(buttonShow)
+
+    const buttonClose = document.createElement('i')
+    buttonClose.classList.add('fas')
+    buttonClose.classList.add('fa-times')
+    buttonClose.classList.add('close')
+    buttonClose.classList.add('novisible')
+    relationButton.appendChild(buttonClose)
+
+    const relationFirstDescription = document.createElement('p')
+    relationFirstDescription.textContent = `${this.firstDescription}`
+    relationButton.appendChild(relationFirstDescription)
+
+    const relationFullDescription = document.createElement('p')
+    relationFullDescription.classList.add('novisible')
+    relationFullDescription.textContent = `${this.fullDescription}`
+    relationButton.appendChild(relationFullDescription)
   }
 
-
 }
-
-// {
-/* <img src="/img/relations/${arrayRelations[0].allImagess[1]}">
-<img src="/img/relations/${this.allImagess[1]}">
-<img src="/img/relations/${this.allImagess[2]}">
-<img src="/img/relations/${this.allImagess[3]}">
-<img src="/img/relations/${this.allImagess[4]}">
-<img src="/img/relations/${this.allImagess[5]}">
-<img src="/img/relations/${this.allImagess[6]}">
-<img src="/img/relations/${this.allImagess[7]}">
-<img src="/img/relations/${this.allImagess[8]}"> */
-// }
 
 const arrayRelations = [];
 
 const pierwszaRelacja = new showRelations(
   "relation1.jpg",
-  ['relation0.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation1.jpg', 'relation1.jpg'],
+  ['relation1.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation1.jpg', 'relation1.jpg'],
   "Pierwsza Relacja",
   "Poznań",
   "Pierwsza cała relacja",
@@ -84,25 +93,14 @@ arrayRelations.push(drugaRelacja);
 
 const trzeciaRelacja = new showRelations(
   "relation2.jpg",
-  ['relation5.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation5.jpg'],
+  ['relation5.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg'],
   "Trzecia Relacja",
   "Warszawa",
   "Trzecia cała relacja",
 );
 arrayRelations.push(trzeciaRelacja);
 
-arrayRelations.forEach(relation => {
-  relation.addRelation()
-  // relation.addImages()
-});
-
-
-
-
-
-
-
-
+arrayRelations.forEach(relation => relation.addRelation());
 
 //ukryte teksty artykułów
 const allDescriptions = document.querySelectorAll(".relation-1st-descrition p.novisible");
