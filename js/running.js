@@ -1,5 +1,5 @@
 class RunningCity {
-  constructor(runningArm, runningCityName, runningProvince, allContestName, allContestli1, allContestli2, allContestli3) {
+  constructor(runningArm, runningCityName, runningProvince, allContestName, allContestli1, allContestli2, allContestli3, contentLink, contentFacebook) {
     this.runningArm = runningArm;
     this.runningCityName = runningCityName;
     this.runningProvince = runningProvince;
@@ -7,6 +7,8 @@ class RunningCity {
     this.allContestli1 = allContestli1;
     this.allContestli2 = allContestli2;
     this.allContestli3 = allContestli3;
+    this.contentLink = contentLink;
+    this.contentFacebook = contentFacebook
 
     this.runningSectionWrapper = document.querySelector('.section-running-wrapper')
     this.runningSectionContest = document.querySelector('.running-contest')
@@ -62,45 +64,14 @@ class RunningCity {
       const constetNameLi3 = document.createElement('li')
       contestNameDescription.appendChild(constetNameLi3).textContent = `Biegi towarzyszące: ${this.allContestli3[i]}`
 
+      const contestNameLink = document.createElement('p')
+      contestNameDescription.appendChild(contestNameLink);
+      contestNameLink.innerHTML = `<a href="${this.contentLink[i]}" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="${this.contentFacebook[i]}" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>`
+
     }
 
   }
 
-}
-
-{
-  /* <div class="no-active">
-  <p class="contest-city">
-    <span><img src="./img/running_wroclaw.png" /></span><span>Wrocław</span>
-  </p>
-  <p class="contest-name">7. PKO Nocny Wrocław Półmaratom</p>
-  <ul class="novisible">
-    <li>15.06.2019r. godz. 22:00 - limit: 13.000 osób</li>
-    <li>21.097km - półmaraton</li>
-    <li>biegi towarzyszące: PKO Wieczorny Bieg Rodzinny</li>
-    <p>
-      <a href="https://pol.wroclawmaraton.pl" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="https://web.facebook.com/maraton.wroclawski?fref=ts" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>
-    </p>
-  </ul>
-  <p class="contest-name">37. PKO Wrocław Maraton</p>
-  <ul class="novisible">
-    <li>15.09.2019r.</li>
-    <li>42.197km - maraton</li>
-    <li>biegi towarzyszące: </li>
-    <p>
-      <a href="http://wroclawmaraton.pl/" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="https://web.facebook.com/maraton.wroclawski?fref=ts" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>
-    </p>
-  </ul>
-  <p class="contest-name">VI Półmaraton Piastowski</p>
-  <ul class="novisible">
-    <li>19.10.2019r.</li>
-    <li>21.097km - półmaraton trasa crossowa</li>
-    <li>biegi towarzyszące: bieg dla każdego - 10.5km; Nordic Walking - 10.5km (trasa crossowa)</li>
-    <p>
-      <a href="http://wkbpiast.com/" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="https://web.facebook.com/wkbpiast/" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>
-    </p>
-  </ul>
-  </div> */
 }
 
 const arrayRunning = [];
@@ -109,7 +80,10 @@ const wroclaw = new RunningCity(
   "running_wroclaw.png",
   "Wrocław",
   "dolnośląskie",
-  ['7. PKO Nocny Wrocław Półmaratom', '37. PKO Wrocław Maraton', 'VI Półmaraton Piastowski'],
+  ['7. PKO Nocny Wrocław Półmaratom',
+    '37. PKO Wrocław Maraton',
+    'VI Półmaraton Piastowski'
+  ],
   ['15.06.2019r. godz. 22:00 - limit: 13.000 osób',
     '15.09.2019r.',
     '19.10.2019r.'
@@ -122,104 +96,221 @@ const wroclaw = new RunningCity(
     '',
     'bieg dla każdego - 10.5km; Nordic Walking - 10.5km (trasa crossowa)'
   ],
+  ['https://pol.wroclawmaraton.pl',
+    'http://wroclawmaraton.pl/',
+    'http://wkbpiast.com/'
+  ],
+  ['https://web.facebook.com/maraton.wroclawski?fref=ts',
+    'https://web.facebook.com/maraton.wroclawski?fref=ts',
+    'https://web.facebook.com/wkbpiast/'
+  ],
 
 );
 arrayRunning.push(wroclaw);
 
-// const olawa = new RunningCity(
-//   "running_olawa.png",
-//   "Oława",
-//   "dolnośląskie",
-//   ['XII Bieg Koguta'],
-// );
-// arrayRunning.push(olawa);
+const olawa = new RunningCity(
+  "running_olawa.png",
+  "Oława",
+  "dolnośląskie",
+  ['XII Bieg Koguta'],
+  ['01.09.2019r.'],
+  ['10km'],
+  [''],
+  [''],
+  [''],
+);
+arrayRunning.push(olawa);
 
-// const laskowice = new RunningCity(
-//   "running_laskowice.png",
-//   "Jelcz-Laskowice",
-//   "dolnośląskie",
-//   ['Maraton Jelcz-Laskowice', 'Cross Półmaraton', 'Bieg Sylwestrony']
-// );
-// arrayRunning.push(laskowice);
+const laskowice = new RunningCity(
+  "running_laskowice.png",
+  "Jelcz-Laskowice",
+  "dolnośląskie",
+  ['Maraton Jelcz-Laskowice', 'Cross Półmaraton', 'Bieg Sylwestrony'],
+  ['01.05.2019r. godz. 09:00',
+    '26.08.2018r. (nieustalono terminu na 2019r.)',
+    '31.12.2019r.'
+  ],
+  ['42.197km - maraton',
+    '42.197km - maraton',
+    '10km'
+  ],
+  ['10km, bieg dzieci',
+    '10km, bieg dzieci',
+    '5km'
+  ],
+  ['https://kbharcownik.pl',
+    'https://kbharcownik.pl',
+    'https://kbharcownik.pl'
+  ],
+  ['', '', ''],
+);
+arrayRunning.push(laskowice);
 
-// const henrykow = new RunningCity(
-//   "running_henrykow.png",
-//   "Henryków",
-//   "dolnośląskie",
-//   ['Półmaraton Henryków']
-// );
-// arrayRunning.push(henrykow);
+const henrykow = new RunningCity(
+  "running_henrykow.png",
+  "Henryków",
+  "dolnośląskie",
+  ['Półmaraton Henryków'],
+  ['11.08.2018r. (nieustalono terminu na 2019r.)'],
+  ['21.097km - półmaraton'],
+  ['10km, bieg dzieci'],
+  ['https://www.polmaraton-henrykowski.pl/'],
+  ['https://www.facebook.com/polmaratonhenrykowski'],
+);
+arrayRunning.push(henrykow);
 
-// const sobotka = new RunningCity(
-//   "running_sobotka.png",
-//   "Sobótka",
-//   "dolnośląskie",
-//   ['12. PANAS PÓŁMARATON ŚLĘŻAŃSKI']
-// );
-// arrayRunning.push(sobotka);
+const sobotka = new RunningCity(
+  "running_sobotka.png",
+  "Sobótka",
+  "dolnośląskie",
+  ['12. PANAS PÓŁMARATON ŚLĘŻAŃSKI'],
+  ['23.03.2019r.'],
+  ['21.097km - półmaraton'],
+  [''],
+  ['http://www.polmaratonslezanski.pl/'],
+  [''],
+);
+arrayRunning.push(sobotka);
 
-// const brzeg = new RunningCity(
-//   "running_brzeg.png",
-//   "Brzeg",
-//   "opolskie",
-//   ['Nocna Dycha']
-// );
-// arrayRunning.push(brzeg);
+const brzeg = new RunningCity(
+  "running_brzeg.png",
+  "Brzeg",
+  "opolskie",
+  ['Nocna Dycha'],
+  ['13.04.2019r.'],
+  ['10km'],
+  [''],
+  ['http://kotwicabrzeg.pl/'],
+  [''],
+);
+arrayRunning.push(brzeg);
 
-// const szczecin = new RunningCity(
-//   "running_szczecin.png",
-//   "Szczecin",
-//   "zachodniopomorskie",
-//   ['40. PKO Półmaraton Szczecin']
-// );
-// arrayRunning.push(szczecin);
+const szczecin = new RunningCity(
+  "running_szczecin.png",
+  "Szczecin",
+  "zachodniopomorskie",
+  ['40. PKO Półmaraton Szczecin'],
+  ['25.08.2019r.'],
+  ['21.097km - półmaraton'],
+  ['10km, bieg dzieci'],
+  ['http://halfmarathon.szczecin.pl/'],
+  ['https://www.facebook.com/szczecinhalfmarathon?fref=ts'],
+);
+arrayRunning.push(szczecin);
 
-// const kolobrzeg = new RunningCity(
-//   "running_kolobrzeg.png",
-//   "Kołobrzeg",
-//   "zachodniopomorskie",
-//   ['6. Maraton Kołobrzeg']
-// );
-// arrayRunning.push(kolobrzeg);
+const kolobrzeg = new RunningCity(
+  "running_kolobrzeg.png",
+  "Kołobrzeg",
+  "zachodniopomorskie",
+  ['6. Maraton Kołobrzeg'],
+  ['28.04.2019r.'],
+  ['42.197km - maraton'],
+  ['3 półmaraton Kołobrzeg, bieg dzieci'],
+  ['http://kolobrzegmaraton.com/'],
+  ['https://www.facebook.com/KolobrzegMaraton/'],
+);
+arrayRunning.push(kolobrzeg);
 
-// const gdansk = new RunningCity(
-//   "running_gdansk.png",
-//   "Gdańsk",
-//   "pomorskie",
-//   ['Półmaraton Gdańsk', '5. Gdańsk Maraton']
-// );
-// arrayRunning.push(gdansk);
+const gdansk = new RunningCity(
+  "running_gdansk.png",
+  "Gdańsk",
+  "pomorskie",
+  ['Półmaraton Gdańsk', '5. Gdańsk Maraton'],
+  ['28.10.2018r. (nieustalono terminu na 2019r.)',
+    '14.04.2019r.'
+  ],
+  ['21.097km - półmaraton',
+    '42.197km - maraton'
+  ],
+  ['',
+    'bieg dzieci'
+  ],
+  ['http://polmaratongdansk.pl/',
+    'https://www.gdanskmaraton.pl/',
+    'http://wkbpiast.com/'
+  ],
+  ['',
+    'https://www.facebook.com/GdanskMaraton/'
+  ],
+);
+arrayRunning.push(gdansk);
 
-// const warszawa = new RunningCity(
-//   "running_warszawa.png",
-//   "Warszawa",
-//   "mazowieckie",
-//   ['14. Półmaraton Warszawski', 'Orlen Warsaw Marathon', '41. Maraton Warszawski']
-// );
-// arrayRunning.push(warszawa);
+const warszawa = new RunningCity(
+  "running_warszawa.png",
+  "Warszawa",
+  "mazowieckie",
+  ['14. Półmaraton Warszawski', 'Orlen Warsaw Marathon', '41. Maraton Warszawski'],
+  ['31.03.2019r.',
+    '14.04.2019r.',
+    '29.09.2019r.'
+  ],
+  ['21.097km - półmaraton',
+    '42.197km - maraton',
+    '42.197km - maraton'
+  ],
+  ['',
+    'Bieg na 10 km',
+    ''
+  ],
+  ['http://pzupolmaratonwarszawski.com/',
+    'https://www.orlenmarathon.pl/',
+    'http://pzumaratonwarszawski.com/'
+  ],
+  ['https://www.facebook.com/MaratonWarszawski/',
+    '',
+    'https://www.facebook.com/MaratonWarszawski/'
+  ],
+);
+arrayRunning.push(warszawa);
 
-// const poznan = new RunningCity(
-//   "running_poznan.png",
-//   "Poznań",
-//   "wielkopolskie",
-//   ['12. PKO Poznań Półmaraton', '20. PKO Poznań Maraton']
-// );
-// arrayRunning.push(poznan);
+const poznan = new RunningCity(
+  "running_poznan.png",
+  "Poznań",
+  "wielkopolskie",
+  ['12. PKO Poznań Półmaraton', '20. PKO Poznań Maraton'],
+  ['14.04.2019r.',
+    '20.10.2019r.'
+  ],
+  ['21.097km - półmaraton',
+    '42.197km - maraton'
+  ],
+  ['10km, bieg dzieci',
+    ''
+  ],
+  ['https://pol.wroclawmaraton.pl',
+    'https://halfmarathon.poznan.pl/',
+  ],
+  ['https://www.facebook.com/PoznanMaraton/',
+    'https://www.facebook.com/PoznanMaraton/'
+  ],
+);
+arrayRunning.push(poznan);
 
-// const krakow = new RunningCity(
-//   "running_krakow.png",
-//   "Kraków",
-//   "małopolskie",
-//   ['6. Cracovia Półmaraton Królewski', '18. Cracovia Maraton']
-// );
-// arrayRunning.push(krakow);
+const krakow = new RunningCity(
+  "running_krakow.png",
+  "Kraków",
+  "małopolskie",
+  ['6. Cracovia Półmaraton Królewski', '18. Cracovia Maraton'],
+  ['13.10.2019r.',
+    '28.04.2019r.'
+  ],
+  ['21.097km - półmaraton',
+    '42.197km - maraton'
+  ],
+  ['', ''],
+  ['http://www.pzucracoviapolmaraton.pl',
+    'http://www.cracoviamaraton.pl/'
+  ],
+  ['https://www.facebook.com/CracoviaMaraton/',
+    'https://www.facebook.com/CracoviaMaraton/'
+  ],
+);
+arrayRunning.push(krakow);
 
 arrayRunning.forEach(run => {
   run.addRunningCity();
   run.addRunningContest()
 }); //dodanie wszystkim elementom tablicy metody addRunningCity
-
-
 
 const imgArms = document.querySelectorAll(".running-arm img");
 const btnsCities = document.querySelectorAll(".running-city");
