@@ -1,10 +1,15 @@
 class RunningCity {
-  constructor(runningArm, runningCityName, runningProvince) {
+  constructor(runningArm, runningCityName, runningProvince, allContestName, allContestli1, allContestli2, allContestli3) {
     this.runningArm = runningArm;
     this.runningCityName = runningCityName;
-    this.runningProvince = runningProvince
+    this.runningProvince = runningProvince;
+    this.allContestName = allContestName;
+    this.allContestli1 = allContestli1;
+    this.allContestli2 = allContestli2;
+    this.allContestli3 = allContestli3;
 
     this.runningSectionWrapper = document.querySelector('.section-running-wrapper')
+    this.runningSectionContest = document.querySelector('.running-contest')
   }
 
   addRunningCity() {
@@ -28,6 +33,74 @@ class RunningCity {
 
   }
 
+  addRunningContest() {
+    const runningContestCity = document.createElement('div');
+    runningContestCity.classList.add('no-active');
+    this.runningSectionContest.appendChild(runningContestCity)
+
+    const runningContestCityName = document.createElement('p')
+    runningContestCityName.classList.add("contest-city")
+    runningContestCity.appendChild(runningContestCityName)
+    runningContestCityName.innerHTML = `<span><img src="./img/${this.runningArm}" /></span><span>${this.runningCityName}</span>`
+
+    for (let i = 0; i < this.allContestName.length; i++) {
+      const oneContestName = document.createElement('p');
+      oneContestName.classList.add('contest-name');
+      oneContestName.textContent = `${this.allContestName[i]}`
+      runningContestCity.appendChild(oneContestName)
+
+      const contestNameDescription = document.createElement('ul')
+      contestNameDescription.classList.add('novisible')
+      runningContestCity.appendChild(contestNameDescription)
+
+      const constetNameLi1 = document.createElement('li')
+      contestNameDescription.appendChild(constetNameLi1).textContent = `${this.allContestli1[i]}`
+
+      const constetNameLi2 = document.createElement('li')
+      contestNameDescription.appendChild(constetNameLi2).textContent = `${this.allContestli2[i]}`
+
+      const constetNameLi3 = document.createElement('li')
+      contestNameDescription.appendChild(constetNameLi3).textContent = `Biegi towarzyszące: ${this.allContestli3[i]}`
+
+    }
+
+  }
+
+}
+
+{
+  /* <div class="no-active">
+  <p class="contest-city">
+    <span><img src="./img/running_wroclaw.png" /></span><span>Wrocław</span>
+  </p>
+  <p class="contest-name">7. PKO Nocny Wrocław Półmaratom</p>
+  <ul class="novisible">
+    <li>15.06.2019r. godz. 22:00 - limit: 13.000 osób</li>
+    <li>21.097km - półmaraton</li>
+    <li>biegi towarzyszące: PKO Wieczorny Bieg Rodzinny</li>
+    <p>
+      <a href="https://pol.wroclawmaraton.pl" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="https://web.facebook.com/maraton.wroclawski?fref=ts" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>
+    </p>
+  </ul>
+  <p class="contest-name">37. PKO Wrocław Maraton</p>
+  <ul class="novisible">
+    <li>15.09.2019r.</li>
+    <li>42.197km - maraton</li>
+    <li>biegi towarzyszące: </li>
+    <p>
+      <a href="http://wroclawmaraton.pl/" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="https://web.facebook.com/maraton.wroclawski?fref=ts" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>
+    </p>
+  </ul>
+  <p class="contest-name">VI Półmaraton Piastowski</p>
+  <ul class="novisible">
+    <li>19.10.2019r.</li>
+    <li>21.097km - półmaraton trasa crossowa</li>
+    <li>biegi towarzyszące: bieg dla każdego - 10.5km; Nordic Walking - 10.5km (trasa crossowa)</li>
+    <p>
+      <a href="http://wkbpiast.com/" target="_blank"><button class="button-running"><i class="fas fa-link"></i></button></a><a href="https://web.facebook.com/wkbpiast/" target="_blank"><button class="button-running"><i class="fab fa-facebook-f"></i></button></a>
+    </p>
+  </ul>
+  </div> */
 }
 
 const arrayRunning = [];
@@ -35,88 +108,116 @@ const arrayRunning = [];
 const wroclaw = new RunningCity(
   "running_wroclaw.png",
   "Wrocław",
-  "dolnośląskie"
+  "dolnośląskie",
+  ['7. PKO Nocny Wrocław Półmaratom', '37. PKO Wrocław Maraton', 'VI Półmaraton Piastowski'],
+  ['15.06.2019r. godz. 22:00 - limit: 13.000 osób',
+    '15.09.2019r.',
+    '19.10.2019r.'
+  ],
+  ['21.097km - półmaraton',
+    '42.197km - maraton',
+    '21.097km - półmaraton trasa crossowa'
+  ],
+  ['PKO Wieczorny Bieg Rodzinny',
+    '',
+    'bieg dla każdego - 10.5km; Nordic Walking - 10.5km (trasa crossowa)'
+  ],
+
 );
 arrayRunning.push(wroclaw);
 
-const olawa = new RunningCity(
-  "running_olawa.png",
-  "Oława",
-  "dolnośląskie"
-);
-arrayRunning.push(olawa);
+// const olawa = new RunningCity(
+//   "running_olawa.png",
+//   "Oława",
+//   "dolnośląskie",
+//   ['XII Bieg Koguta'],
+// );
+// arrayRunning.push(olawa);
 
-const laskowice = new RunningCity(
-  "running_laskowice.png",
-  "Jelcz-Laskowice",
-  "dolnośląskie"
-);
-arrayRunning.push(laskowice);
+// const laskowice = new RunningCity(
+//   "running_laskowice.png",
+//   "Jelcz-Laskowice",
+//   "dolnośląskie",
+//   ['Maraton Jelcz-Laskowice', 'Cross Półmaraton', 'Bieg Sylwestrony']
+// );
+// arrayRunning.push(laskowice);
 
-const henrykow = new RunningCity(
-  "running_henrykow.png",
-  "Henryków",
-  "dolnośląskie"
-);
-arrayRunning.push(henrykow);
+// const henrykow = new RunningCity(
+//   "running_henrykow.png",
+//   "Henryków",
+//   "dolnośląskie",
+//   ['Półmaraton Henryków']
+// );
+// arrayRunning.push(henrykow);
 
-const sobotka = new RunningCity(
-  "running_sobotka.png",
-  "Sobótka",
-  "dolnośląskie"
-);
-arrayRunning.push(sobotka);
+// const sobotka = new RunningCity(
+//   "running_sobotka.png",
+//   "Sobótka",
+//   "dolnośląskie",
+//   ['12. PANAS PÓŁMARATON ŚLĘŻAŃSKI']
+// );
+// arrayRunning.push(sobotka);
 
-const brzeg = new RunningCity(
-  "running_brzeg.png",
-  "Brzeg",
-  "opolskie"
-);
-arrayRunning.push(brzeg);
+// const brzeg = new RunningCity(
+//   "running_brzeg.png",
+//   "Brzeg",
+//   "opolskie",
+//   ['Nocna Dycha']
+// );
+// arrayRunning.push(brzeg);
 
-const szczecin = new RunningCity(
-  "running_szczecin.png",
-  "Szczecin",
-  "zachodniopomorskie"
-);
-arrayRunning.push(szczecin);
+// const szczecin = new RunningCity(
+//   "running_szczecin.png",
+//   "Szczecin",
+//   "zachodniopomorskie",
+//   ['40. PKO Półmaraton Szczecin']
+// );
+// arrayRunning.push(szczecin);
 
-const kolobrzeg = new RunningCity(
-  "running_kolobrzeg.png",
-  "Kołobrzeg",
-  "zachodniopomorskie"
-);
-arrayRunning.push(kolobrzeg);
+// const kolobrzeg = new RunningCity(
+//   "running_kolobrzeg.png",
+//   "Kołobrzeg",
+//   "zachodniopomorskie",
+//   ['6. Maraton Kołobrzeg']
+// );
+// arrayRunning.push(kolobrzeg);
 
-const gdansk = new RunningCity(
-  "running_gdansk.png",
-  "Gdańsk",
-  "pomorskie"
-);
-arrayRunning.push(gdansk);
+// const gdansk = new RunningCity(
+//   "running_gdansk.png",
+//   "Gdańsk",
+//   "pomorskie",
+//   ['Półmaraton Gdańsk', '5. Gdańsk Maraton']
+// );
+// arrayRunning.push(gdansk);
 
-const warszawa = new RunningCity(
-  "running_warszawa.png",
-  "Warszawa",
-  "mazowieckie"
-);
-arrayRunning.push(warszawa);
+// const warszawa = new RunningCity(
+//   "running_warszawa.png",
+//   "Warszawa",
+//   "mazowieckie",
+//   ['14. Półmaraton Warszawski', 'Orlen Warsaw Marathon', '41. Maraton Warszawski']
+// );
+// arrayRunning.push(warszawa);
 
-const poznan = new RunningCity(
-  "running_poznan.png",
-  "Poznań",
-  "wielkopolskie"
-);
-arrayRunning.push(poznan);
+// const poznan = new RunningCity(
+//   "running_poznan.png",
+//   "Poznań",
+//   "wielkopolskie",
+//   ['12. PKO Poznań Półmaraton', '20. PKO Poznań Maraton']
+// );
+// arrayRunning.push(poznan);
 
-const krakow = new RunningCity(
-  "running_krakow.png",
-  "Kraków",
-  "małopolskie"
-);
-arrayRunning.push(krakow);
+// const krakow = new RunningCity(
+//   "running_krakow.png",
+//   "Kraków",
+//   "małopolskie",
+//   ['6. Cracovia Półmaraton Królewski', '18. Cracovia Maraton']
+// );
+// arrayRunning.push(krakow);
 
-arrayRunning.forEach(run => run.addRunningCity()); //dodanie wszystkim elementom tablicy metody addRunningCity
+arrayRunning.forEach(run => {
+  run.addRunningCity();
+  run.addRunningContest()
+}); //dodanie wszystkim elementom tablicy metody addRunningCity
 
 
 
