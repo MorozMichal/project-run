@@ -6,7 +6,7 @@
     display: flex;
     padding: 30px;
 
-    overflow: hidden;
+    // overflow: hidden;
 
 
     .running-contest {
@@ -20,7 +20,7 @@
 
         .no-active {
             flex-direction: column;
-            width: 55vw;
+            width: 65vw;
             padding-left: 5vw;
 
         }

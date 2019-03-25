@@ -444,7 +444,6 @@ header .header-button-down:hover {
   display: -ms-flexbox;
   display: flex;
   padding: 30px;
-  overflow: hidden;
 }
 
 .section-running .running-contest {
@@ -464,7 +463,7 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 55vw;
+  width: 65vw;
   padding-left: 5vw;
 }
 
