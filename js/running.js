@@ -1,3 +1,125 @@
+class RunningCity {
+  constructor(runningArm, runningCityName, runningProvince) {
+    this.runningArm = runningArm;
+    this.runningCityName = runningCityName;
+    this.runningProvince = runningProvince
+
+    this.runningSectionWrapper = document.querySelector('.section-running-wrapper')
+  }
+
+  addRunningCity() {
+    const runningArms = document.createElement('div');
+    runningArms.classList.add('running-arms')
+    this.runningSectionWrapper.appendChild(runningArms)
+
+    const runningArm = document.createElement('div')
+    runningArm.classList.add('running-arm')
+    runningArms.appendChild(runningArm)
+
+    const armImg = document.createElement('img')
+    runningArm.appendChild(armImg)
+    armImg.src = `./img/${this.runningArm}`
+
+    const runningCity = document.createElement('h2')
+    runningCity.classList.add('running-city')
+    runningArms.appendChild(runningCity)
+
+    runningCity.innerHTML = `${this.runningCityName}<span>${this.runningProvince}</span>`
+
+  }
+
+}
+
+const arrayRunning = [];
+
+const wroclaw = new RunningCity(
+  "running_wroclaw.png",
+  "Wrocław",
+  "dolnośląskie"
+);
+arrayRunning.push(wroclaw);
+
+const olawa = new RunningCity(
+  "running_olawa.png",
+  "Oława",
+  "dolnośląskie"
+);
+arrayRunning.push(olawa);
+
+const laskowice = new RunningCity(
+  "running_laskowice.png",
+  "Jelcz-Laskowice",
+  "dolnośląskie"
+);
+arrayRunning.push(laskowice);
+
+const henrykow = new RunningCity(
+  "running_henrykow.png",
+  "Henryków",
+  "dolnośląskie"
+);
+arrayRunning.push(henrykow);
+
+const sobotka = new RunningCity(
+  "running_sobotka.png",
+  "Sobótka",
+  "dolnośląskie"
+);
+arrayRunning.push(sobotka);
+
+const brzeg = new RunningCity(
+  "running_brzeg.png",
+  "Brzeg",
+  "opolskie"
+);
+arrayRunning.push(brzeg);
+
+const szczecin = new RunningCity(
+  "running_szczecin.png",
+  "Szczecin",
+  "zachodniopomorskie"
+);
+arrayRunning.push(szczecin);
+
+const kolobrzeg = new RunningCity(
+  "running_kolobrzeg.png",
+  "Kołobrzeg",
+  "zachodniopomorskie"
+);
+arrayRunning.push(kolobrzeg);
+
+const gdansk = new RunningCity(
+  "running_gdansk.png",
+  "Gdańsk",
+  "pomorskie"
+);
+arrayRunning.push(gdansk);
+
+const warszawa = new RunningCity(
+  "running_warszawa.png",
+  "Warszawa",
+  "mazowieckie"
+);
+arrayRunning.push(warszawa);
+
+const poznan = new RunningCity(
+  "running_poznan.png",
+  "Poznań",
+  "wielkopolskie"
+);
+arrayRunning.push(poznan);
+
+const krakow = new RunningCity(
+  "running_krakow.png",
+  "Kraków",
+  "małopolskie"
+);
+arrayRunning.push(krakow);
+
+arrayRunning.forEach(run => run.addRunningCity()); //dodanie wszystkim elementom tablicy metody addRunningCity
+
+
+
 const imgArms = document.querySelectorAll(".running-arm img");
 const btnsCities = document.querySelectorAll(".running-city");
 
