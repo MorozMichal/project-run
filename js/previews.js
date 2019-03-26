@@ -11,30 +11,14 @@ class PreviewCity {
   }
 
   addPreview() {
-    //moze skrocic to za pomoca dodatnia jednego elementu innerHTML i w srodku niego 3p
     const divPreview = document.createElement("div"); //zbiorczy div dla 3*p
 
     divPreview.classList.add("preview");
     this.previewsAll.appendChild(divPreview);
     divPreview.innerHTML = `<p>${this.city}</p><p>${this.date}</p><p>${
       this.description
-    }</p>`;
+    }</p>`
 
-    // divPreview.classList.add("preview");
-    // this.previewsAll.appendChild(divPreview);
-
-    // const previewPcity = document.createElement("p"); //p z nazwą miasta
-    // divPreview.appendChild(previewPcity);
-
-    // const previewPdate = document.createElement("p"); //p z data zawodów
-    // divPreview.appendChild(previewPdate);
-
-    // const previewPdescription = document.createElement("p"); //p z nazwa biegu
-    // divPreview.appendChild(previewPdescription);
-
-    // previewPcity.textContent = `${this.city}`;
-    // previewPdate.textContent = `${this.date}`;
-    // previewPdescription.textContent = `${this.description}`;
   }
 
   addContent() {
@@ -196,7 +180,10 @@ const poznan201019 = new PreviewCity(
 arrayPreview.push(poznan201019);
 // poznan201019.addPreview()
 
+
 arrayPreview.forEach(preview => preview.addPreview()); //dodanie wszystkim elementom tablicy metody addPreview
+
+
 
 /* ---------------------------------------------------------------------------- */
 const previews = document.querySelectorAll(".preview");

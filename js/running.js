@@ -310,7 +310,7 @@ arrayRunning.push(krakow);
 arrayRunning.forEach(run => {
   run.addRunningCity();
   run.addRunningContest()
-}); //dodanie wszystkim elementom tablicy metody addRunningCity
+}); //dodanie wszystkim elementom tablicy metody addRunningCity, addRunningContest
 
 const imgArms = document.querySelectorAll(".running-arm img");
 const btnsCities = document.querySelectorAll(".running-city");

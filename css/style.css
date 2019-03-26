@@ -173,20 +173,33 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   background-image: url(/img/background_previews.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  overflow: hidden;
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .section-previews .section-previews-content {
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
   text-align: center;
   position: relative;
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews .section-previews-content {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+  }
 }
 
 .section-previews .section-previews-content .preview-content {
@@ -204,8 +217,8 @@ header .header-button-down:hover {
 }
 
 .section-previews .section-previews-racing {
-  -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,13 +226,22 @@ header .header-button-down:hover {
       flex-wrap: wrap;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transform: translateX(90%);
-          transform: translateX(90%);
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews .section-previews-racing {
+    -webkit-transform: translateX(80%);
+            transform: translateX(80%);
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
 }
 
 .section-previews .section-previews-racing .section-previews-banner {
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   position: relative;
   background-color: rgba(210, 210, 210, 0.7);
 }
@@ -243,27 +265,58 @@ header .header-button-down:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .section-previews .section-previews-racing .section-previews-all .preview {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 3px 0;
   background-color: rgba(210, 210, 210, 0.7);
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews .section-previews-racing .section-previews-all .preview {
+    padding: 10px 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 .section-previews .section-previews-racing .section-previews-all .preview p:nth-child(1) {
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews .section-previews-racing .section-previews-all .preview p:nth-child(1) {
+    font-weight: 900;
+    font-size: 1rem;
+  }
+}
+
+.section-previews .section-previews-racing .section-previews-all .preview p:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews .section-previews-racing .section-previews-all .preview p:nth-child(3) {
+    display: block;
+  }
 }
 
 .section-previews .section-previews-racing .section-previews-all .preview p {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 739px) {
+  .section-previews .section-previews-racing .section-previews-all .preview p {
+    font-size: 0.7rem;
+  }
 }
 
 .section-previews .section-previews-racing .section-previews-all .preview:hover {
