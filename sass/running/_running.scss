@@ -4,9 +4,14 @@
     background-position: center;
     background-size: cover;
     display: flex;
-    padding: 30px;
-
+    flex-direction: column;
+    // padding: 30px;
     // overflow: hidden;
+
+    @media screen and (min-width: 739px) {
+        flex-direction: row;
+        // padding: 30px;
+    }
 
 
     .running-contest {
@@ -147,15 +152,19 @@
 
 
         .running-arms {
-            flex-basis: 30%;
+            flex-basis: 50%;
             display: flex;
             flex-wrap: nowrap;
             justify-content: left;
             // border: 1px solid white;
 
 
+            @media screen and (min-width: 739px) {
+                flex-basis: 100%;
+            }
+
             .running-arm {
-                width: 100px;
+                flex-basis: 25%;
                 text-align: center;
                 padding: 5px;
 
@@ -167,11 +176,35 @@
             }
 
             .running-city {
+                // text-align: right;
                 background-color: rgba(210, 210, 210, 0.2);
-                width: 250px;
-                font-size: 16px;
+                flex-basis: 75%;
+                font-size: 1rem;
                 padding: 5px;
                 line-height: 30px;
+                position: relative;
+
+
+
+                @media screen and (min-width: 739px) {
+                    width: 25vw;
+
+                }
+
+                span {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    font-weight: 400;
+                    font-size: 10px;
+                    padding: 5px;
+                    line-height: 25px;
+
+                    @media screen and (min-width: 739px) {
+                        display: inline;
+                    }
+
+                }
 
 
             }
@@ -180,19 +213,7 @@
                 animation: arm 2s infinite linear
             }
 
-            h2 {
-                position: relative;
-            }
 
-            span {
-                position: absolute;
-                right: 0;
-                font-weight: 400;
-                font-size: 10px;
-                padding: 5px;
-                line-height: 25px;
-
-            }
 
             .running-city:hover {
                 background-color: rgba(210, 210, 210, 0.8);

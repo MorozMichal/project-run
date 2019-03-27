@@ -519,7 +519,19 @@ header .header-button-down:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 739px) {
+  .section-running {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .section-running .running-contest {
@@ -651,8 +663,8 @@ header .header-button-down:hover {
 }
 
 .section-running .section-running-wrapper .running-arms {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,8 +675,16 @@ header .header-button-down:hover {
           justify-content: left;
 }
 
+@media screen and (min-width: 739px) {
+  .section-running .section-running-wrapper .running-arms {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .section-running .section-running-wrapper .running-arms .running-arm {
-  width: 100px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   text-align: center;
   padding: 5px;
 }
@@ -675,28 +695,39 @@ header .header-button-down:hover {
 
 .section-running .section-running-wrapper .running-arms .running-city {
   background-color: rgba(210, 210, 210, 0.2);
-  width: 250px;
-  font-size: 16px;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  font-size: 1rem;
   padding: 5px;
   line-height: 30px;
-}
-
-.section-running .section-running-wrapper .running-arms .running-city-arms-animation {
-  -webkit-animation: arm 2s infinite linear;
-          animation: arm 2s infinite linear;
-}
-
-.section-running .section-running-wrapper .running-arms h2 {
   position: relative;
 }
 
-.section-running .section-running-wrapper .running-arms span {
+@media screen and (min-width: 739px) {
+  .section-running .section-running-wrapper .running-arms .running-city {
+    width: 25vw;
+  }
+}
+
+.section-running .section-running-wrapper .running-arms .running-city span {
+  display: none;
   position: absolute;
   right: 0;
   font-weight: 400;
   font-size: 10px;
   padding: 5px;
   line-height: 25px;
+}
+
+@media screen and (min-width: 739px) {
+  .section-running .section-running-wrapper .running-arms .running-city span {
+    display: inline;
+  }
+}
+
+.section-running .section-running-wrapper .running-arms .running-city-arms-animation {
+  -webkit-animation: arm 2s infinite linear;
+          animation: arm 2s infinite linear;
 }
 
 .section-running .section-running-wrapper .running-arms .running-city:hover {
