@@ -18,7 +18,7 @@ body {
   position: fixed;
   top: 0%;
   right: 0%;
-  width: 25%;
+  width: 100%;
   height: 100%;
   z-index: 1000;
   -webkit-transform: translate(100%);
@@ -26,6 +26,12 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+@media screen and (min-width: 739px) {
+  .menu {
+    width: 25%;
+  }
 }
 
 .menu li {
@@ -55,7 +61,7 @@ body {
 }
 
 .menu li:nth-child(1) {
-  line-height: 2.5rem;
+  line-height: 3rem;
   font-size: 1.5rem;
   padding: 0;
   padding-right: 4rem;
@@ -82,22 +88,30 @@ header {
 }
 
 header .header-wrapper-menu {
-  width: 100%;
-  text-align: right;
-  padding-right: 3.5rem;
-  background-color: transparent;
   position: fixed;
-  line-height: 2.5rem;
-  height: 2.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: transparent;
   z-index: 1000;
 }
 
 header .header-wrapper-menu .header-menu {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.3rem;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (min-width: 739px) {
+  header .header-wrapper-menu .header-menu {
+    font-size: 1.5rem;
+  }
 }
 
 header .header-wrapper-menu .header-menu i {
@@ -115,12 +129,18 @@ header h1 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 2rem;
   letter-spacing: 0.3rem;
   color: rgba(255, 255, 255, 0.3);
   width: 100%;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media screen and (min-width: 739px) {
+  header h1 {
+    font-size: 5rem;
+  }
 }
 
 header .header-button-down {
@@ -129,7 +149,7 @@ header .header-button-down {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.7);
   padding: 0.5rem 3rem;
   -webkit-animation: headerButtonDown 2s linear infinite;

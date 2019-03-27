@@ -10,21 +10,26 @@ header {
     position: relative;
 
     .header-wrapper-menu {
-        width: 100%;
-        text-align: right;
-        padding-right: 3.5rem;
-        background-color: transparent;
         position: fixed;
-        line-height: 2.5rem;
-        height: 2.5rem;
+        width: 100%;
+        padding: 1.5rem;
+        background-color: transparent;
         z-index: 1000;
 
         .header-menu {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
             text-transform: uppercase;
-            font-size: 1.5rem;
+            font-size: 1rem;
             letter-spacing: 0.3rem;
             font-weight: 900;
             color: rgba(255, 255, 255, 0.3);
+
+            @media screen and (min-width: 739px) {
+                font-size: 1.5rem;
+            }
 
             i {
                 padding-left: 1rem;
@@ -45,12 +50,16 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 5rem;
+        font-size: 2rem;
         letter-spacing: 0.3rem;
         color: rgba(255, 255, 255, 0.3);
         width: 100%;
         text-transform: uppercase;
         text-align: center;
+
+        @media screen and (min-width: 739px) {
+            font-size: 5rem;
+        }
 
     }
 
@@ -59,7 +68,7 @@ header {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 3rem;
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.7);
         padding: 0.5rem 3rem;
         animation: headerButtonDown 2s linear infinite;
