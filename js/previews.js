@@ -1,12 +1,17 @@
 class PreviewCity {
-  constructor(city, date, description, webOrganizer, regulations, records, limit) {
+  constructor(city, date, description, webOrganizer, regulations, records, fullDate, place, distance, limit, route, payment) {
     this.city = city;
     this.date = date;
     this.description = description;
     this.webOrganizer = webOrganizer;
     this.regulations = regulations;
     this.records = records;
-    this.limit = limit
+    this.fullDate = fullDate;
+    this.place = place;
+    this.distance = distance;
+    this.limit = limit;
+    this.route = route;
+    this.payment = payment;
 
     this.previewsAll = document.querySelector(".section-previews-all");
     this.previewsContents = document.querySelector(".section-previews-content");
@@ -34,7 +39,12 @@ class PreviewCity {
     <p><a href="${this.webOrganizer}" target="_blank">Strona organizatora</a></p>
    <p><a href="${this.regulations}" target="_blank">Regulamin</a></p>
    <p><a href="${this.records}" target="_blank">Zapisy</a></p>
-   <p>limit uczestników: ${this.limit}</p>`;
+   <p>Termin: ${this.fullDate}</p>
+   <p>Miejsce: ${this.place}</p>
+   <p>Dystans: ${this.distance}</p>
+   <p>limit uczestników: ${this.limit}</p>
+   <p>Trasa: ${this.route}</p>
+   <p>Opłata startowa: ${this.payment}</p>`;
   }
 }
 
@@ -47,7 +57,12 @@ const laskowice311218 = new PreviewCity(
   (webOrganizer = "http://www.endomondo.com"),
   (regulations = "http://www.endomondo.com"),
   (records = "http://www.endomondo.com"),
-  (limit = "300")
+  (fullDate = "2019.04.01 godz. 17:00"),
+  (place = "start i meta Warszawa ul. Zakichana 1,"),
+  (distance = "21km"),
+  (limit = "300"),
+  (route = "opis trasy"),
+  (payment = "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł")
 );
 
 // const laskowice311218 = new PreviewCity('Jelcz-Laskowice', '31.12.2018r.', 'IV TOYOTA Bieg Sylwestrowy', 'Jelcz-Laskowice')
@@ -61,7 +76,12 @@ const sobotka230319 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(sobotka230319);
 // sobotka230319.addPreview()
@@ -73,7 +93,12 @@ const krakow240319 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "2start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(krakow240319);
 // krakow240319.addPreview()
@@ -85,7 +110,12 @@ const warszawa310319 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "2start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(warszawa310319);
 // warszawa310319.addPreview()
@@ -97,7 +127,12 @@ const debno070419 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(debno070419);
 // debno070419.addPreview()
@@ -109,7 +144,12 @@ const gdansk140419 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(gdansk140419);
 // gdansk140419.addPreview()
@@ -121,7 +161,12 @@ const warszawa140419 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(warszawa140419);
 // warszawa140419.addPreview()
@@ -133,7 +178,12 @@ const poznan140419 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(poznan140419);
 // poznan140419.addPreview()
@@ -145,7 +195,12 @@ const krakow280419 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(krakow280419);
 // krakow280419.addPreview()
@@ -157,7 +212,12 @@ const poznan050519 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(poznan050519);
 // poznan050519.addPreview()
@@ -169,7 +229,12 @@ const wroclaw150619 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(wroclaw150619);
 // wroclaw150619.addPreview()
@@ -181,7 +246,12 @@ const olawa010919 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(olawa010919);
 // olawa010919.addPreview()
@@ -193,7 +263,12 @@ const wroclaw150919 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(wroclaw150919);
 // wroclaw150919.addPreview()
@@ -205,7 +280,12 @@ const warszawa290919 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(warszawa290919);
 // warszawa290919.addPreview()
@@ -217,7 +297,12 @@ const katowice061019 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(katowice061019);
 // katowice061019.addPreview()
@@ -229,7 +314,12 @@ const poznan201019 = new PreviewCity(
   "http://www.wp.com",
   "http://www.wp.com",
   "http://www.endomondo.com",
-  "500"
+  "2019.04.01 godz. 17:00",
+  "start i meta Warszawa ul. Zakichana 1,",
+  "21km",
+  "500",
+  "opis trasy",
+  "do 31.03.2019 - 60zł, do 31.05.2019 - 80zł, do 30.07.2019 - 100zł"
 );
 arrayPreview.push(poznan201019);
 // poznan201019.addPreview()
