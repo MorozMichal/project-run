@@ -199,15 +199,6 @@ header .header-button-down:hover {
   background-size: cover;
 }
 
-@media screen and (min-width: 739px) {
-  .section-previews {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 .section-previews .section-previews-content {
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
@@ -228,7 +219,19 @@ header .header-button-down:hover {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+
+.section-previews .section-previews-content .preview-content p:nth-child(1) {
+  font-weight: 900;
+}
+
+.section-previews .section-previews-content .preview-content p {
+  line-height: 1.5rem;
+}
+
+.section-previews .section-previews-content .preview-content p a {
+  text-decoration: none;
 }
 
 .section-previews .section-previews-content .animation-preview-content {

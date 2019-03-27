@@ -1,17 +1,11 @@
 .section-previews {
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     background-image: url(/img/background_previews.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     // overflow: hidden;
-
-    @media screen and (min-width: 739px) {
-        flex-direction: row;
-    }
-
 
     .section-previews-content {
         flex-basis: 75%;
@@ -28,15 +22,25 @@
             position: absolute;
             top: 0;
             left: 0;
-            font-size: 2rem;
+            font-size: 1rem;
+
+            p:nth-child(1) {
+                font-weight: 900;
+            }
+
+            p {
+                line-height: 1.5rem;
+
+                a {
+                    text-decoration: none;
+                }
+            }
 
         }
 
         .animation-preview-content {
             animation: animation-preview-content 2s linear;
         }
-
-
 
     }
 
