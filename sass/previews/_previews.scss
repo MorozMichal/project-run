@@ -1,11 +1,15 @@
 .section-previews {
     display: flex;
     flex-direction: row;
-    background-image: url(/img/background_previews.jpg);
+    background-image: url(../img/background/previews_mobile.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     // overflow: hidden;
+
+    @media screen and (min-width: 1024px) {
+        background-image: url(../img/background/previews_full.jpg);
+    }
 
     .section-previews-content {
         flex-basis: 75%;

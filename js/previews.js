@@ -351,7 +351,7 @@ btnShowPreviews.addEventListener("click", () => {
   btnShowPreviews.classList.toggle("animation-previews-button");
   if (btnShowPreviews.classList.contains("fa-angle-left")) {
     //sprawdzenie czy element ma daną klasę
-    previewContents.textContent = "";
+    previewContents.textContent = "ZAPOWIEDZI BIEGOWE";
   }
 });
 

@@ -1,11 +1,12 @@
 /* links section */
 .section-links {
-    background-image: url(/img/background_running.jpg);
+    background-image: url(../img/background/links_mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (min-width: 500px) {
+    @media (min-width: 1024px) {
         background-size: cover;
+        background-image: url(../img/background/links_full.jpg);
 
     }
 

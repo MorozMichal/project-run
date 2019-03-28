@@ -1,10 +1,12 @@
 class showRelations {
-  constructor(firstImage, allImagess, nameRelation, firstDescription, fullDescription) {
+  constructor(dateRelation, firstImage, allImagess, nameRelation, firstDescription, fullDescription) {
     this.nameRelation = nameRelation
+    this.dateRelation = dateRelation
     this.firstDescription = firstDescription
     this.fullDescription = fullDescription
     this.firstImage = firstImage
     this.allImagess = allImagess
+
 
     this.relationsAll = document.querySelector(".relations")
 
@@ -24,7 +26,7 @@ class showRelations {
     relationImages.appendChild(relation1stImage)
 
     const relationFirstImage = document.createElement("img")
-    relationFirstImage.src = `/img/relations/${this.firstImage}`
+    relationFirstImage.src = `./img/relations/${this.dateRelation}/${this.firstImage}`
     relation1stImage.appendChild(relationFirstImage)
 
     const relationAllImages = document.createElement('div');
@@ -34,7 +36,7 @@ class showRelations {
 
     for (let i = 0; i < this.allImagess.length; i++) {
       const relationOneImage = document.createElement('img')
-      relationOneImage.src = `/img/relations/${this.allImagess[i]}`
+      relationOneImage.src = `./img/relations/${this.dateRelation}/${this.allImagess[i]}`
       relationAllImages.appendChild(relationOneImage)
     }
 
@@ -60,8 +62,10 @@ class showRelations {
     relationButton.appendChild(buttonClose)
 
     const relationFirstDescription = document.createElement('p')
-    relationFirstDescription.textContent = `${this.firstDescription}`
+    relationFirstDescription.textContent = `${this.dateRelation} - ${this.firstDescription}`
     relationButton.appendChild(relationFirstDescription)
+
+
 
     const relationFullDescription = document.createElement('p')
     relationFullDescription.classList.add('novisible')
@@ -74,6 +78,7 @@ class showRelations {
 const arrayRelations = [];
 
 const pierwszaRelacja = new showRelations(
+  "2019-03-30",
   "relation1.jpg",
   ['relation1.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation1.jpg', 'relation1.jpg'],
   "Pierwsza Relacja",
@@ -83,6 +88,7 @@ const pierwszaRelacja = new showRelations(
 arrayRelations.push(pierwszaRelacja);
 
 const drugaRelacja = new showRelations(
+  "2019-03-31",
   "relation2.jpg",
   ['relation1.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg', 'relation6.jpg', 'relation2.jpg', 'relation5.jpg'],
   "Druga Relacja",
@@ -92,6 +98,7 @@ const drugaRelacja = new showRelations(
 arrayRelations.push(drugaRelacja);
 
 const trzeciaRelacja = new showRelations(
+  "2019-04-01",
   "relation2.jpg",
   ['relation5.jpg', 'relation2.jpg', 'relation3.jpg', 'relation4.jpg', 'relation5.jpg'],
   "Trzecia Relacja",

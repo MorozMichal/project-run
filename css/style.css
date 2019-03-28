@@ -28,7 +28,7 @@ body {
   transition: 1s;
 }
 
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 1024px) {
   .menu {
     width: 25%;
   }
@@ -36,8 +36,7 @@ body {
 
 .menu li {
   list-style-type: none;
-  padding: 0.5rem 0 0.5rem 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid black;
   -webkit-transform: translate(100%);
           transform: translate(100%);
@@ -51,7 +50,7 @@ body {
   letter-spacing: 0.1rem;
 }
 
-.menu li:hover {
+.menu li:hover:not(:first-child) {
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
@@ -63,14 +62,12 @@ body {
 .menu li:nth-child(1) {
   line-height: 3rem;
   font-size: 1.5rem;
-  padding: 0;
-  padding-right: 4rem;
+  padding: 0 4rem 0 0;
   text-align: right;
   border-bottom: none;
 }
 
 .menu li:nth-child(1):hover {
-  background-color: none;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -79,12 +76,18 @@ body {
 /* SEKCJA HEADER */
 header {
   height: 100vh;
-  background-image: url(../img/background/header_background.jpg);
+  background-image: url(../img/background/header_mobile.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-image: url(../img/background/header_full.jpg);
+  }
 }
 
 header .header-wrapper-menu {
@@ -208,10 +211,16 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-image: url(/img/background_previews.jpg);
+  background-image: url(../img/background/previews_mobile.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .section-previews {
+    background-image: url(../img/background/previews_full.jpg);
+  }
 }
 
 .section-previews .section-previews-content {
@@ -527,7 +536,7 @@ header .header-button-down:hover {
 
 /* running */
 .section-running {
-  background-image: url(/img/background_running.jpg);
+  background-image: url(../img/background/running_mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -546,6 +555,7 @@ header .header-button-down:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    background-image: url(../img/background/running_full.jpg);
   }
 }
 
@@ -596,7 +606,7 @@ header .header-button-down:hover {
 }
 
 .section-running .running-contest .contest-city img {
-  padding-top: 10px;
+  padding-top: 1rem;
   height: 4rem;
 }
 
@@ -778,6 +788,10 @@ header .header-button-down:hover {
 
 /* calculators*/
 .section-calculators {
+  background-image: url(../img/background/calculators_mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,6 +799,12 @@ header .header-button-down:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media screen and (min-width: 1024px) {
+  .section-calculators {
+    background-image: url(../img/background/calculators_full.jpg);
+  }
 }
 
 .section-calculators .section-calculators-content {
@@ -1051,14 +1071,15 @@ header .header-button-down:hover {
 /*links*/
 /* links section */
 .section-links {
-  background-image: url(/img/background_running.jpg);
+  background-image: url(../img/background/links_mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 1024px) {
   .section-links {
     background-size: cover;
+    background-image: url(../img/background/links_full.jpg);
   }
 }
 

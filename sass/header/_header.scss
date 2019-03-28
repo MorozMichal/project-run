@@ -2,12 +2,16 @@
 
 header {
     height: 100vh;
-    background-image: url(../img/background/header_background.jpg);
+    background-image: url(../img/background/header_mobile.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     position: relative;
+
+    @media screen and (min-width: 1024px) {
+        background-image: url(../img/background/header_full.jpg);
+    }
 
     .header-wrapper-menu {
         position: fixed;

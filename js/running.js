@@ -25,7 +25,7 @@ class RunningCity {
 
     const armImg = document.createElement('img')
     runningArm.appendChild(armImg)
-    armImg.src = `./img/${this.runningArm}`
+    armImg.src = `./img/running/${this.runningArm}`
 
     const runningCity = document.createElement('h2')
     runningCity.classList.add('running-city')
@@ -43,7 +43,7 @@ class RunningCity {
     const runningContestCityName = document.createElement('p')
     runningContestCityName.classList.add("contest-city")
     runningContestCity.appendChild(runningContestCityName)
-    runningContestCityName.innerHTML = `<span><img src="./img/${this.runningArm}" /></span><span>${this.runningCityName}</span>`
+    runningContestCityName.innerHTML = `<span><img src="./img/running/${this.runningArm}" /></span><span>${this.runningCityName}</span>`
 
     for (let i = 0; i < this.allContestName.length; i++) {
       const oneContestName = document.createElement('p');
