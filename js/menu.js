@@ -6,10 +6,12 @@ const previewsOffsetTop = document.querySelector('.section-previews').offsetTop 
 window.addEventListener("scroll", () => {
     if (scrollY > previewsOffsetTop) {
         headerMenu.style.backgroundColor = "rgba(255, 255, 255, 0.4)"
-        menuShowBtn.style.color = "rgba(0, 0, 0, 0.7)"
+        menuShowBtn.classList.add('header-menu-bgcolor-scroll')
+        menuShowBtn.classList.remove('header-menu-bgcolor-start')
     } else {
         headerMenu.style.backgroundColor = "transparent"
-        menuShowBtn.style.color = "rgba(255, 255, 255, 0.3)"
+        menuShowBtn.classList.add('header-menu-bgcolor-start')
+        menuShowBtn.classList.remove('header-menu-bgcolor-scroll')
     }
 })
 
