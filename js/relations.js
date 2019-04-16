@@ -1,5 +1,5 @@
 class showRelations {
-  constructor(dateRelation, firstImage, allImagess, nameRelation, firstDescription, fullDescription) {
+  constructor(dateRelation = "", firstImage = "", allImagess = [], nameRelation = "", firstDescription = "", fullDescription = "") {
     this.nameRelation = nameRelation
     this.dateRelation = dateRelation
     this.firstDescription = firstDescription

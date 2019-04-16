@@ -1,5 +1,5 @@
 class RunningCity {
-  constructor(runningArm, runningCityName, runningProvince, allContestName, allContestli1, allContestli2, allContestli3, contentLink, contentFacebook) {
+  constructor(runningArm = "", runningCityName = "", runningProvince = "", allContestName = [], allContestli1 = [], allContestli2 = [], allContestli3 = [], contentLink = [], contentFacebook = []) {
     this.runningArm = runningArm;
     this.runningCityName = runningCityName;
     this.runningProvince = runningProvince;

@@ -1,5 +1,5 @@
 class PreviewCity {
-  constructor(city, date, description, webOrganizer, regulations, records, fullDate, place, distance, limit, route, payment) {
+  constructor(city = "", date = "", description = "", webOrganizer = "", regulations = "", records = "", fullDate = "", place = "", distance = "", limit = "", route = "", payment = "") {
     this.city = city;
     this.date = date;
     this.description = description;
